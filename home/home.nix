@@ -14,6 +14,17 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
+    playerctl
+    wl-clipboard
+    hyprland
+    waybar
+    tofi
+    wofi
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprshot
+    dunst
     git
     zsh
     tmux

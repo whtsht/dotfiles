@@ -139,18 +139,6 @@
   #  wget
     git
     greetd.tuigreet
-    playerctl
-    wl-clipboard
-
-    hyprland
-    waybar
-    tofi
-    wofi
-    hyprpaper
-    hypridle
-    hyprlock
-    hyprshot
-    dunst
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
