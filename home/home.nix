@@ -13,6 +13,10 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  imports = [
+    ./programs
+  ];
+
   home.packages = with pkgs; [
     playerctl
     wl-clipboard
@@ -50,6 +54,8 @@
     efm-langserver
 
     firefox
+
+    tree
 
     slack
 
@@ -134,127 +140,6 @@
     SUDO_EDITOR="nvim";
 
     FZF_DEFAULT_OPTS="--reverse";
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    history.size = 10000;
-
-    shellAliases = {
-      e   = "nvim";
-      m   = "mkdir";
-      mp  = "mkdir -p";
-      rm  = "trash-put";
-      u   = "cd ..";
-      uu  = "cd ../..";
-      uuu = "cd ../../..";
-      sw  = "sudo nixos-rebuild switch --flake";
-      "$" = "";
-    };
-
-    oh-my-zsh = {
-        enable = true;
-        plugins = [ "git" ];
-    };
-
-    initExtra = ''
-      eval "$(zoxide init zsh)"
-      bindkey '^u' autosuggest-accept
-      zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-      eval "$(navi widget zsh)"
-    '';
-    plugins = [
-      {
-        name = "zsh-autosuggestions";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-autosuggestions";
-          rev = "v0.7.0";
-          sha256 = "KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=";
-        };
-      }
-      {
-        name = "fzf-tab";
-        src = pkgs.fetchFromGitHub {
-          owner = "Aloxaf";
-          repo = "fzf-tab";
-          rev = "v1.1.1";
-          sha256 = "0/YOL1/G2SWncbLNaclSYUz7VyfWu+OB8TYJYm4NYkM=";
-        };
-      }
-      {
-        name = "zsh-fzf-history-search";
-        src = pkgs.fetchFromGitHub {
-          owner = "joshskidmore";
-          repo = "zsh-fzf-history-search";
-          rev = "master";
-          sha256 = "RqQGDMCb7+TMRG/ITNkQsRJhbhGkGq3ogdbUNHNvv6U=";
-        };
-      }
-    ];
-  };
-
-  programs.alacritty = {
-    enable = true;
-
-    settings = {
-      shell = "zsh";
-      font = {
-        size = 15.0;
-      };
-      window = {
-        opacity = 0.8;
-      };
-    };
-  };
-
-  programs.starship = {
-    enable = true;
-    # custom settings
-    settings = {
-      add_newline = false;
-      aws.disabled = true;
-      gcloud.disabled = true;
-      line_break.disabled = false;
-    };
-  };
-
-
-  programs.git = {
-    enable = true;
-
-    userName = "whtsht";
-    userEmail = "whiteshirt0079@gmail.com";
-
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-      core = {
-        editor = "nvim";
-      };
-      pull = {
-        ff = "only";
-      };
-      commit = {
-        gpgsign = "true";
-      };
-    };
-  };
-
-  programs.tmux = {
-    enable = true;
-
-    shell = "${pkgs.zsh}/bin/zsh";
-
-    plugins = with pkgs.tmuxPlugins; [
-        power-theme
-        tmux-fzf
-    ];
-
-    extraConfig = builtins.readFile ./tmux.conf;
   };
 
   programs.home-manager.enable = true;
