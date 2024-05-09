@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "toma";
@@ -24,9 +24,10 @@
     waybar
     wofi
     hyprpaper
-    hypridle
-    hyprlock
-    hyprshot
+    #hypridle
+    inputs.hypridle.packages."${pkgs.system}".hypridle
+    #hyprlock
+    inputs.hyprlock.packages."${pkgs.system}".hyprlock
     dunst
     git
     zsh
