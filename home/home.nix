@@ -52,6 +52,7 @@
     lua-language-server
     efm-langserver
 
+    brave
     firefox
 
     tree
