@@ -22,7 +22,6 @@
     wl-clipboard
     hyprland
     waybar
-    tofi
     wofi
     hyprpaper
     hypridle
@@ -142,6 +141,7 @@
     SUDO_EDITOR="nvim";
 
     FZF_DEFAULT_OPTS="--reverse";
+    LD_LIBRARY_PATH="$NIX_LD_LIBRARY_PATH";
   };
 
   programs.home-manager.enable = true;

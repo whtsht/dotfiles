@@ -131,6 +131,16 @@
       };
     };
   };
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    libGL
+    wayland
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libxcb
+    xorg.libXi
+    libxkbcommon
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
