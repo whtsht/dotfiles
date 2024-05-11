@@ -14,5 +14,9 @@
     "./.config/hypr" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/hypr;
     };
+
+    "~/.config/wofi" = {
+      source = config.lib.file.mkOutOfStoreSymlink ../config/wofi;
+    };
   };
 }
