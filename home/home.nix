@@ -108,6 +108,8 @@
     libnotify
 
     nyxt
+
+    pv
   ];
 
 
