@@ -115,9 +115,7 @@
     isNormalUser = true;
     description = "toma";
     extraGroups = [ "networkmanager" "wheel" "docker" "audio" ];
-    packages = with pkgs; [
-      
-    ];
+    packages = [];
     shell = pkgs.bash;
   };
 
