@@ -59,6 +59,7 @@
 
     slack
 
+    ncdu
     mpv
     yt-dlp
 
