@@ -30,14 +30,11 @@
     alacritty
 
     # Compiler and Interpretor
-    # C
     gcc
-    # Rust
     rustup
-    # JavaScript/Typescript
     deno nodejs
-    # Python 3
     python3
+    gauche
 
     fzf
     zoxide
@@ -105,6 +102,21 @@
     pv
 
     sheldon
+
+    # Readline wrapper for console programs
+    rlwrap
+
+    # A command-line hex viewer
+    hexyl
+
+    # A web content scanner
+    dirb
+
+    # Automatic SQL injection and database takeover tool
+    sqlmap
+
+    # Man-in-the-middle proxy
+    mitmproxy
   ];
 
 

@@ -16,6 +16,7 @@
       uu  = "cd ../..";
       uuu = "cd ../../..";
       sw  = "sudo nixos-rebuild switch --flake";
+      sc  = "rlwrap gosh";
       "$" = "";
     };
 
@@ -23,6 +24,7 @@
       eval "$(sheldon source)"
       eval "$(zoxide init zsh)"
       eval "$(navi widget zsh)"
+      bindkey -e
       bindkey '^u' autosuggest-accept
       zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
     '';
