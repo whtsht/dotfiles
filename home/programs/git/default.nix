@@ -18,6 +18,9 @@
       commit = {
         gpgsign = "true";
       };
+      user = {
+        signingkey = "22419B841495187E";
+      };
     };
   };
 }

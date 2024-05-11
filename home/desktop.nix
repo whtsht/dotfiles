@@ -15,11 +15,11 @@
       source = config.lib.file.mkOutOfStoreSymlink ../config/hypr;
     };
 
-    "~/.config/wofi" = {
+    "./.config/wofi" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/wofi;
     };
 
-    "~/.config/waybar" = {
+    "./.config/waybar" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/waybar;
     };
   };
