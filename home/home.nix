@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
   home.username = "toma";
@@ -15,20 +15,13 @@
 
   imports = [
     ./programs
+    ./desktop.nix
   ];
 
   home.packages = with pkgs; [
     playerctl
     wl-clipboard
-    hyprland
-    waybar
-    wofi
-    hyprpaper
-    #hypridle
-    inputs.hypridle.packages."${pkgs.system}".hypridle
-    #hyprlock
-    inputs.hyprlock.packages."${pkgs.system}".hyprlock
-    dunst
+
     git
     zsh
     tmux
