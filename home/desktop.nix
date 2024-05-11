@@ -18,5 +18,9 @@
     "~/.config/wofi" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/wofi;
     };
+
+    "~/.config/waybar" = {
+      source = config.lib.file.mkOutOfStoreSymlink ../config/waybar;
+    };
   };
 }
