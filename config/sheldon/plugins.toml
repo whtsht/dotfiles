@@ -5,10 +5,14 @@ github = "zsh-users/zsh-autosuggestions"
 github = "Aloxaf/fzf-tab"
 
 [plugins.git-auto-fetch]
-remote = 'https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git-auto-fetch/git-auto-fetch.plugin.zsh'
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git-auto-fetch/git-auto-fetch.plugin.zsh"
+
+[plugins.gitlib]
+use = [ "git.zsh" ]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/git.zsh"
 
 [plugins.git]
-remote = 'https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh"
 
 [plugins.zsh-fzf-history-search]
-github = 'joshskidmore/zsh-fzf-history-search'
+github = "joshskidmore/zsh-fzf-history-search"
