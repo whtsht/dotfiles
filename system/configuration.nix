@@ -63,8 +63,6 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   programs.hyprland.enable = true;
 
   # Enable the X11 windowing system.

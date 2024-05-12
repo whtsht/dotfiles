@@ -47,8 +47,6 @@
 
     tree
 
-    slack
-
     ncdu
     mpv
     yt-dlp
