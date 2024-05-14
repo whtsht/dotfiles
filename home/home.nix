@@ -33,7 +33,9 @@
     gcc
     rustup
     deno nodejs
-    python3
+    (python3.withPackages (pp: with pp; [
+      requests
+    ]))
     gauche
 
     fzf
