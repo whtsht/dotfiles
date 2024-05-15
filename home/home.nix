@@ -117,6 +117,9 @@
 
     # Man-in-the-middle proxy
     mitmproxy
+
+    # Small, fast and powerful console music player for Linux and *BSD
+    cmus
   ];
 
 
