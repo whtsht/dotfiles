@@ -35,6 +35,9 @@
     deno nodejs
     (python3.withPackages (pp: with pp; [
       requests
+      sympy
+      pyzmq
+      cryptography
     ]))
     gauche
 
