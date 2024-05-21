@@ -33,7 +33,7 @@
     gcc
     rustup
     deno nodejs
-    (python3.withPackages (pp: with pp; [
+    (python3.withPackages (packages: with packages; [
       # general
       requests pyzmq numba
       # math
@@ -43,6 +43,11 @@
     ]))
     pyright
     gauche
+
+    gnumake
+
+    ruby_3_3
+    pry
 
     fzf
     zoxide
