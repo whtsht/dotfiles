@@ -67,12 +67,6 @@ local plugins = {
         end,
     },
 
-    -- general purpose language server
-    {
-        "mattn/efm-langserver",
-        lazy = false,
-    },
-
     -- fuzzy finder.
     {
         "ibhagwan/fzf-lua",

@@ -43,8 +43,11 @@
     ]))
     pyright
     gauche
+    go
+    gopls
 
-    vscode
+    typos-lsp
+
     gnumake
     ruby_3_3
 

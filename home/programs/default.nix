@@ -5,6 +5,6 @@
     ./git
     ./starship
     ./alacritty
-    ./nvim
+    ./nvim.nix
   ];
 }
