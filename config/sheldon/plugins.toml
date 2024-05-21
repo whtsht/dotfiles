@@ -13,6 +13,3 @@ remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/git.zsh"
 
 [plugins.git]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh"
-
-[plugins.zsh-fzf-history-search]
-github = "joshskidmore/zsh-fzf-history-search"

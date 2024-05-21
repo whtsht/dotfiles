@@ -27,12 +27,19 @@
       bindkey -e
       bindkey '^u' autosuggest-accept
       zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+      function fzf-select-history() {
+          BUFFER=$(history -n -r 1 | awk '!x[$0]++' | fzf --query "$LBUFFER")
+          CURSOR=$#BUFFER
+          zle reset-prompt
+      }
+      zle -N fzf-select-history
+      bindkey '^r' fzf-select-history
     '';
   };
 
   home.file = {
     "./.config/sheldon" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../../../config/sheldon;
+      source = config.lib.file.mkOutOfStoreSymlink ../../config/sheldon;
     };
   };
 }

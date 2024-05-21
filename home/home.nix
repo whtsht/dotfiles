@@ -35,7 +35,7 @@
     deno nodejs
     (python3.withPackages (packages: with packages; [
       # general
-      requests pyzmq numba
+      requests pyzmq numba ipython
       # math
       numpy sympy
       # crypto
