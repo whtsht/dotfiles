@@ -44,13 +44,14 @@
     pyright
     gauche
 
+    vscode
     gnumake
-
     ruby_3_3
-    pry
 
+    libyaml
     fzf
     zoxide
+    libyaml
 
     lua-language-server
     efm-langserver

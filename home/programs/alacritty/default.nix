@@ -8,7 +8,7 @@
         size = 15.0;
       };
       window = {
-        opacity = 0.8;
+        opacity = 1.0;
       };
     };
   };
