@@ -34,11 +34,14 @@
     rustup
     deno nodejs
     (python3.withPackages (pp: with pp; [
-      requests
-      sympy
-      pyzmq
-      cryptography
+      # general
+      requests pyzmq numba
+      # math
+      numpy sympy
+      # crypto
+      cryptography pycryptodome gmpy2 pwntools z3
     ]))
+    pyright
     gauche
 
     fzf
@@ -96,6 +99,9 @@
     # A highly customizable and functional document viewer
     zathura
 
+    # Small, fast and powerful console music player for Linux and *BSD
+    cmus
+
     dunst
 
     libnotify
@@ -120,9 +126,6 @@
 
     # Man-in-the-middle proxy
     mitmproxy
-
-    # Small, fast and powerful console music player for Linux and *BSD
-    cmus
   ];
 
 
