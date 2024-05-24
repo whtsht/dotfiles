@@ -22,6 +22,7 @@
     playerctl
     wl-clipboard
 
+    diffr
     git
     zsh
     tmux
@@ -49,7 +50,9 @@
     typos-lsp
 
     gnumake
-    ruby_3_3
+    (ruby_3_3.withPackages (packages: with packages; [
+      solargraph
+    ]))
 
     libyaml
     fzf

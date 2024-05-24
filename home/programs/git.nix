@@ -11,6 +11,7 @@
       };
       core = {
         editor = "nvim";
+        pager = "diffr | less";
       };
       pull = {
         ff = "only";
