@@ -53,6 +53,8 @@
     (ruby_3_3.withPackages (packages: with packages; [
       solargraph
     ]))
+    idris2
+    idris2Packages.idris2Lsp
 
     libyaml
     fzf
@@ -138,6 +140,8 @@
 
     # Man-in-the-middle proxy
     mitmproxy
+
+    chromium
   ];
 
 

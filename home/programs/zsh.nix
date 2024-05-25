@@ -34,6 +34,7 @@
       }
       zle -N fzf-select-history
       bindkey '^r' fzf-select-history
+      export PATH=$HOME/.pack/bin:$PATH
     '';
   };
 
