@@ -11,7 +11,10 @@
       };
       core = {
         editor = "nvim";
-        pager = "diffr | less";
+        pager = "delta --color-only --line-numbers";
+      };
+      interactive = {
+        diffFilter = "delta --color-only --line-numbers";
       };
       pull = {
         ff = "only";

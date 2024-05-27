@@ -64,6 +64,10 @@
     lua-language-server
     efm-langserver
 
+    ripgrep
+
+    delta
+
     brave
     firefox
 

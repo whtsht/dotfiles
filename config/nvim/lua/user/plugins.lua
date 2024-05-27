@@ -186,39 +186,16 @@ local plugins = {
         ft = { "markdown" },
     },
 
-    -- skk
     {
-        "vim-skk/skkeleton",
-        dependencies = {
-            "vim-denops/denops.vim",
-        },
+        "nvimdev/lspsaga.nvim",
         config = function()
-            vim.fn.call("skkeleton#config", {
-                {
-                    globalDictionaries = {
-                        "/usr/share/skk/SKK-JISYO.L",
-                    },
-                },
-            })
+            require("lspsaga").setup({})
         end,
-    },
-    {
-        "rinx/cmp-skkeleton",
         dependencies = {
-            "vim-skk/skkeleton",
-            "hrsh7th/nvim-cmp",
-        },
-    },
-    {
-        "ShinKage/idris2-nvim",
-        dependencies = {
-            "neovim/nvim-lspconfig",
-            "MunifTanjim/nui.nvim"
-        },
-        config = function ()
-            require("idris2").setup({})
-        end
-    },
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons",
+        }
+    }
 }
 
 local lazy_setup = require("user.lazy_setup")
