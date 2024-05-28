@@ -56,6 +56,11 @@
     idris2
     idris2Packages.idris2Lsp
 
+    chez
+    akku
+
+    cinnamon.nemo
+
     libyaml
     fzf
     zoxide
@@ -67,6 +72,7 @@
     ripgrep
 
     delta
+    w3m
 
     brave
     firefox

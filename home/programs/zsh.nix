@@ -18,6 +18,7 @@
       sw  = "sudo nixos-rebuild switch --flake";
       sc  = "rlwrap gosh";
       "$" = "";
+      dr  = "docker compose run --rm rails";
     };
 
     initExtra = ''
