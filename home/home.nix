@@ -52,6 +52,7 @@
     gnumake
     (ruby_3_3.withPackages (packages: with packages; [
       solargraph
+      pry
     ]))
     idris2
     idris2Packages.idris2Lsp
@@ -165,6 +166,9 @@
     # "./.config/nvim" = {
     #   source = config.lib.file.mkOutOfStoreSymlink ./programs/nvim;
     # };
+    "./.config/menu.sh" = {
+        source = ../config/menu.sh;
+    };
 
     # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

@@ -76,7 +76,7 @@ local lsp_keymaps = {
         { "]d",         vim.diagnostic.goto_next },
         { "K" ,         vim.lsp.buf.hover },
         { "gd",         vim.lsp.buf.definition },
-        { "<leader>rn", "<cmd>Lspsaga rename" },
+        { "<leader>rn", "<cmd>Lspsaga rename<cr>" },
         { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>" },
         {
             "<leader>f",
