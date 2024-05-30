@@ -28,7 +28,11 @@
     tmux
     vim
 
+    # A cross-platform, GPU-accelerated terminal emulator
     alacritty
+
+    # Wayland clipboard manager
+    cliphist
 
     # Compiler and Interpretor
     gcc
