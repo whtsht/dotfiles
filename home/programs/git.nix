@@ -26,6 +26,7 @@
         ll = "log --oneline";
         la = "log -1 HEAD --stat";
         df = "diff";
+        cl = "clean -f -d";
       };
     };
   };
