@@ -19,6 +19,16 @@
       sc  = "rlwrap gosh";
       "$" = "";
       dr  = "docker compose run --rm rails";
+
+
+      # git
+      gst = "git status --short";
+      ga  = "git add";
+      gaa = "git add --all";
+      gd  = "git diff";
+      gdc = "git diff --cache";
+      gl  = "git push";
+      gp  = "git pull";
     };
 
     initExtra = ''

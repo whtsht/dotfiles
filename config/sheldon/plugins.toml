@@ -6,10 +6,3 @@ github = "Aloxaf/fzf-tab"
 
 [plugins.git-auto-fetch]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git-auto-fetch/git-auto-fetch.plugin.zsh"
-
-[plugins.gitlib]
-use = [ "git.zsh" ]
-remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/git.zsh"
-
-[plugins.git]
-remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh"

@@ -19,15 +19,6 @@
       pull = {
         ff = "only";
       };
-      alias = {
-        ps = "push";
-        pl = "pull";
-        st = "status -sb";
-        ll = "log --oneline";
-        la = "log -1 HEAD --stat";
-        df = "diff";
-        cl = "clean -f -d";
-      };
     };
   };
 }
