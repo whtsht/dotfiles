@@ -25,10 +25,12 @@
       gst = "git status --short";
       ga  = "git add";
       gaa = "git add --all";
+      gc  = "git commit";
       gd  = "git diff";
       gdc = "git diff --cache";
-      gl  = "git push";
-      gp  = "git pull";
+      gl  = "git pull";
+      gp  = "git push";
+      gpf = "git push --force --force-with-lease --force-if-includes";
     };
 
     initExtra = ''
