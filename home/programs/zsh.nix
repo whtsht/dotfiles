@@ -19,7 +19,8 @@
       sc  = "rlwrap gosh";
       "$" = "";
       dr  = "docker compose run --rm rails";
-
+      l   = "exa -lh";
+      la  = "exa -lha";
 
       # git
       gst = "git status --short";
