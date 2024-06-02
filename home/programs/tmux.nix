@@ -30,8 +30,8 @@
       unbind C-[
       set -g prefix C-Space
 
-      bind \\ split-window -h
-      bind  - split-window -v
+      bind \\ split-window -h -c "#{pane_current_path}"
+      bind  - split-window -v -c "#{pane_current_path}"
 
       bind w new-window -c "#{pane_current_path}"
       bind e kill-window\; \

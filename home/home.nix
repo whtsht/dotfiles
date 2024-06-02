@@ -82,7 +82,13 @@
     brave
     firefox
 
+    # A PDF rendering library
+    poppler_utils
+
     tree
+
+    # A software suite to create, edit, compose, or convert bitmap images
+    imagemagick
 
     ncdu
     mpv

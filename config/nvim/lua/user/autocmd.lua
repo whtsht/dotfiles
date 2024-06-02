@@ -22,3 +22,12 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	pattern = "*",
 	command = "setlocal nospell | startinsert",
 })
+
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+	group = "userconfig",
+	desc = "automatically open cwindow when run vim[grep]",
+    pattern = "*grep*",
+    callback = function()
+        vim.cmd("cwindow")
+    end,
+})
