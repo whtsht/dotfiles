@@ -190,7 +190,7 @@ local plugins = {
         "nvimdev/lspsaga.nvim",
         config = function()
             require("lspsaga").setup({
-                lightbulb =  {
+                lightbulb = {
                     enable = false,
                 },
             })
@@ -199,6 +199,16 @@ local plugins = {
             "nvim-treesitter/nvim-treesitter",
             "nvim-tree/nvim-web-devicons",
         }
+    },
+
+    {
+        "shortcuts/no-neck-pain.nvim",
+        version = "*",
+        lazy = false,
+        config = function()
+            require("no-neck-pain").setup({})
+            vim.cmd("NoNeckPain")
+        end,
     }
 }
 
