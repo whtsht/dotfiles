@@ -89,15 +89,6 @@ local lsp_keymaps = {
     },
 }
 
-local hop_keymaps = {
-    n = {
-        { "<leader><leader>", "<cmd>HopChar2<cr>" },
-    },
-    x = {
-        { "<leader><leader>", "<cmd>HopChar2<cr>" },
-    },
-}
-
 local align_keymaps = {
     x = {
         {
@@ -111,7 +102,6 @@ local align_keymaps = {
 
 apply_kaymaps(basic_keymaps)
 apply_kaymaps(fzf_keymaps)
-apply_kaymaps(hop_keymaps)
 apply_kaymaps(align_keymaps)
 
 vim.api.nvim_create_autocmd("LspAttach", {
