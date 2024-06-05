@@ -202,6 +202,18 @@ local plugins = {
             vim.cmd("NoNeckPain")
         end,
     },
+
+    -- GitHub Copilot
+    {
+        "https://github.com/github/copilot.vim",
+        lazy = false,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+            require("copilot_cmp").setup()
+        end
+    }
 }
 
 local lazy_setup = require("user.lazy_setup")
