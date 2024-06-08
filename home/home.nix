@@ -11,7 +11,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; # Please read the comment before changing.
 
   imports = [
     ./programs
@@ -50,6 +50,10 @@
     gauche
     go
     gopls
+    # Haskell
+    stack
+    haskell-language-server
+
 
     typos-lsp
 
@@ -57,6 +61,7 @@
     (ruby_3_3.withPackages (packages: with packages; [
       solargraph
       pry
+      vimgolf
     ]))
     idris2
     idris2Packages.idris2Lsp
@@ -81,6 +86,9 @@
 
     brave
     firefox
+
+    # Simulates the falling characters theme from The Matrix movie
+    cmatrix
 
     # A PDF rendering library
     poppler_utils
@@ -165,38 +173,12 @@
     chromium
   ];
 
-
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
-    # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-    # "./.config/nvim" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink ./programs/nvim;
-    # };
     "./.config/menu.sh" = {
         source = ../config/menu.sh;
     };
-
-    # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. If you don't want to manage your shell through Home
-  # Manager then you have to manually source 'hm-session-vars.sh' located at
-  # either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/toma/etc/profile.d/hm-session-vars.sh
-  #
+
   home.sessionVariables = {
     EDITOR = "nvim";
     SUDO_EDITOR="nvim";

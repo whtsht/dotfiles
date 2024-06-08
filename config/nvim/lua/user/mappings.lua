@@ -23,8 +23,6 @@ local basic_keymaps = {
         { "H", "g^" },
         { "L", "g$" },
 
-        { "<C-a>", "ggVG" },
-
         { "<leader>p", "<C-^>" },
     },
     c = {
