@@ -29,9 +29,15 @@
       gc  = "git commit";
       gd  = "git diff";
       gdc = "git diff --cache";
-      gl  = "git pull";
-      gp  = "git push";
-      gpf = "git push --force --force-with-lease --force-if-includes";
+      gsw = "git switch";
+      gsW = "git switch --create";
+      gb  = "git branch";
+      gba = "git branch --all";
+      gbd = "git branch --delete";
+      gbD = "git branch --delete --force";
+      gl  = "git pull origin $(git branch --show current)";
+      gp  = "git push origin $(git branch --show current)";
+      gpf = "git push --force --force-with-lease --force-if-includes origin $(git branch --show current)";
     };
 
     initExtra = ''
