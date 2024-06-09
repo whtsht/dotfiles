@@ -90,6 +90,8 @@
     # This is a simple graphical user interface for Neovim.
     neovide
 
+    pkg-config
+
     # Simulates the falling characters theme from The Matrix movie
     cmatrix
 
