@@ -43,7 +43,50 @@ local plugins = {
         lazy = false,
         priority = 1000,
         config = function()
-            require("lualine").setup()
+            local function current_dir()
+                return vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+            end
+
+            require('lualine').setup {
+                options = {
+                    icons_enabled = true,
+                    theme = 'auto',
+                    component_separators = { left = '', right = ''},
+                    section_separators = { left = '', right = ''},
+                    disabled_filetypes = {
+                        statusline = {},
+                        winbar = {},
+                    },
+                    ignore_focus = {},
+                    always_divide_middle = true,
+                    globalstatus = false,
+                    refresh = {
+                        statusline = 1000,
+                        tabline = 1000,
+                        winbar = 1000,
+                    }
+                },
+                sections = {
+                    lualine_a = {'mode'},
+                    lualine_b = {'diagnostics'},
+                    lualine_c = { current_dir, { 'filename', path = 1 }},
+                    lualine_x = {'encoding', 'fileformat', 'filetype'},
+                    lualine_y = {'progress'},
+                    lualine_z = {''}
+                },
+                inactive_sections = {
+                    lualine_a = {},
+                    lualine_b = {},
+                    lualine_c = {},
+                    lualine_x = {},
+                    lualine_y = {},
+                    lualine_z = {}
+                },
+                tabline = {},
+                winbar = {},
+                inactive_winbar = {},
+                extensions = {}
+            }
         end,
     },
 
