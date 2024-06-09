@@ -4,9 +4,10 @@ local function apply_kaymaps(keymaps)
             ---@diagnostic disable-next-line: deprecated
             local key, action, options = unpack(map_opt)
             if options == nil then
-                options = { noremap = true }
+                options = { noremap = true, silent = true }
             else
                 options.noremap = true
+                options.silent = true
             end
             vim.keymap.set(mode, key, action, options)
         end

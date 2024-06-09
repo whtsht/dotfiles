@@ -363,5 +363,5 @@ local plugins = {
   },
 }
 
-local lazy_setup = require("user.lazy_setup")
-lazy_setup(plugins)
+local LazySetup = require("user.lazy_setup")
+LazySetup(plugins)

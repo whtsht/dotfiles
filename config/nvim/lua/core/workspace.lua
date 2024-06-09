@@ -1,5 +1,4 @@
 function ChangeWorkspace()
-  require("fzf-lua")
   local handle = io.popen("zoxide query -l")
   if handle == nil then
     return
