@@ -40,13 +40,12 @@ local basic_keymaps = {
         { "<C-j>", "<Plug>(skkeleton-enable)" },
     },
     i = {
-        { "kj", "<ESC>" },
         { "<C-j>", "<Plug>(skkeleton-enable)" },
+        { "kj", "<ESC>" },
     },
     t = {
         { "<C-[>", "<C-\\><C-n>" },
-        { "kj", "<ESC>" },
-        { "<leader>t", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
+        { "kj", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
     },
     x = {
         { "a'", "2i'" },
