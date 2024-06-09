@@ -131,7 +131,9 @@
 
     # 白源 (はくげん／HackGen) Font
     hackgen-font
-    hacka
+    hackgen-nf-font
+
+    handlr
 
     # A lightweight and flexible command-line JSON processor
     jq

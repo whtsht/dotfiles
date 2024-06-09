@@ -1,6 +1,7 @@
 local function apply_kaymaps(keymaps)
     for mode, map_opts in pairs(keymaps) do
         for _, map_opt in ipairs(map_opts) do
+            ---@diagnostic disable-next-line: deprecated
             local key, action, options = unpack(map_opt)
             if options == nil then
                 options = { noremap = true }
@@ -39,7 +40,8 @@ local basic_keymaps = {
     },
     t = {
         { "<C-[>", "<C-\\><C-n>" },
-        { "jj",    "<cmd>lua require('FTerm').toggle()<cr>" }
+        { "jj",    "<ESC>" },
+        { "<leader>t", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
     }
 }
 

@@ -21,12 +21,13 @@
       dr  = "docker compose run --rm rails";
       l   = "exa -lh";
       la  = "exa -lha";
+      op  = "handlr open";
 
       # git
       gst = "git status --short";
       ga  = "git add";
       gaa = "git add --all";
-      gc  = "git commit";
+      gc  = "git commit --message";
       gd  = "git diff";
       gdc = "git diff --cache";
       gsw = "git switch";
