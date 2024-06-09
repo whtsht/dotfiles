@@ -345,6 +345,7 @@ local plugins = {
           create_filter("msg_show", "", "lines"),
           create_filter("msg_show", "", "change"),
           create_filter("msg_show", "", "continuing"),
+          create_filter("msg_show", "", "/"),
         },
       })
     end
@@ -361,6 +362,21 @@ local plugins = {
         },
       })
     end
+  },
+  {
+    "vim-skk/skkeleton",
+    config = function ()
+      vim.fn["skkeleton#config"]{
+        globalDictionaries = {
+          vim.fn.expand("~") .. "/.skk/SKK-JISYO.L"
+        }
+      }
+    end,
+    dependencies = { "vim-denops/denops.vim" }
+  },
+  {
+    "rinx/cmp-skkeleton",
+    dependencies = { "vim-skk/skkeleton", "hrsh7th/nvim-cmp" }
   },
 }
 

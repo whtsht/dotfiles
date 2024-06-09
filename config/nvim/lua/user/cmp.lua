@@ -12,6 +12,7 @@ cmp.setup({
     { name = "path" },
     { name = "buffer" },
     { name = "copilot" },
+    { name = "skkeleton" },
   }),
   mapping = cmp.mapping.preset.insert({
     ["<C-p>"] = cmp.mapping.select_prev_item(),

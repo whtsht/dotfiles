@@ -1,5 +1,5 @@
 function ChangeWorkspace()
-  local handle = io.popen("zoxide query -l")
+  local handle = io.popen("find . -type d -print")
   if handle == nil then
     return
   end
@@ -24,28 +24,42 @@ function ChangeWorkspace()
   })
 end
 
+local function writeToFile(filename, content)
+  local f = io.open(filename, "w")
+  if f then
+    f:write(content)
+    f:close()
+  end
+end
+
+local function readFromFile(filename)
+  local f = io.open(filename, "r")
+  if f then
+    local content = f:read("*line")
+    f:close()
+    return content
+  end
+  return nil
+end
+
 local workdir_file = vim.fn.stdpath("data") .. "/last_working_dir"
 
 vim.api.nvim_create_autocmd("VimLeavePre", {
   callback = function()
     local workdir = vim.fn.getcwd()
-    local f = io.open(workdir_file, "w")
-    if f then
-      f:write(workdir)
-      f:close()
-    end
+    writeToFile(workdir_file, workdir)
   end
 })
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    local f = io.open(workdir_file, "r")
-    if f then
-      local workdir = f:read("*line")
-      f:close()
-      if workdir and vim.fn.isdirectory(workdir) == 1 then
-        vim.cmd("cd " .. workdir)
-      end
+    local workdir = readFromFile(workdir_file)
+    if workdir and vim.fn.isdirectory(workdir) == 1 then
+      vim.cmd("cd " .. workdir)
     end
+
+    vim.defer_fn(function()
+      vim.cmd("e #<1")
+    end, 100)
   end
 })
