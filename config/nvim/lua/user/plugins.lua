@@ -345,7 +345,7 @@ local plugins = {
           create_filter("msg_show", "", "lines"),
           create_filter("msg_show", "", "change"),
           create_filter("msg_show", "", "continuing"),
-          create_filter("msg_show", "", "/"),
+          create_filter("msg_show", "search_count", ""),
         },
       })
     end

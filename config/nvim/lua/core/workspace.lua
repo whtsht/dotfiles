@@ -1,5 +1,5 @@
 function ChangeWorkspace()
-  local handle = io.popen("find . -type d -print")
+  local handle = io.popen("find ~ -maxdepth 6 -type d -not -path '*/.*' -print")
   if handle == nil then
     return
   end
