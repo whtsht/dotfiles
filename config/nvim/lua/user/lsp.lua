@@ -13,6 +13,8 @@ local lsp_servers = {
     "solargraph",
     -- Code spell checker 
     "typos_lsp",
+    -- Haskell
+    "hls",
 }
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()

@@ -24,6 +24,7 @@ local basic_keymaps = {
         { "L", "g$" },
 
         { "<leader>p", "<C-^>" },
+        { "<leader>t", "<cmd>lua require('FTerm').toggle()<cr>" },
     },
     c = {
         { "<C-b>", "<left>" },
@@ -37,7 +38,8 @@ local basic_keymaps = {
         { "jj", "<esc>" },
     },
     t = {
-        { "<C-[>", "<C-\\><C-n>" }
+        { "<C-[>", "<C-\\><C-n>" },
+        { "jj",    "<cmd>lua require('FTerm').toggle()<cr>" }
     }
 }
 
@@ -51,6 +53,7 @@ local fzf_keymaps = {
         { "<leader>fq", "<cmd>FzfLua quickfix_stack<cr>" },
 
         { "<leader>lg", "<cmd>FzfLua live_grep_glob<cr>" },
+        { "<leader>lr", "<cmd>FzfLua live_grep_resume<cr>" },
 
         { "<leader>gf", "<cmd>FzfLua git_files<cr>" },
         { "<leader>gs", "<cmd>FzfLua git_status<cr>" },
@@ -74,7 +77,7 @@ local lsp_keymaps = {
     n = {
         { "[d",         vim.diagnostic.goto_prev },
         { "]d",         vim.diagnostic.goto_next },
-        { "K" ,         vim.lsp.buf.hover },
+        { "K",          vim.lsp.buf.hover },
         { "gd",         vim.lsp.buf.definition },
         { "<leader>rn", "<cmd>Lspsaga rename<cr>" },
         { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>" },

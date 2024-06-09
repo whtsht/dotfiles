@@ -54,7 +54,7 @@
     stack
     haskell-language-server
 
-
+    ctags
     typos-lsp
 
     gnumake
@@ -86,6 +86,9 @@
 
     brave
     firefox
+
+    # This is a simple graphical user interface for Neovim.
+    neovide
 
     # Simulates the falling characters theme from The Matrix movie
     cmatrix
