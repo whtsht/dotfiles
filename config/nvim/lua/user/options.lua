@@ -6,7 +6,8 @@ local options = {
     fileencoding = "utf-8",
     clipboard = "unnamedplus",
     completeopt = { "menu", "preview", "noselect" },
-    timeoutlen = 500,
+    timeoutlen = 300,
+    ttimeoutlen = 0,
     shell = "zsh",
     updatetime = 200,
 
