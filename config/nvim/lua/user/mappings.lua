@@ -18,7 +18,7 @@ local basic_keymaps = {
     n = {
         { "<leader>w", "<cmd>w<cr>" },
         { "<leader>q", "<cmd>q<cr>" },
-        { "<leader>n", "<cmd>noh<cr>", { silent = true } },
+        { "<leader>n", "<cmd>noh<cr>" },
 
         { "<leader><leader>", "<cmd>HopPattern<cr>" },
 

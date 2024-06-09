@@ -43,7 +43,7 @@ local plugins = {
     lazy = false,
     priority = 1000,
     config = function()
-      local function current_dir()
+      local function currentDir()
         return vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
       end
 
@@ -69,7 +69,7 @@ local plugins = {
         sections = {
           lualine_a = { 'mode' },
           lualine_b = { 'diagnostics' },
-          lualine_c = { current_dir, { 'filename', path = 1 } },
+          lualine_c = { currentDir, { 'filename', path = 1 } },
           lualine_x = { 'encoding', 'fileformat', 'filetype' },
           lualine_y = { 'progress' },
           lualine_z = { '' }
@@ -97,7 +97,7 @@ local plugins = {
       local hop = require('hop')
       local directions = require('hop.hint').HintDirection
 
-      local function hint_char1(direction, current_line_only, hint_offset)
+      local function hintChar1(direction, current_line_only, hint_offset)
         hop.hint_char1({
           direction = direction,
           current_line_only = current_line_only,
@@ -106,19 +106,19 @@ local plugins = {
       end
 
       vim.keymap.set('', 'f', function()
-        hint_char1(directions.AFTER_CURSOR, true, nil)
+        hintChar1(directions.AFTER_CURSOR, true, nil)
       end, { remap = true })
 
       vim.keymap.set('', 'F', function()
-        hint_char1(directions.BEFORE_CURSOR, true, nil)
+        hintChar1(directions.BEFORE_CURSOR, true, nil)
       end, { remap = true })
 
       vim.keymap.set('', 't', function()
-        hint_char1(directions.AFTER_CURSOR, true, -1)
+        hintChar1(directions.AFTER_CURSOR, true, -1)
       end, { remap = true })
 
       vim.keymap.set('', 'T', function()
-        hint_char1(directions.BEFORE_CURSOR, true, 1)
+        hintChar1(directions.BEFORE_CURSOR, true, 1)
       end, { remap = true })
     end
   },
@@ -344,6 +344,7 @@ local plugins = {
           create_filter("msg_show", "", "written"),
           create_filter("msg_show", "", "lines"),
           create_filter("msg_show", "", "change"),
+          create_filter("msg_show", "", "search hit BOTTOM, continuing at TOP"),
         },
       })
     end
