@@ -43,7 +43,18 @@ local basic_keymaps = {
         { "<C-[>", "<C-\\><C-n>" },
         { "kj",    "<ESC>" },
         { "<leader>t", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
+    },
+    x = {
+        { "a'", "2i'" },
+        { "a\"", "2i\"" },
+        { "a`", "2i`" },
+    },
+    o = {
+        { "a'", "2i'" },
+        { "a\"", "2i\"" },
+        { "a`", "2i`" },
     }
+
 }
 
 local fzf_keymaps = {
