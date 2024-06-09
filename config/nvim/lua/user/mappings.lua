@@ -19,6 +19,8 @@ local basic_keymaps = {
         { "<leader>q", "<cmd>q<cr>" },
         { "<leader>n", "<cmd>noh<cr>", { silent = true } },
 
+        { "<leader><leader>", "<cmd>HopPattern<cr>" },
+
         { "k", "gk" },
         { "j", "gj" },
         { "H", "g^" },
@@ -82,6 +84,8 @@ local fzf_keymaps = {
 
         { "<leader>sh", "<cmd>FzfLua search_history<cr>" },
         { "<leader>ch", "<cmd>FzfLua command_history<cr>" },
+
+        { "<leader>z" , ":lua ChangeWorkspace()<cr>" },
     }
 }
 
