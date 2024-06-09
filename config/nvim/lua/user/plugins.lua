@@ -344,7 +344,7 @@ local plugins = {
           create_filter("msg_show", "", "written"),
           create_filter("msg_show", "", "lines"),
           create_filter("msg_show", "", "change"),
-          create_filter("msg_show", "", "search hit BOTTOM, continuing at TOP"),
+          create_filter("msg_show", "", "continuing"),
         },
       })
     end
