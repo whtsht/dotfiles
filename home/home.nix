@@ -129,6 +129,10 @@
 
     mariadb
 
+    # 白源 (はくげん／HackGen) Font
+    hackgen-font
+    hacka
+
     # A lightweight and flexible command-line JSON processor
     jq
 
