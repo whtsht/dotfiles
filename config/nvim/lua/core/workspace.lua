@@ -57,9 +57,5 @@ vim.api.nvim_create_autocmd("VimEnter", {
     if workdir and vim.fn.isdirectory(workdir) == 1 then
       vim.cmd("cd " .. workdir)
     end
-
-    vim.defer_fn(function()
-      vim.cmd("e #<1")
-    end, 100)
   end
 })
