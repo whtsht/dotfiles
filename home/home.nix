@@ -22,7 +22,9 @@
     playerctl
     wl-clipboard
 
+    # Yet another diff highlighting tool
     diffr
+
     git
     zsh
     tmux
