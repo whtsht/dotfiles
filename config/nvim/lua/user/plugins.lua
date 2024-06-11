@@ -167,7 +167,16 @@ local plugins = {
   { "neovim/nvim-lspconfig" },
 
   -- completion engine
-  { "hrsh7th/nvim-cmp" },
+  {
+    "hrsh7th/nvim-cmp",
+    config = function()
+      require("cmp").setup({
+        performance = {
+          max_view_entries = 15,
+        },
+      })
+    end
+  },
   -- completion sources
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/cmp-buffer" },
@@ -366,8 +375,8 @@ local plugins = {
   },
   {
     "vim-skk/skkeleton",
-    config = function ()
-      vim.fn["skkeleton#config"]{
+    config = function()
+      vim.fn["skkeleton#config"] {
         globalDictionaries = {
           vim.fn.expand("~") .. "/.skk/SKK-JISYO.L"
         }
