@@ -16,19 +16,19 @@ end
 
 local basic_keymaps = {
   n = {
-    { "<leader>w", "<cmd>w<cr>" },
-    { "<leader>q", "<cmd>q<cr>" },
-    { "<leader>n", "<cmd>noh<cr>" },
+    { "<leader>w",        "<cmd>w<cr>" },
+    { "<leader>q",        "<cmd>q<cr>" },
+    { "<leader>n",        "<cmd>noh<cr>" },
 
     { "<leader><leader>", "<cmd>HopPattern<cr>" },
 
-    { "k", "gk" },
-    { "j", "gj" },
-    { "H", "g^" },
-    { "L", "g$" },
+    { "k",                "gk" },
+    { "j",                "gj" },
+    { "H",                "g^" },
+    { "L",                "g$" },
 
-    { "<leader>p", "<C-^>" },
-    { "<leader>[", "<cmd>lua require('FTerm').toggle()<cr>" },
+    { "<leader>p",        "<C-^>" },
+    { "<C-;>",            "<cmd>lua require('FTerm').toggle()<cr>" },
   },
   c = {
     { "<C-b>", "<left>" },
@@ -41,20 +41,22 @@ local basic_keymaps = {
   },
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)" },
+    { "jj",    "<ESC>" },
   },
   t = {
     { "<C-[>", "<ESC>" },
-    { "<leader>[", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
+    { "<C-;>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
+    { "jj",    "<C-\\><C-n>" },
   },
   x = {
-    { "a'", "2i'" },
+    { "a'",  "2i'" },
     { "a\"", "2i\"" },
-    { "a`", "2i`" },
+    { "a`",  "2i`" },
   },
   o = {
-    { "a'", "2i'" },
+    { "a'",  "2i'" },
     { "a\"", "2i\"" },
-    { "a`", "2i`" },
+    { "a`",  "2i`" },
   }
 }
 
@@ -86,7 +88,7 @@ local fzf_keymaps = {
     { "<leader>sh", "<cmd>FzfLua search_history<cr>" },
     { "<leader>ch", "<cmd>FzfLua command_history<cr>" },
 
-    { "<leader>z" , ":lua ChangeWorkspace()<cr>" },
+    { "<leader>z",  ":lua ChangeWorkspace()<cr>" },
   }
 }
 

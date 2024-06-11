@@ -56,6 +56,9 @@
     stack
     haskell-language-server
 
+    # Common Lisp compiler
+    sbcl
+
     ctags
     typos-lsp
 
