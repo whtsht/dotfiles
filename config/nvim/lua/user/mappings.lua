@@ -44,9 +44,9 @@ local basic_keymaps = {
     { "jj",    "<ESC>" },
   },
   t = {
-    { "<C-[>", "<ESC>" },
+    { "<C-k>", "<ESC>" },
     { "<C-;>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
-    { "jj",    "<C-\\><C-n>" },
+    { "<ESC>", "<C-\\><C-n>" },
   },
   x = {
     { "a'",  "2i'" },
