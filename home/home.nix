@@ -103,6 +103,9 @@
     # A software suite to create, edit, compose, or convert bitmap images
     imagemagick
 
+    # Simple terminal UI for git commands
+    lazygit
+
     ncdu
     mpv
     yt-dlp
