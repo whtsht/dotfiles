@@ -7,12 +7,12 @@
     ];
 
   # Bootloader.
-  #boot.loader.grub.enable = true;
-  #boot.loader.grub.device = "/dev/nvme0n1";
-  #boot.loader.grub.useOSProber = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/nvme0n1";
+  boot.loader.grub.useOSProber = true;
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;
@@ -65,19 +65,7 @@
 
   programs.hyprland.enable = true;
 
-  # Enable the X11 windowing system.
-  #services.xserver.enable = true;
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  #services.xserver.displayManager.sddm.enable = true;
-  #services.xserver.desktopManager.plasma5.enable = true;
-
- # # Configure keymap in X11
- # services.xserver = {
- #   layout = "us";
- #   xkbVariant = "";
- # };
 
   services.mpd = {
     enable = true;

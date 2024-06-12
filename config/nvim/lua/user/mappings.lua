@@ -51,6 +51,7 @@ local basic_keymaps = {
     { "a'",  "2i'" },
     { "a\"", "2i\"" },
     { "a`",  "2i`" },
+    { "<leader><leader>", "<cmd>HopPattern<cr>" },
   },
   o = {
     { "a'",  "2i'" },
