@@ -283,7 +283,9 @@ local plugins = {
     version = "*",
     lazy = false,
     config = function()
-      require("no-neck-pain").setup({})
+      require("no-neck-pain").setup({
+        width = 120,
+      })
       vim.cmd("NoNeckPain")
     end,
   },
