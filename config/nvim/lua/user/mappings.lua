@@ -87,8 +87,6 @@ local fzf_keymaps = {
 
     { "<leader>sh", "<cmd>FzfLua search_history<cr>" },
     { "<leader>ch", "<cmd>FzfLua command_history<cr>" },
-
-    { "<leader>z",  ":lua ChangeWorkspace()<cr>" },
   }
 }
 

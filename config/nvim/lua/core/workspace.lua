@@ -1,29 +1,3 @@
-function ChangeWorkspace()
-  local handle = io.popen("find ~ -maxdepth 6 -type d -not -path '*/.*' -print")
-  if handle == nil then
-    return
-  end
-  local result = handle:read("*a")
-  handle:close()
-
-  local dirs = {}
-  for line in result:gmatch("[^\r\n]+") do
-    table.insert(dirs, line)
-  end
-
-  require("fzf-lua").fzf_exec(dirs, {
-    prompt = "z> ",
-    actions = {
-      ["default"] = function(selected)
-        local dir = selected[1]
-        if dir then
-          vim.cmd("cd " .. dir)
-        end
-      end
-    }
-  })
-end
-
 local function writeToFile(filename, content)
   local f = io.open(filename, "w")
   if f then
