@@ -43,6 +43,8 @@
     (python3.withPackages (packages: with packages; [
       # general
       requests pyzmq numba ipython
+      # dev tools
+      black
       # math
       numpy sympy
       # crypto

@@ -37,3 +37,20 @@ lspconfig.rust_analyzer.setup({
   },
   capabilities = capabilities,
 })
+
+-- efm language server
+lspconfig.efm.setup({
+  init_options = { documentFormatting = true },
+  settings = {
+    rootMarkers = { ".git/" },
+    languages = {
+      python = {
+        {
+          formatCommand = "black --quiet -",
+          formatStdin = true,
+        }
+      },
+    },
+  },
+  filetypes = { "python" }
+})
