@@ -29,14 +29,14 @@ local basic_keymaps = {
 
     { "<leader>p",        "<C-^>" },
     { "<C-;>",            "<cmd>lua require('FTerm').toggle()<cr>" },
+
+    { "<leader><leader>", "<cmd>HopPattern<cr>" },
   },
   c = {
     { "<C-b>", "<left>" },
     { "<C-f>", "<right>" },
     { "<C-a>", "<home>" },
     { "<C-e>", "<end>" },
-    { "<C-p>", "<up>" },
-    { "<C-n>", "<down>" },
     { "<C-j>", "<Plug>(skkeleton-enable)" },
   },
   i = {
@@ -46,12 +46,12 @@ local basic_keymaps = {
     { "<C-k>", "<ESC>" },
     { "<C-;>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
     { "<ESC>", "<C-\\><C-n>" },
+    { "<C-j>", "<Plug>(skkeleton-enable)" },
   },
   x = {
     { "a'",  "2i'" },
     { "a\"", "2i\"" },
     { "a`",  "2i`" },
-    { "<leader><leader>", "<cmd>HopPattern<cr>" },
   },
   o = {
     { "a'",  "2i'" },
