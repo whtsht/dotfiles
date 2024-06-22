@@ -1,12 +1,12 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     waybar
     wofi
     hyprpaper
-    inputs.hypridle.packages."${pkgs.system}".hypridle
-    inputs.hyprlock.packages."${pkgs.system}".hyprlock
+    hypridle
+    hyprlock
     dunst
   ];
 
