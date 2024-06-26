@@ -24,7 +24,7 @@
       op  = "handlr open";
 
       # git
-      gst = "git status --short";
+      gs  = "git status --short";
       ga  = "git add";
       gaa = "git add --all";
       glg = "git log --graph --oneline --decorate --all";
@@ -34,8 +34,12 @@
       gd  = "git diff";
       gdc = "git diff --cached";
       gsw = "git switch";
-      gsW = "git switch --create";
+      gsc = "git switch --create";
       gcp = "git cherry-pick";
+      glg = "git log --all --graph";
+      gsh = "git stash push";
+      gsp = "git stash pop";
+      gsl = "git stash list";
       gb  = "git branch";
       gba = "git branch --all";
       gbd = "git branch --delete";
