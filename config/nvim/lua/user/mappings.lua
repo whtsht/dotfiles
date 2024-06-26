@@ -28,7 +28,7 @@ local basic_keymaps = {
     { "L",                "g$" },
 
     { "<leader>p",        "<C-^>" },
-    { "<C-;>",            "<cmd>lua require('FTerm').toggle()<cr>" },
+    { "<C-;>",            "<cmd>ToggleTerm<cr><cmd>startinsert<cr>" },
 
     { "<leader><leader>", "<cmd>HopPattern<cr>" },
   },
@@ -41,10 +41,11 @@ local basic_keymaps = {
   },
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)" },
+    { "<C-;>", "<cmd>ToggleTerm<cr><cmd>startinsert<cr>" },
   },
   t = {
     { "<C-k>", "<ESC>" },
-    { "<C-;>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<cr>" },
+    { "<C-;>", "<C-\\><C-n><cmd>ToggleTerm<cr>" },
     { "<ESC>", "<C-\\><C-n>" },
     { "<C-j>", "<Plug>(skkeleton-enable)" },
   },

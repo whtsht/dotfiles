@@ -363,17 +363,22 @@ local plugins = {
     end
   },
 
-  -- No-nonsense floating terminal plugin for neovim
+  -- A neovim lua plugin to help easily manage multiple terminal windows
   {
-    "numToStr/FTerm.nvim",
-    config = function()
-      require("FTerm").setup({
-        dimensions = {
-          height = 0.8,
-          width  = 0.6,
-        },
-      })
-    end
+    {
+      "akinsho/toggleterm.nvim",
+      version = "*",
+      config = function()
+        require("toggleterm").setup {
+          direction = "float",
+          float_opts = {
+            border = "single",
+            width = 120,
+            height = 30,
+          },
+        }
+      end
+    }
   },
 
   -- SKK
