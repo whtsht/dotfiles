@@ -27,7 +27,7 @@
       gs  = "git status --short";
       ga  = "git add";
       gaa = "git add --all";
-      glg = "git log --graph --oneline --decorate --all";
+      glg = "git log --all --graph";
       gc  = "git commit";
       gcm = "git commit --message";
       gbl = "git blame";
@@ -36,7 +36,6 @@
       gsw = "git switch";
       gsc = "git switch --create";
       gcp = "git cherry-pick";
-      glg = "git log --all --graph";
       gsh = "git stash push";
       gsp = "git stash pop";
       gsl = "git stash list";
