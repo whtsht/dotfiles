@@ -27,8 +27,8 @@
     "./.config/fcitx5" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/fcitx5;
     };
-    "./.config/libskk" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../config/libskk;
+    "./.config/libskk/rules/custom" = {
+      source = config.lib.file.mkOutOfStoreSymlink ../config/fcitx5/skk_rules_custom;
     };
   };
 }
