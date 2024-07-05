@@ -24,10 +24,10 @@
     };
 
     # skk
-    "~/.config/fcitx5" = {
+    "./.config/fcitx5" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/fcitx5;
     };
-    "~/.config/libskk" = {
+    "./.config/libskk" = {
       source = config.lib.file.mkOutOfStoreSymlink ../config/libskk;
     };
   };
