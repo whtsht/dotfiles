@@ -1,0 +1,4 @@
+libskk/context.vala
+libskk/state.vala
+tools/skk.vala
+tools/fep.vala

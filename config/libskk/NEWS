@@ -1,0 +1,146 @@
+Noteworthy changes in version 1.0.5 (2018-09-15)
+------------------------------------------------
+
+ * build: Use libxkbcommon to resolve keysyms [#54]
+
+Noteworthy changes in version 1.0.4 (2018-06-26)
+------------------------------------------------
+
+ * Don't consume key release events [#52]
+ * Improve hankaku katakana conversion [#51]
+ * Use the same typing rule in dict-edit mode [#50]
+ * Add `abort-to-latin` and `abort-to-latin-unhandled` command [#48]
+ * Add more z-* shortcuts from DDSKK
+ * Fix memory leak caused by Vala array conversion
+ * Bump build requirements (glib >= 2.36, valadoc >= 0.40)
+
+Noteworthy changes in version 1.0.3 (2017-11-10)
+------------------------------------------------
+
+ * Fix hiragana to katakana conversion in abbrev mode [#41]
+ * Make "commit-unhandled" actually commit in abbrev mode [#39]
+ * Avoid redundant dictionary lookup in non-numeric conversion cases [#36]
+ * Fix KZIK rules [#35, #37]
+ * Fix okuri-ari word registration [#33, #34]
+ * Add command for sticky-shift [#32]
+ * Don't crash when a rule has no default metadata [#31]
+ * Bind C-j to go back to hiragana in AZIK latin [#30]
+ * Build fixes [#42, #43]
+
+Noteworthy changes in version 1.0.2 (2014-09-09)
+------------------------------------------------
+
+ * Migrate to libgee 0.8 from 0.6 (Issue#29).
+ * rules: new ACT09 rule contributed by Naoki Mizuno (Issue#28).
+ * Consume key event for "commit" command (Issue#26).  Use
+   "commit-unhandled" for the previous behavior.
+ * Consume C-j in abbrev mode (Issue#24).
+
+Noteworthy changes in version 1.0.1 (2013-04-01)
+------------------------------------------------
+
+ * Cancel okuri-ari conversion only if there is no candidate (Issue#23).
+ * Allow clients to populate lookup table before setting cursor pos
+   (ibus-skk Issue#51).
+ * rules: inherit AZIK keymap from the default keymap (Issue#22).
+ * Don't use type-punning when converting bytes to uint32 (Issue#20).
+
+Noteworthy changes in version 1.0.0 (2012-08-27)
+------------------------------------------------
+
+ * Make sure to create parent directory of user-dict (Debian bug#685745).
+ * Clear output and preedit on context reset.
+ * Fix header include in tests (Issue#19).
+
+Noteworthy changes in version 0.0.13 (2012-07-02)
+------------------------------------------------
+
+ * Fix segfault on 64-bit FreeBSD (Issue#18).
+ * Update required Vala version from 0.12.0 to 0.14.0 (Issue#17).
+ * Fix CDB dictionary integer alignment issue on ARM (Debian bug#674471).
+ * Map files that simply include "default" are now optional.
+
+Noteworthy changes in version 0.0.12 (2012-03-29)
+------------------------------------------------
+
+ * Improve AZIK, KZIK, and ACT tables (Issue#16).
+   "upper-<lower>" command is added to keymap.
+ * Fix "nq" and "nl" handling in hiragana input mode (Issue#15).
+ * Fix "NA" handling in hiragana input mode.
+ * Fix okuri-ari conversion in katakana input mode (Issue#12).
+ * --preedit-style option is added to skkfep.
+
+Noteworthy changes in version 0.0.11 (2012-02-11)
+------------------------------------------------
+
+ * Fix for candidate list hiding bug (ibus-skk Issue#47).
+ * Decorate selected candidate in FEP mode.
+
+Noteworthy changes in version 0.0.10 (2012-02-03)
+------------------------------------------------
+
+ * Respect coding cookie in file dictionaries (Issue#10).
+ * Change DictEdit preedit format to make Firefox forms happy.
+ * Support libfep and add skkfep replacement.
+   To enable, pass --enable-fep to configure.
+
+Noteworthy changes in version 0.0.9 (2012-01-25)
+------------------------------------------------
+
+ * Import skk.1 manual page from Debian.
+ * Adopt code coverage testing with lcov.
+   To enable, pass --enable-code-coverage to configure.
+ * Support running test cases under valgrind.
+   To enable, pass --enable-valgrind-tests to configure.
+
+Noteworthy changes in version 0.0.8 (2012-01-11)
+------------------------------------------------
+
+ * Fix user dictionary handling (ibus-skk Issue#44).
+
+Noteworthy changes in version 0.0.7 (2012-01-05)
+------------------------------------------------
+
+ * Improve candidate list traversal with "x" and SPC keys.
+ * Reduce the number of property notifications for performance.
+
+Noteworthy changes in version 0.0.6 (2011-12-28)
+------------------------------------------------
+
+ * Support re-conversion based on surrounding text.
+
+Noteworthy changes in version 0.0.5 (2011-12-25)
+------------------------------------------------
+
+  * Fix buffer overrun when using skkserv (Issue#2).
+
+Noteworthy changes in version 0.0.4 (2011-12-20)
+------------------------------------------------
+
+  * Improve kanagaki input okuri-ari conversion.
+
+Noteworthy changes in version 0.0.3 (2011-12-20)
+------------------------------------------------
+
+  * Support (concat ...).
+
+Noteworthy changes in version 0.0.2 (2011-12-16)
+------------------------------------------------
+
+  * New test tool "skk".
+
+Noteworthy changes in version 0.0.1 (2011-11-30)
+------------------------------------------------
+
+  * First release of libskk.
+
+Copyright (C) 2011-2018 Daiki Ueno <ueno@gnu.org>
+Copyright (C) 2011-2018 Red Hat, Inc.
+
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
