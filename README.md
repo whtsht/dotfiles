@@ -1,4 +1,4 @@
-# my dotfiles
+# My dotfiles
 
 ## Wallpaper
 
