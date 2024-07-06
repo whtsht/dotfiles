@@ -16,26 +16,6 @@ local plugins = {
     end,
   },
 
-  -- interface for tree-sitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = "all",
-        highlight = {
-          enable = true,
-          disable = function(_, buf)
-            local max_filesize = 100 * 1024 -- 100 KB
-            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-            if ok and stats and stats.size > max_filesize then
-              return true
-            end
-          end,
-        },
-      })
-    end,
-  },
-
   -- status line
   {
     "nvim-lualine/lualine.nvim",
@@ -208,15 +188,6 @@ local plugins = {
     end,
   },
 
-  {
-    "kylechui/nvim-surround",
-    version = "*",
-    event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup({})
-    end,
-  },
-
   -- commenting
   {
     "numToStr/Comment.nvim",
@@ -261,21 +232,6 @@ local plugins = {
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     ft = { "markdown" },
-  },
-
-  {
-    "nvimdev/lspsaga.nvim",
-    config = function()
-      require("lspsaga").setup({
-        lightbulb = {
-          enable = false,
-        },
-      })
-    end,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    }
   },
 
   {
