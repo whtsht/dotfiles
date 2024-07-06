@@ -168,6 +168,9 @@
 
     dunst
 
+    # A widget system made in Rust to create widgets for any WM
+    eww-wayland
+
     libnotify
 
     nyxt
