@@ -196,13 +196,10 @@
 
     # Free and open source software for video recording and live streaming
     obs-studio
+
+    vscode
   ];
 
-  home.file = {
-    "./.config/menu.sh" = {
-        source = ../config/menu.sh;
-    };
-  };
 
   home.sessionVariables = {
     EDITOR = "nvim";

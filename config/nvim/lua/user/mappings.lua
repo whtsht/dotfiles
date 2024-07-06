@@ -42,6 +42,7 @@ local basic_keymaps = {
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)" },
     { "<C-;>", "<cmd>ToggleTerm<cr><cmd>startinsert<cr>" },
+    { "jj",    "<esc>" }
   },
   t = {
     { "<C-k>", "<ESC>" },
