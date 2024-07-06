@@ -191,7 +191,11 @@
     # Man-in-the-middle proxy
     mitmproxy
 
+    # An open source web browser from Google
     chromium
+
+    # Free and open source software for video recording and live streaming
+    obs-studio
   ];
 
   home.file = {
