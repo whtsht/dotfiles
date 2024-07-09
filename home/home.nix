@@ -4,14 +4,7 @@
   home.username = "toma";
   home.homeDirectory = "/home/toma";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+  home.stateVersion = "24.05";
 
   imports = [
     ./programs
@@ -203,13 +196,20 @@
     vscode
   ];
 
-
   home.sessionVariables = {
     EDITOR = "nvim";
     SUDO_EDITOR="nvim";
 
     FZF_DEFAULT_OPTS="--reverse";
     LD_LIBRARY_PATH="$NIX_LD_LIBRARY_PATH";
+
+    PATH="$PATH:$HOME/.local/bin";
+  };
+
+  home.file = {
+    "./.local/bin" = {
+      source = config.lib.file.mkOutOfStoreSymlink ../script;
+    };
   };
 
   programs.home-manager.enable = true;

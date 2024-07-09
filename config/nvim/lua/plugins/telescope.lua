@@ -4,7 +4,7 @@ return {
     defaults = {
       mappings = {
         i = {
-          ["<C-[>"] = require("telescope.actions").close,
+          ["<C-k>"] = require("telescope.actions").close,
         },
       },
     },
