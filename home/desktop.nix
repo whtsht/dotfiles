@@ -11,14 +11,6 @@
   ];
 
   home.file = {
-    "./.config/menu.sh" = {
-      source = ../config/menu.sh;
-    };
-
-    "./.config/audio_changer.py" = {
-      source = ../config/audio_changer.py;
-    };
-
     "./.config/dunst/dunstrc" = {
       source = ../config/dunst/dunstrc;
     };

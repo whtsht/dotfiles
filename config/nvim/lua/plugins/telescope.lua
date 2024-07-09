@@ -6,6 +6,9 @@ return {
         i = {
           ["<C-k>"] = require("telescope.actions").close,
         },
+        n = {
+          ["<C-k>"] = require("telescope.actions").close,
+        },
       },
     },
   },
