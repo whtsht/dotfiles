@@ -194,6 +194,9 @@
     obs-studio
 
     vscode
+
+    #  Comprehensive, professional-quality productivity suite, a variant of openoffice.org
+    libreoffice
   ];
 
   home.sessionVariables = {
