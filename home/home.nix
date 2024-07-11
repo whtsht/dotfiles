@@ -128,6 +128,9 @@
 
     trash-cli
 
+    # A desktop application for creating diagrams
+    drawio
+
     awscli
 
     mariadb
