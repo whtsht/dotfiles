@@ -3,7 +3,7 @@ local lazyterm = function()
   Util.terminal(nil, {
     cwd = Util.root(),
     border = "rounded",
-    size = { width = 0.8, height = 0.8 },
+    size = { width = 0.9, height = 0.9 },
   })
 end
 
@@ -16,7 +16,7 @@ local keymaps = {
     { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Terminal (root dir)" } },
   },
   i = {
-    { "<C-o>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
+    { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
 
     { "<C-l>", "<Right>", { noremap = true } },
     { "<C-h>", "<Left>", { noremap = true } },
@@ -24,7 +24,7 @@ local keymaps = {
     { "<C-k>", "<Up>", { noremap = true } },
   },
   c = {
-    { "<C-o>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
+    { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
   },
   t = {
     -- disable go to window mappings
@@ -33,11 +33,13 @@ local keymaps = {
     { "<C-j>", "<C-j>", { noremap = true } },
     { "<C-k>", "<C-k>", { noremap = true } },
 
+    { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
+
     { "<C-[>", "<C-\\><C-n>", { noremap = true } },
   },
 }
 
--- avoid remove outer spaces
+-- avoid removing outer spaces
 for _, quote in ipairs({ '"', "'", "`" }) do
   vim.keymap.set({ "x", "o" }, "a" .. quote, "2i" .. quote)
 end
