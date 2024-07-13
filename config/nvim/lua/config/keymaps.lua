@@ -9,7 +9,6 @@ end
 
 local keymaps = {
   n = {
-    { "<leader>w", ":w<CR>", { noremap = true, silent = true } },
     { "<leader>p", "<C-^>", { noremap = true, silent = true } },
     { "<leader>n", ":noh<CR>", { noremap = true, silent = true } },
 
