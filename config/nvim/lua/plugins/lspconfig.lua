@@ -18,12 +18,6 @@ return {
           capabilities = capabilities,
           cmd = { "docker", "compose", "run", "--rm", "rails", "solargraph", "stdio" },
         })
-
-        lspconfig.ruby_lsp.setup({
-          root_dir = lspconfig.util.root_pattern(".git", "Gemfile"),
-          capabilities = capabilities,
-          cmd = { "docker", "compose", "run", "--rm", "rails", "bundle", "exec", "ruby-lsp" },
-        })
       end,
     })
   end,

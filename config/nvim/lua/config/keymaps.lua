@@ -22,7 +22,6 @@ local keymaps = {
 
     { "<C-l>", "<Right>", { noremap = true } },
     { "<C-h>", "<Left>", { noremap = true } },
-    { "<C-j>", "<Down>", { noremap = true } },
     { "<C-k>", "<Up>", { noremap = true } },
   },
   c = {
