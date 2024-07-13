@@ -1,20 +1,33 @@
 return {
-  "neovim/nvim-lspconfig",
+  "williamboman/mason-lspconfig.nvim",
+  requires = {
+    "neovim/nvim-lspconfig",
+  },
   config = function()
-    -- Ruby lsp settings
-    local lspconfig = require("lspconfig")
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    require("mason-lspconfig").setup_handlers({
+      function(server_name)
+        local lspconfig = require("lspconfig")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        lspconfig[server_name].setup({
+          capabilities = capabilities,
+        })
 
-    lspconfig.solargraph.setup({
-      root_dir = lspconfig.util.root_pattern(".git"),
-      capabilities = capabilities,
-      cmd = { "docker", "compose", "run", "--rm", "rails", "solargraph", "stdio" },
-    })
+        -- Ruby lsp settings
+        lspconfig.solargraph.setup({
+          root_dir = lspconfig.util.root_pattern(".git", "Gemfile"),
+          capabilities = capabilities,
+          cmd = { "docker", "compose", "run", "--rm", "rails", "solargraph", "stdio" },
+        })
 
-    lspconfig.ruby_lsp.setup({
-      root_dir = lspconfig.util.root_pattern(".git"),
-      capabilities = capabilities,
-      cmd = { "docker", "compose", "run", "--rm", "rails", "bundle", "exec", "ruby-lsp" },
+        lspconfig.ruby_lsp.setup({
+          root_dir = lspconfig.util.root_pattern(".git", "Gemfile"),
+          capabilities = capabilities,
+          cmd = { "docker", "compose", "run", "--rm", "rails", "bundle", "exec", "ruby-lsp" },
+        })
+      end,
     })
   end,
+  opts = {
+    format = { timeout_ms = 1000 },
+  },
 }

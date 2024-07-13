@@ -6,6 +6,7 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     history.size = 10000;
+    history.ignoreAllDups
 
     shellAliases = {
       e   = "nvim";

@@ -14,6 +14,8 @@ local keymaps = {
     { "<leader>n", ":noh<CR>", { noremap = true, silent = true } },
 
     { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Terminal (root dir)" } },
+    { "<leader>fF", LazyVim.pick("auto"), desc = "Find Files (Root Dir)" },
+    { "<leader>ff", LazyVim.pick("auto", { root = false }), desc = "Find Files (cwd)" },
   },
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
