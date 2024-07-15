@@ -28,7 +28,7 @@
       gs  = "git status --short";
       ga  = "git add";
       gaa = "git add --all";
-      glg = "git log --all --graph";
+      glg = "git log --graph";
       gc  = "git commit";
       gcm = "git commit --message";
       gbl = "git blame";

@@ -114,6 +114,7 @@
     navi
 
     eza
+    fd
 
     # clipboard package for x11
     xclip
