@@ -19,9 +19,10 @@ local keymaps = {
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
 
+    { "kk", "<Esc>", { noremap = true } },
+
     { "<C-l>", "<Right>", { noremap = true } },
     { "<C-h>", "<Left>", { noremap = true } },
-    { "<C-k>", "<Up>", { noremap = true } },
   },
   c = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
