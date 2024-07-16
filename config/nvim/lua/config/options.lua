@@ -26,6 +26,7 @@ local options = {
     winblend = 0,
     pumblend = 0,
     shortmess = "I",
+    wrap = true,
   },
 }
 

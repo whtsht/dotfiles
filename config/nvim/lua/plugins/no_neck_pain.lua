@@ -4,7 +4,7 @@ return {
   lazy = false,
   config = function()
     require("no-neck-pain").setup({
-      width = 100,
+      width = 120,
     })
     vim.cmd("NoNeckPain")
   end,
