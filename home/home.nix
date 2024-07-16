@@ -92,6 +92,8 @@
 
     pkg-config
 
+    texliveFull
+
     # Simulates the falling characters theme from The Matrix movie
     cmatrix
 
