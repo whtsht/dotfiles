@@ -138,10 +138,6 @@
 
     mariadb
 
-    # 白源 (はくげん／HackGen) Font
-    hackgen-font
-    hackgen-nf-font
-
     handlr
 
     # A lightweight and flexible command-line JSON processor
