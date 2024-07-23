@@ -33,6 +33,7 @@
     gcc
     rustup
     deno nodejs
+    nodePackages.yarn
     (python3.withPackages (packages: with packages; [
       # general
       requests pyzmq numba ipython
@@ -71,7 +72,6 @@
 
     cinnamon.nemo
 
-    libyaml
     fzf
     zoxide
     libyaml
