@@ -43,6 +43,8 @@
       numpy sympy
       # crypto
       cryptography pycryptodome gmpy2 pwntools z3
+      # visualization
+      matplotlib
     ]))
     pyright
     gauche
@@ -63,6 +65,7 @@
       solargraph
       pry
       vimgolf
+      rubocop
     ]))
     idris2
     idris2Packages.idris2Lsp
