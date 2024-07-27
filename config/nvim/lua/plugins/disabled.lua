@@ -1,6 +1,5 @@
 if vim.g.vscode then
   return {
-    -- disable plugins
     { "nvimdev/dashboard-nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
     { "rafamadriz/friendly-snippets", enabled = false },
@@ -12,10 +11,10 @@ if vim.g.vscode then
     { "folke/noice.nvim", enabled = false },
     { "nvim-lualine/lualine.nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
+    { "lukas-reineke/indent-blankline.nvim", enabled = false },
   }
 else
   return {
-    -- disable plugins
     { "nvimdev/dashboard-nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
     { "rafamadriz/friendly-snippets", enabled = false },
