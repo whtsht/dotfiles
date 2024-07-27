@@ -16,7 +16,7 @@ return {
         lspconfig.solargraph.setup({
           root_dir = lspconfig.util.root_pattern(".git", "Gemfile"),
           capabilities = capabilities,
-          cmd = { "docker", "compose", "run", "--rm", "rails", "solargraph", "stdio" },
+          cmd = { "docker", "compose", "run", "--rm", "devcontainer", "solargraph", "stdio" },
         })
       end,
     })
