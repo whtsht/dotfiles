@@ -18,7 +18,6 @@ local options = {
       precedes = "<",
     },
     background = "dark",
-    spell = true,
     spelllang = "en,cjk",
     splitbelow = true,
     splitright = true,

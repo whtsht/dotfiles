@@ -12,6 +12,7 @@ if vim.g.vscode then
     { "nvim-lualine/lualine.nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
     { "lukas-reineke/indent-blankline.nvim", enabled = false },
+    { "hrsh7th/nvim-cmp", enabled = false },
   }
 else
   return {
