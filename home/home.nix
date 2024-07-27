@@ -61,12 +61,8 @@
     typos-lsp
 
     gnumake
-    (ruby_3_3.withPackages (packages: with packages; [
-      solargraph
-      pry
-      vimgolf
-      rubocop
-    ]))
+    ruby_3_3
+
     idris2
     idris2Packages.idris2Lsp
 
