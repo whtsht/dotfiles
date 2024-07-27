@@ -1,3 +1,6 @@
 if vim.g.vscode then
-  vim.opt.spell = false
+  vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*",
+    command = "setlocal nospell",
+  })
 end
