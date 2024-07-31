@@ -198,6 +198,12 @@
 
     #  Comprehensive, professional-quality productivity suite, a variant of openoffice.org
     libreoffice
+
+    # A tool that makes it easy to run Kubernetes locally
+    minikube
+
+    # Production-Grade Container Scheduling and Management
+    kubernetes
   ];
 
   home.sessionVariables = {
