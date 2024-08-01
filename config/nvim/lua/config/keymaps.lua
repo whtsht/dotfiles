@@ -14,6 +14,8 @@ local keymaps = {
 
     { "<C-p>", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true } },
 
+    { "<leader>.", "@@", { noremap = true, silent = true } },
+
     { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Terminal (root dir)" } },
     { "<leader>fF", LazyVim.pick("auto"), desc = "Find Files (Root Dir)" },
     { "<leader>ff", LazyVim.pick("auto", { root = false }), desc = "Find Files (cwd)" },
