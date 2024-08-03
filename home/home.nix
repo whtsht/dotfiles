@@ -204,6 +204,8 @@
 
     # Production-Grade Container Scheduling and Management
     kubernetes
+
+    zotero
   ];
 
   home.sessionVariables = {
