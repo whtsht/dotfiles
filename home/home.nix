@@ -15,6 +15,8 @@
     playerctl
     wl-clipboard
 
+    screenfetch
+
     # Yet another diff highlighting tool
     diffr
 
