@@ -24,6 +24,10 @@
     zsh
     tmux
     vim
+    emacs
+
+    llvm
+    clang
 
     # A cross-platform, GPU-accelerated terminal emulator
     alacritty
