@@ -28,6 +28,10 @@
 
     llvm
     clang
+    clang-tools
+
+
+    postman
 
     # A cross-platform, GPU-accelerated terminal emulator
     alacritty
@@ -36,7 +40,6 @@
     cliphist
 
     # Compiler and Interpretor
-    gcc
     rustup
     deno nodejs
     nodePackages.yarn
@@ -51,6 +54,7 @@
       cryptography pycryptodome gmpy2 pwntools z3
       # visualization
       matplotlib
+      tweepy
     ]))
     pyright
     gauche

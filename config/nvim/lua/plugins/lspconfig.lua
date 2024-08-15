@@ -12,11 +12,13 @@ return {
           capabilities = capabilities,
         })
 
-        -- Ruby lsp settings
-        lspconfig.solargraph.setup({
-          root_dir = lspconfig.util.root_pattern(".git", "Gemfile"),
+        -- C/C++ lsp settings
+        lspconfig.clangd.setup({
           capabilities = capabilities,
-          cmd = { "docker", "compose", "run", "--rm", "devcontainer", "solargraph", "stdio" },
+          cmd = {
+            "clangd",
+            "--offset-encoding=utf-16",
+          },
         })
       end,
     })
