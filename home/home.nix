@@ -217,6 +217,8 @@
 
     zotero
 
+    yazi
+
     imv
   ];
 
