@@ -9,20 +9,17 @@
     history.ignoreAllDups = true;
 
     shellAliases = {
-      e   = "nvim";
-      m   = "mkdir";
-      mp  = "mkdir -p";
-      rm  = "trash-put";
-      u   = "cd ..";
-      uu  = "cd ../..";
-      uuu = "cd ../../..";
-      sw  = "sudo nixos-rebuild switch --flake";
-      sc  = "rlwrap gosh";
-      "$" = "";
-      dr  = "docker compose run --rm rails";
-      l   = "exa -lh";
-      la  = "exa -lha";
-      op  = "handlr open";
+      e    = "nvim";
+      m    = "mkdir";
+      mp   = "mkdir -p";
+      rm   = "trash-put";
+      u    = "cd ..";
+      uu   = "cd ../..";
+      uuu  = "cd ../../..";
+      sw   = "sudo nixos-rebuild switch --flake . --impure";
+      "$"  = "";
+      ls   = "exa";
+      open = "handlr open";
 
       # git
       gs  = "git status --short";

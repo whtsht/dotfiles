@@ -6,5 +6,6 @@
     ./starship.nix
     ./alacritty.nix
     ./nvim.nix
+    ./handlr.nix
   ];
 }

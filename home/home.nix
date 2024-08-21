@@ -216,6 +216,8 @@
     kubernetes
 
     zotero
+
+    imv
   ];
 
   home.sessionVariables = {
