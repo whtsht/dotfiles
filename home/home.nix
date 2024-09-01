@@ -44,6 +44,10 @@
     rustup
     deno nodejs
     nodePackages.yarn
+
+    # Dev container CLI, run and manage your dev environments via a devcontainer.json
+    devcontainer
+
     (python3.withPackages (packages: with packages; [
       # general
       requests pyzmq numba ipython
