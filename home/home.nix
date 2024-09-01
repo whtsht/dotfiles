@@ -22,6 +22,7 @@
 
     git
     zsh
+    nushell
     tmux
     vim
     emacs
