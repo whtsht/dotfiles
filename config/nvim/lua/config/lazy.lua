@@ -32,10 +32,12 @@ require("lazy").setup({
   lockfile = "~/dotfiles/config/nvim/lazy.lock",
   performance = {
     rtp = {
+      -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        "matchparen",
-        "netrwPlugin",
+        -- "matchit",
+        -- "matchparen",
+        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
