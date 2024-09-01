@@ -31,7 +31,6 @@ local keymaps = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
   },
   t = {
-    -- disable go to window mappings
     { "<C-l>", "<C-l>", { noremap = true } },
     { "<C-h>", "<C-h>", { noremap = true } },
     { "<C-j>", "<C-j>", { noremap = true } },
