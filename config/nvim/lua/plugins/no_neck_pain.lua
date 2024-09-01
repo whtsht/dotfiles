@@ -1,11 +1,7 @@
 return {
   "shortcuts/no-neck-pain.nvim",
-  version = "*",
-  lazy = false,
   config = function()
-    require("no-neck-pain").setup({
-      width = 120,
-    })
+    require("no-neck-pain").setup()
     vim.cmd("NoNeckPain")
   end,
 }

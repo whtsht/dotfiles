@@ -1,13 +1,6 @@
-{ config, ... }:
-
 {
-  programs.zsh = {
+  programs.nushell = {
     enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    history.size = 10000;
-    history.ignoreAllDups = true;
-
     shellAliases = {
       e    = "nvim";
       m    = "mkdir";
@@ -41,32 +34,9 @@
       gba = "git branch --all";
       gbd = "git branch --delete";
       gbD = "git branch --delete --force";
-      gl  = "git fetch && git pull origin $(git branch --show current)";
+      gl  = "git fetch ; git pull origin $(git branch --show current)";
       gp  = "git push origin $(git branch --show current)";
       gpf = "git push --force --force-with-lease --force-if-includes origin $(git branch --show current)";
-    };
-
-    initExtra = ''
-      eval "$(sheldon source)"
-      eval "$(zoxide init zsh)"
-      eval "$(navi widget zsh)"
-      bindkey -e
-      bindkey '^u' autosuggest-accept
-      zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-      function fzf-select-history() {
-          BUFFER=$(history -n -r 1 | awk '!x[$0]++' | fzf --query "$LBUFFER")
-          CURSOR=$#BUFFER
-          zle reset-prompt
-      }
-      zle -N fzf-select-history
-      bindkey '^r' fzf-select-history
-      export PATH=$HOME/.pack/bin:$PATH
-    '';
-  };
-
-  home.file = {
-    "./.config/sheldon" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../../config/sheldon;
     };
   };
 }

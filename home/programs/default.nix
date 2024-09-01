@@ -7,5 +7,6 @@
     ./alacritty.nix
     ./nvim.nix
     ./handlr.nix
+    ./nu.nix
   ];
 }

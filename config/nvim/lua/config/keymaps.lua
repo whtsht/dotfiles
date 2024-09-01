@@ -11,12 +11,14 @@ local keymaps = {
   n = {
     { "<leader>p", "<C-^>", { noremap = true, silent = true } },
     { "<leader>n", ":noh<CR>", { noremap = true, silent = true } },
-
+    { "<leader>w", ":w<CR>", { noremap = true, silent = true } },
+    { "<leader>q", ":q<CR>", { noremap = true, silent = true } },
     { "<leader>.", "@@", { noremap = true, silent = true }, desc = "Repeat the previous macro" },
 
     { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Open Nth Terminal" } },
     { "<C-p>", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true } },
     { "<leader>p", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true } },
+    { "<leader>e", "<cmd>Telescope file_browser<cr>", { noremap = true, silent = true } },
     { "<C-r>", "<cmd>Telescope resume<cr>", { noremap = true, silent = true, desc = "Resume" } },
   },
   i = {
