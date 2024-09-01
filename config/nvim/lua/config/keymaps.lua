@@ -12,13 +12,12 @@ local keymaps = {
     { "<leader>p", "<C-^>", { noremap = true, silent = true } },
     { "<leader>n", ":noh<CR>", { noremap = true, silent = true } },
 
+    { "<leader>.", "@@", { noremap = true, silent = true }, desc = "Repeat the previous macro" },
+
+    { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Open Nth Terminal" } },
     { "<C-p>", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true } },
-
-    { "<leader>.", "@@", { noremap = true, silent = true } },
-
-    { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Terminal (root dir)" } },
-    { "<leader>fF", LazyVim.pick("auto"), desc = "Find Files (Root Dir)" },
-    { "<leader>ff", LazyVim.pick("auto", { root = false }), desc = "Find Files (cwd)" },
+    { "<leader>p", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true } },
+    { "<C-r>", "<cmd>Telescope resume<cr>", { noremap = true, silent = true, desc = "Resume" } },
   },
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },

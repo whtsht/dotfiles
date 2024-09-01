@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, dotLoc, ... }:
 
 {
   programs.neovim = {
@@ -7,7 +7,7 @@
 
   home.file = {
     "./.config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../../config/nvim;
+      source = config.lib.file.mkOutOfStoreSymlink "${dotLoc}/config/nvim";
     };
   };
 }
