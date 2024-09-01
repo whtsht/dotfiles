@@ -220,6 +220,8 @@
     yazi
 
     imv
+
+    steam
   ];
 
   home.sessionVariables = {
