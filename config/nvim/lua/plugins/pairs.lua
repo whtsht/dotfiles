@@ -18,4 +18,10 @@ return {
       LazyVim.mini.pairs(opts)
     end,
   },
+  {
+    "andymass/vim-matchup",
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  },
 }
