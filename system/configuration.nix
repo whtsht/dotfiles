@@ -58,6 +58,9 @@
     };
   };
 
+  hardware.graphics.enable32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
+
   programs.hyprland.enable = true;
 
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
