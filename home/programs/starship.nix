@@ -1,11 +1,11 @@
+{ config, dotLoc, ... }:
+
 {
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = false;
-      aws.disabled = true;
-      gcloud.disabled = true;
-      line_break.disabled = false;
+  programs.starship.enable = true;
+
+  home.file = {
+    "./.config/starship.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${dotLoc}/config/starship.toml";
     };
   };
 }

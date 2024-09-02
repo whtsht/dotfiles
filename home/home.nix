@@ -82,7 +82,7 @@
     chez
     akku
 
-    cinnamon.nemo
+    nemo
 
     fzf
     zoxide

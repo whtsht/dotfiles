@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -28,9 +28,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ALL = "en_US.UTF-8";
-  };
 
   i18n.inputMethod = {
     type = "fcitx5";
@@ -43,8 +40,8 @@
   fonts = {
     enableDefaultPackages = false;
     packages = with pkgs; [
-      meslo-lgs-nf
-      (nerdfonts.override { fonts = [ "Meslo" ]; })
+      fira-code
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
 
       noto-fonts
       noto-fonts-extra
@@ -56,7 +53,7 @@
       defaultFonts = {
         sansSerif = [ "Noto" ];
         serif = [ "Noto" ];
-        monospace = [ "Meslo" ];
+        monospace = [ "FiraCode Nerd Font" ];
       };
     };
   };
