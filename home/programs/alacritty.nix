@@ -22,9 +22,6 @@
           family = "FiraCode Nerd Font";
           style = "Bold Italic";
         };
-        window = {
-          opacity = 1.0;
-        };
       };
     };
   };
