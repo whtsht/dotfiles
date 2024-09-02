@@ -28,12 +28,7 @@
     llvm
     clang
     clang-tools
-
-
     postman
-
-    # A cross-platform, GPU-accelerated terminal emulator
-    alacritty
 
     # Wayland clipboard manager
     cliphist
