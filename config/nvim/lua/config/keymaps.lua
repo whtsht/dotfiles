@@ -19,7 +19,7 @@ local keymaps = {
     { "<C-p>", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true } },
     { "<leader>p", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true } },
     { "<leader>e", "<cmd>Telescope file_browser<cr>", { noremap = true, silent = true } },
-    { "<C-r>", "<cmd>Telescope resume<cr>", { noremap = true, silent = true, desc = "Resume" } },
+    { "<leader>r", "<cmd>Telescope resume<cr>", { noremap = true, silent = true, desc = "Resume" } },
   },
   i = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
