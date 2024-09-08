@@ -17,6 +17,9 @@
 
     screenfetch
 
+    usbutils
+    qmk
+
     # Yet another diff highlighting tool
     diffr
 
