@@ -223,6 +223,8 @@
     imv
 
     steam
+
+    ssm-session-manager-plugin
   ];
 
   home.sessionVariables = {
