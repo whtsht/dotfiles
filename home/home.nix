@@ -224,6 +224,8 @@
 
     steam
 
+    memos
+
     ssm-session-manager-plugin
   ];
 

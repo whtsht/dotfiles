@@ -47,7 +47,6 @@
     };
 
     initExtra = ''
-      eval "$(sheldon source)"
       eval "$(zoxide init zsh)"
       eval "$(navi widget zsh)"
       bindkey -e
@@ -60,13 +59,6 @@
       }
       zle -N fzf-select-history
       bindkey '^r' fzf-select-history
-      export PATH=$HOME/.pack/bin:$PATH
     '';
-  };
-
-  home.file = {
-    "./.config/sheldon" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../../config/sheldon;
-    };
   };
 }
