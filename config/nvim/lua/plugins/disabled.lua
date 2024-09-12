@@ -15,11 +15,13 @@ if vim.g.vscode then
     { "hrsh7th/nvim-cmp", enabled = false },
     { "zbirenbaum/copilot.lua", enabled = false },
     { "zbirenbaum/copilot-cmp", enabled = false },
+    { "echasnovski/mini.pairs", enabled = false },
   }
 else
   return {
     { "nvimdev/dashboard-nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
     { "rafamadriz/friendly-snippets", enabled = false },
+    { "echasnovski/mini.pairs", enabled = false },
   }
 end
