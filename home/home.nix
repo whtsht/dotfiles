@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nur, ... }:
 
 {
   home.username = "toma";
@@ -227,6 +227,8 @@
     memos
 
     ssm-session-manager-plugin
+
+    devcontainer
   ];
 
   home.sessionVariables = {
