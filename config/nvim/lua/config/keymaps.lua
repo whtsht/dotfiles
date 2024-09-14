@@ -14,6 +14,7 @@ local keymaps = {
     { "<leader>w", ":w<CR>", { noremap = true, silent = true } },
     { "<leader>q", ":q<CR>", { noremap = true, silent = true } },
     { "<leader>.", "@@", { noremap = true, silent = true }, desc = "Repeat the previous macro" },
+    { "<leader>y", '/<C-r>"<CR>', { noremap = true, silent = true, desc = "Search yanked text" } },
 
     { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Open Nth Terminal" } },
     { "<C-p>", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true } },
@@ -24,6 +25,7 @@ local keymaps = {
     { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
 
     { "kk", "<Esc>", { noremap = true } },
+    { "jj", "<Esc>", { noremap = true } },
 
     { "<C-l>", "<Right>", { noremap = true } },
     { "<C-h>", "<Left>", { noremap = true } },

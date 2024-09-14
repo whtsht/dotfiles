@@ -229,6 +229,8 @@
     ssm-session-manager-plugin
 
     devcontainer
+
+    globalprotect-openconnect
   ];
 
   home.sessionVariables = {
