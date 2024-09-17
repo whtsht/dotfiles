@@ -27,7 +27,6 @@
       # ---------------------------------------------------------
 
       unbind C-b
-      unbind C-[
       set -g prefix C-Space
 
       bind \\ split-window -h -c "#{pane_current_path}"
@@ -63,7 +62,9 @@
       bind -T copy-mode-vi C-[ send -X cancel
       set -wg mode-style bg=blue,fg=white
 
-      set-option -g mouse on
+      set -g mouse on
+      bind-key -T copy-mode-vi WheelUpPane send -X copy-mode
+      bind-key -T copy-mode-vi WheelUpPane send -X scroll-up
       bind-key -T copy-mode-vi MouseDragEnd1Pane send -X copy-pipe-and-cancel "wl-copy"
 
       # ---------------------------------------------------------

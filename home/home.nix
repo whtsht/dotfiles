@@ -1,4 +1,4 @@
-{ config, pkgs, nur, ... }:
+{ config, pkgs, ... }:
 
 {
   home.username = "toma";
@@ -27,6 +27,7 @@
     tmux
     vim
     emacs
+    zellij
 
     llvm
     clang
@@ -72,7 +73,7 @@
     typos-lsp
 
     gnumake
-    ruby_3_3
+    ruby_3_2
 
     idris2
     idris2Packages.idris2Lsp
@@ -225,8 +226,6 @@
     steam
 
     memos
-
-    ssm-session-manager-plugin
 
     devcontainer
   ];
