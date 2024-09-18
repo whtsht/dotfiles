@@ -9,7 +9,7 @@ EnumerateBackwardKeys=
 EnumerateSkipFirst=False
 
 [Hotkey/TriggerKeys]
-0=Control+space
+0=Alt+E
 
 [Hotkey/AltTriggerKeys]
 0=Shift_L
@@ -44,6 +44,8 @@ EnumerateSkipFirst=False
 [Behavior]
 # Active By Default
 ActiveByDefault=False
+# Reset state on Focus In
+resetStateWhenFocusIn=No
 # Share Input State
 ShareInputState=No
 # Show preedit in application

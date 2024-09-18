@@ -7,7 +7,6 @@ return {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "zbirenbaum/copilot-cmp",
-    "rinx/cmp-skkeleton",
     "saadparwaiz1/cmp_luasnip",
   },
   config = function()
@@ -25,7 +24,6 @@ return {
         { name = "path" },
         { name = "buffer" },
         { name = "copilot" },
-        { name = "skkeleton" },
       }),
       mapping = cmp.mapping.preset.insert({
         ["<C-p>"] = cmp.mapping.select_prev_item(),

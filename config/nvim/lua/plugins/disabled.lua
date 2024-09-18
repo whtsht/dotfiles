@@ -6,7 +6,6 @@ if vim.g.vscode then
     { "shortcuts/no-neck-pain.nvim", enabled = false },
     { "nvim-telescope/telescope.nvim", enabled = false },
     { "williamboman/mason-lspconfig.nvim", enabled = false },
-    { "vim-skk/skkeleton", enabled = false },
     { "rcarriga/nvim-notify", enabled = false },
     { "folke/noice.nvim", enabled = false },
     { "nvim-lualine/lualine.nvim", enabled = false },

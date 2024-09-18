@@ -128,7 +128,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="dfa0", TAG+="uacc
     type = "fcitx5";
     enable = true;
     fcitx5.addons = with pkgs; [
-      fcitx5-skk
+      fcitx5-mozc
     ];
   };
 

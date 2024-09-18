@@ -22,24 +22,17 @@ local keymaps = {
     { "<leader>r", "<cmd>Telescope resume<cr>", { noremap = true, silent = true, desc = "Resume" } },
   },
   i = {
-    { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
-
     { "kk", "<Esc>", { noremap = true } },
     { "jj", "<Esc>", { noremap = true } },
 
     { "<C-l>", "<Right>", { noremap = true } },
     { "<C-h>", "<Left>", { noremap = true } },
   },
-  c = {
-    { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
-  },
   t = {
     { "<C-l>", "<C-l>", { noremap = true } },
     { "<C-h>", "<C-h>", { noremap = true } },
     { "<C-j>", "<C-j>", { noremap = true } },
     { "<C-k>", "<C-k>", { noremap = true } },
-
-    { "<C-j>", "<Plug>(skkeleton-enable)", { noremap = true, silent = true } },
 
     { "<C-[>", "<C-\\><C-n>", { noremap = true } },
   },
