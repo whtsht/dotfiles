@@ -228,6 +228,8 @@
     memos
 
     devcontainer
+
+    slack
   ];
 
   home.sessionVariables = {
@@ -236,7 +238,7 @@
 
     FZF_DEFAULT_OPTS="--reverse";
     LD_LIBRARY_PATH="$NIX_LD_LIBRARY_PATH";
-
+    NIXOS_OZONE_WL = "1";
     PATH="$PATH:$HOME/.local/bin";
   };
 

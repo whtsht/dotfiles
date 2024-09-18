@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
-if (ps -a | grep wofi >/dev/null); then
+if ps -a | grep wofi >/dev/null; then
   killall -q wofi
 else
-  case $(printf "%s\n" "󰐥 Power Off" "󰑐 Restart" "󰖔 Suspend" "󰌾 Lock" "󰗽 Log Out" | wofi --show=dmenu --hide-scroll --allow-markup --define=hide_search --width=600 --height=200) in
-  "󰐥 Power Off")
+  case $(printf "%s\n" "󰐥 p: POWER OFF" "󰑐 r: RESTART" "󰖔 s: SUSPEND" "󰌾 l: LOCK" "󰗽 o: LOG OUT" | wofi --show=dmenu --hide-scroll --allow-markup --define=hide_search --width=600 --height=200) in
+  "󰐥 p: POWER OFF")
     systemctl poweroff
     ;;
-  "󰑐 Restart")
+  "󰑐 r: RESTART")
     systemctl reboot
     ;;
-  "󰖔 Suspend")
+  "󰖔 s: SUSPEND")
     systemctl suspend
     ;;
-  "󰌾 Lock")
+  "󰌾 l: LOCK")
     swaylock
     ;;
-  "󰗽 Log Out")
+  "󰗽 o: LOG OUT")
     hyprctl dispatch exit 1
     ;;
   esac
