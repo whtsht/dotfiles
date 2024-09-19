@@ -12,7 +12,7 @@
 
   home.file = {
     "./.config/dunst/dunstrc" = {
-      source = ../config/dunst/dunstrc;
+      source = "${dotLoc}/config/dunst/dunstrc";
     };
 
     "./.config/hypr" = {
