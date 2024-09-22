@@ -24,7 +24,6 @@
     tmux
     vim
     emacs
-    zellij
 
     llvm
     clang
@@ -225,6 +224,8 @@
     memos
 
     slack
+
+    protobuf_28
   ];
 
   home.sessionVariables = {

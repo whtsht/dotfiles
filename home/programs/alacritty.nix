@@ -23,6 +23,11 @@
           style = "Bold Italic";
         };
       };
+      colors = {
+        primary = {
+          background = "#1a1b26";
+        };
+      };
     };
   };
 }
