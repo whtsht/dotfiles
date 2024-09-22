@@ -196,7 +196,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="dfa0", TAG+="uacc
     description = "toma";
     extraGroups = [ "networkmanager" "wheel" "docker" "audio" ];
     packages = [];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   services.greetd = {
