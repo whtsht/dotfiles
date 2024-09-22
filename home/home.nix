@@ -11,6 +11,7 @@
     ./desktop.nix
   ];
 
+
   home.packages = with pkgs; [
     playerctl
     wl-clipboard
@@ -21,7 +22,6 @@
     diffr
 
     git
-    tmux
     vim
     emacs
 
