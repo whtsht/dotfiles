@@ -1,7 +1,7 @@
 {
   programs.zsh = {
     enable = true;
-    enableCompletion = false;
+    enableCompletion = true;
     syntaxHighlighting.enable = true;
     history.size = 10000;
     history.ignoreAllDups = true;
@@ -57,7 +57,6 @@
       }
       zle -N fzf-select-history
       bindkey '^r' fzf-select-history
-      source ~/Code/zsh-autocomplete/zsh-autocomplete.plugin.zsh
     '';
   };
 }
