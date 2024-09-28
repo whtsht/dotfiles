@@ -55,6 +55,7 @@
           CURSOR=$#BUFFER
           zle reset-prompt
       }
+      source <(fzf --zsh)
       zle -N fzf-select-history
       bindkey '^r' fzf-select-history
     '';
