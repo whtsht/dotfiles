@@ -29,6 +29,7 @@
     clang
     clang-tools
     postman
+    bat
 
     # Wayland clipboard manager
     cliphist
