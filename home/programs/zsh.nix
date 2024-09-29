@@ -45,19 +45,29 @@
     };
 
     initExtra = ''
+      bindkey -d
+      bindkey -e
+      # bindkey '^u' autosuggest-accept
+      # source <(fzf --zsh)
+      # function fzf-select-history() {
+      #     BUFFER=$(history -n -r 1 | awk '!x[$0]++' | fzf --query "$LBUFFER")
+      #     CURSOR=$#BUFFER
+      #     zle reset-prompt
+      # }
+      # zle -N fzf-select-history
+      # bindkey '^r' fzf-select-history
+      function y() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+        yazi "$@" --cwd-file="$tmp"
+        if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+          builtin cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+        clear
+      }
       eval "$(zoxide init zsh)"
       eval "$(navi widget zsh)"
-      bindkey -d
-      bindkey -v
-      bindkey '^u' autosuggest-accept
-      function fzf-select-history() {
-          BUFFER=$(history -n -r 1 | awk '!x[$0]++' | fzf --query "$LBUFFER")
-          CURSOR=$#BUFFER
-          zle reset-prompt
-      }
-      source <(fzf --zsh)
-      zle -N fzf-select-history
-      bindkey '^r' fzf-select-history
+      eval "$(atuin init zsh)"
     '';
   };
 }

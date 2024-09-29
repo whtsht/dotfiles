@@ -1,0 +1,4 @@
+[manager]
+append_keymap = [
+	{ on = [ "e", "e" ], run = 'shell --block --confirm nvim', desc = "Opening Neovim" },
+]
