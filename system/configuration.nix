@@ -221,11 +221,15 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="dfa0", TAG+="uacc
   ];
 
   environment.systemPackages = with pkgs; [
-    vim
+    nvim
     curl
     git
     greetd.tuigreet
   ];
+
+  environment.variables = {
+    EDITOR = "nvim";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
