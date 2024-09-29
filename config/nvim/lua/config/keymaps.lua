@@ -18,8 +18,13 @@ local keymaps = {
 
     { "<C-/>", lazyterm, { noremap = true, silent = true, desc = "Open Nth Terminal" } },
     { "<C-p>", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true } },
-    { "<leader>e", "<cmd>Telescope file_browser<cr>", { noremap = true, silent = true } },
     { "<leader>r", "<cmd>Telescope resume<cr>", { noremap = true, silent = true, desc = "Resume" } },
+    {
+      "<leader>ew",
+      "<cmd>Yazi cwd<cr>",
+      { noremap = true, silent = true, desc = "Open the file manager in nvim's working directory" },
+    },
+    { "<leader>ef", "<cmd>Yazi<cr>", { noremap = true, silent = true, desc = "Open yazi at the current file" } },
   },
   i = {
     { "kk", "<Esc>", { noremap = true } },
@@ -38,7 +43,7 @@ local keymaps = {
   },
 }
 
--- avoid removing outer spaces
+-- avoid removin outer spaces
 for _, quote in ipairs({ '"', "'", "`" }) do
   vim.keymap.set({ "x", "o" }, "a" .. quote, "2i" .. quote)
 end
