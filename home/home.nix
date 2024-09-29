@@ -16,8 +16,6 @@
     playerctl
     wl-clipboard
 
-    atuin
-
     screenfetch
 
     # Yet another diff highlighting tool
@@ -217,8 +215,6 @@
     kubernetes
 
     zotero
-
-    yazi
 
     imv
 

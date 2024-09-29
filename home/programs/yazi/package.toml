@@ -1,5 +1,7 @@
 [plugin]
-deps = [{ use = "Rolv-Apneseth/starship", rev = "77a65f5" }, { use = "yazi-rs/plugins:no-status", rev = "83c40c7" }, { use = "Lil-Dank/lazygit", rev = "c82794f" }]
+deps = [
+  { use = "Rolv-Apneseth/starship", rev = "77a65f5" }, 
+  { use = "yazi-rs/plugins:no-status", rev = "6c11a97" },
+]
 
 [flavor]
-deps = []
