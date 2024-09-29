@@ -221,7 +221,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="dfa0", TAG+="uacc
   ];
 
   environment.systemPackages = with pkgs; [
-    nvim
+    vim
     curl
     git
     greetd.tuigreet
