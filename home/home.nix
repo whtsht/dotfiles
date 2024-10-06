@@ -225,6 +225,8 @@
     slack
 
     protobuf_28
+    jetbrains.ruby-mine
+    zed-editor
   ];
 
   home.sessionVariables = {
