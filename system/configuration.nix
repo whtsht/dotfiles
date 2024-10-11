@@ -11,6 +11,7 @@
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;
+  networking.nameservers = ["8.8.8.8" "1.1.1.1"];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
