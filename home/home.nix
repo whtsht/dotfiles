@@ -31,6 +31,8 @@
     postman
     bat
 
+    postgresql
+
     # Wayland clipboard manager
     cliphist
 
@@ -38,6 +40,9 @@
     rustup
     deno nodejs
     nodePackages.yarn
+    nodePackages.pnpm
+
+    dbmate
 
     # Dev container CLI, run and manage your dev environments via a devcontainer.json
     devcontainer
