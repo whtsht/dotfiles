@@ -17,7 +17,6 @@
     wl-clipboard
 
     screenfetch
-
     # Yet another diff highlighting tool
     diffr
 
@@ -120,6 +119,7 @@
 
     # Simple terminal UI for git commands
     lazygit
+    lazydocker
 
     ncdu
     mpv

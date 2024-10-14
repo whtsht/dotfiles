@@ -5,6 +5,14 @@ local options = {
     swapfile = false,
     undofile = true,
 
+    clipboard = 'unnamedplus',
+
+    expandtab = true,
+    shiftwidth = 2,
+    tabstop = 2,
+    softtabstop = 2,
+    smartindent = true,
+
     -- display
     number = true,
     relativenumber = true,
@@ -27,6 +35,9 @@ local options = {
     shortmess = "I",
     wrap = true,
   },
+  g = {
+    mapleader = ' '
+  }
 }
 
 for scope, table in pairs(options) do

@@ -1,6 +1,5 @@
 return {
   "hrsh7th/nvim-cmp",
-  version = false, -- last release is way too old
   event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
@@ -8,6 +7,7 @@ return {
     "hrsh7th/cmp-path",
     "zbirenbaum/copilot-cmp",
     "saadparwaiz1/cmp_luasnip",
+    "L3MON4D3/LuaSnip",
   },
   config = function()
     local cmp = require("cmp")
