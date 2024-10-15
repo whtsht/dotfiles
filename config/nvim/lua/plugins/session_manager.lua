@@ -9,7 +9,6 @@ return {
       dir_to_session_filename = dir_to_session_filename,
       autoload_mode = {
         config.AutoloadMode.CurrentDir,
-        config.AutoloadMode.LastSession,
       },
       autosave_last_session = true,
       autosave_ignore_not_normal = true, 
