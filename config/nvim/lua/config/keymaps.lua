@@ -17,6 +17,9 @@ set_keymap('n', '<c-i>', "<cmd>vsplit<cr>", "Vertical window split")
 set_keymap('n', '<c-l>', "<cmd>wincmd l<cr>", "Move to right window")
 set_keymap('n', '<c-h>', "<cmd>wincmd h<cr>", "Move to left window")
 set_keymap('n', '<leader>c', '<C-^>', 'Switch to previous file')
+set_keymap('n', 'p', 'p`]', 'Paste and re-indent')
+set_keymap('n', 'P', 'P`]', 'Paste before and re-indent')
+
 set_keymap(
   "x",
   "<leader>s",
