@@ -10,7 +10,6 @@ set_keymap("i", "<c-l>", "<right>", "Exit insert mode")
 set_keymap("i", "<c-h>", "<left>", "Exit insert mode")
 set_keymap('n', '<leader>w', ':w<CR>', 'Save file')
 set_keymap('n', '<leader>q', ':confirm wq<CR>', 'Quit with confirmation')
-set_keymap('n', '<leader>d', ':confirm bw<CR>', 'Close buffer with confirmation')
 set_keymap("n", "<leader>n", ":noh<cr>", "Clear search highlight")
 set_keymap("n", "<leader>y", '/<C-r>"<cr>', "Search yanked text")
 set_keymap('n', '<c-i>', ":vsplit<cr>", "Vertical window split")
@@ -19,7 +18,6 @@ set_keymap('n', '<c-h>', ":wincmd h<cr>", "Move to left window")
 set_keymap('n', '<leader>c', '<C-^>', 'Switch to previous file')
 set_keymap('n', 'p', 'p`]', 'Paste and re-indent')
 set_keymap('n', 'P', 'P`]', 'Paste before and re-indent')
-set_keymap('n', '<leader>k', ':bufdo confirm bd<CR>', 'Close all buffers')
 
 set_keymap(
   "x",
@@ -54,6 +52,22 @@ set_keymap('n', '<leader>p', ":Telescope registers<cr>", 'Telescope resume')
 set_keymap('n', '<leader>g', ":Telescope live_grep<cr>", 'Telescope live grep')
 set_keymap("n", "<leader>a", ":Telescope live_grep_args<cr>", "Live grep with args")
 set_keymap("n", "<leader>i", ":Telescope notify<cr>", "Show notifications")
+
+-- LSP
+vim.api.nvim_create_autocmd("LspAttach", {
+  desc = "Attach key mappings for LSP functionalities",
+  callback = function ()
+   set_keymap('n', '<M-o>', ':lua vim.diagnostic.open_float()<CR>', 'Open diagnostics')
+   set_keymap('n', '<M-p>', ':lua vim.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic')
+   set_keymap('n', '<M-n>', ':lua vim.diagnostic.goto_next()<CR>', 'Go to next diagnostic')
+   set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<CR>', 'Show hover')
+   set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', 'Go to definition')
+   set_keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>', 'Go to implementation')
+   set_keymap('n', 'gr', ':lua vim.lsp.buf.references()<CR>', 'Show references')
+   set_keymap('n', '<M-f>', ':lua vim.lsp.buf.formatting()<CR>', 'Format document')
+   set_keymap('n', '<M-r>', ':lua vim.lsp.buf.rename()<CR>', 'Rename')
+  end
+})
 
 set_keymap("n", "<leader>t", ":ToggleLazyGit<cr>", "Toggle LazyGit")
 

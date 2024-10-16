@@ -8,7 +8,6 @@ return {
     "zbirenbaum/copilot-cmp",
     "saadparwaiz1/cmp_luasnip",
     "L3MON4D3/LuaSnip",
-    "neovim/nvim-lspconfig"
   },
   config = function()
     local cmp = require("cmp")
@@ -54,10 +53,5 @@ return {
         ghost_text = true,
       },
     })
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    require('lspconfig').rust_analyzer.setup {
-      capabilities = capabilities
-    }
   end,
 }
