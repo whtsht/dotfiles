@@ -11,227 +11,149 @@
     ./desktop.nix
   ];
 
-
   home.packages = with pkgs; [
+    # Clipboard & System Tools
     playerctl
     wl-clipboard
-
+    cliphist
     screenfetch
-    # Yet another diff highlighting tool
-    diffr
 
+    # Development Tools
     git
     vim
     emacs
-
-    llvm
-    clang
-    clang-tools
     postman
     bat
-
-    postgresql
-
-    # Wayland clipboard manager
-    cliphist
-
-    # Compiler and Interpretor
-    rustup
-    deno nodejs
-    nodePackages.yarn
-    nodePackages.pnpm
-
     dbmate
-
-    # Dev container CLI, run and manage your dev environments via a devcontainer.json
     devcontainer
-
-    (python3.withPackages (packages: with packages; [
-      # general
-      requests pyzmq numba ipython
-      # dev tools
-      black
-      # math
-      numpy sympy
-      # crypto
-      cryptography pycryptodome gmpy2 pwntools z3
-      # visualization
-      matplotlib
-      tweepy
-    ]))
-    pyright
-    gauche
-    go
-    gopls
-    # Haskell
-    stack
-    haskell-language-server
-
-    # Common Lisp compiler
-    sbcl
-
     ctags
-    typos-lsp
-
     gnumake
-    ruby_3_2
-
-    idris2
-    idris2Packages.idris2Lsp
-
-    chez
-    akku
-
-    nemo
-
-    fzf
-    zoxide
-    libyaml
-
-    lua-language-server
-    efm-langserver
-
-    ripgrep
-
-    delta
-    w3m
-
-    brave
-    firefox
-
-    # This is a simple graphical user interface for Neovim.
-    neovide
-
     pkg-config
 
-    texliveFull
-
-    # Simulates the falling characters theme from The Matrix movie
-    cmatrix
-
-    # A PDF rendering library
-    poppler_utils
-
-    tree
-
-    # A software suite to create, edit, compose, or convert bitmap images
-    imagemagick
-
-    # Simple terminal UI for git commands
+    # Development Utilities
     lazygit
     lazydocker
 
-    ncdu
-    mpv
-    yt-dlp
+    # Programming Languages
+    llvm
+    clang
+    clang-tools
+    rustup
+    deno
+    nodejs
+    go
+    ruby_3_3
+    gauche
+    sbcl
+    idris2
+    chez
+    haskell-language-server
+    idris2Packages.idris2Lsp
 
-    # An interactive cheatsheet tool for the command-line
-    navi
+    # Language Servers
+    pyright
+    gopls
+    lua-language-server
+    efm-langserver
+    typos-lsp
+    haskell-language-server
+    idris2Packages.idris2Lsp
 
-    eza
-    fd
+    # Package Managers
+    nodePackages.yarn
+    nodePackages.pnpm
+    stack
 
-    # clipboard package for x11
-    xclip
+    # Python with Packages
+    (python3.withPackages (packages: with packages; [
+      requests
+      pyzmq
+      numba
+      ipython
+      black
+      numpy
+      sympy
+      cryptography
+      pycryptodome
+      gmpy2
+      pwntools
+      z3
+      matplotlib
+      tweepy
+    ]))
 
-    # other
-    marp-cli
-
-    # Compressor/archiver for creating and modifying zipfiles
-    zip
-    # An extraction utility for archives compressed in .zip format
-    unzip
-
-    trash-cli
-
-    # A desktop application for creating diagrams
-    drawio
-
+    # Infrastructure Tools
+    minikube
+    kubernetes
     awscli
 
-    mariadb
+    # CLI Tools
+    fzf
+    zoxide
+    libyaml
+    ripgrep
+    delta
+    ncdu
+    eza
+    fd
+    tree
+    trash-cli
+    navi
 
-    handlr
+    # Compression & Archiving Tools
+    zip
+    unzip
 
-    # A lightweight and flexible command-line JSON processor
-    jq
-
-    # Grab images from a Wayland compositor
+    # Wayland Tools
     grim
-
-    # Select a region in a Wayland compositor
     slurp
-
-    # A Wayland native snapshot editing tool, inspired by Snappy on macOS
     swappy
 
-    # An image viewer with vim-like keybindings
-    vimiv-qt
-
-    # A highly customizable and functional document viewer
-    zathura
-
-    # Small, fast and powerful console music player for Linux and *BSD
-    cmus
-
-    dunst
-
-    # A widget system made in Rust to create widgets for any WM
-    eww
-
-    libnotify
-
+    # Browsers
+    brave
+    firefox
+    chromium
     nyxt
 
-    pv
-
-    sheldon
-
-    # Readline wrapper for console programs
-    rlwrap
-
-    # A command-line hex viewer
-    hexyl
-
-    # A web content scanner
-    dirb
-
-    # Automatic SQL injection and database takeover tool
-    sqlmap
-
-    # Man-in-the-middle proxy
-    mitmproxy
-
-    # An open source web browser from Google
-    chromium
-
-    # Free and open source software for video recording and live streaming
+    # Media Tools
+    mpv
+    yt-dlp
+    imagemagick
+    poppler_utils
+    drawio
+    vimiv-qt
+    zathura
+    cmus
     obs-studio
+    imv
+    cmatrix
 
-    vscode
-
-    #  Comprehensive, professional-quality productivity suite, a variant of openoffice.org
+    # Communication & Productivity
+    zotero
+    slack
+    steam
+    memos
     libreoffice
 
-    # A tool that makes it easy to run Kubernetes locally
-    minikube
-
-    # Production-Grade Container Scheduling and Management
-    kubernetes
-
-    zotero
-
-    imv
-
-    steam
-
-    memos
-
-    slack
-
-    protobuf_28
+    # Misc Tools
+    dunst
+    eww
+    libnotify
+    pv
+    sheldon
+    rlwrap
+    hexyl
+    dirb
+    sqlmap
+    mitmproxy
+    vscode
     jetbrains.ruby-mine
     zed-editor
+    handlr
+    jq
+    mariadb
+    postgresql
+    protobuf_28
   ];
 
   home.sessionVariables = {
