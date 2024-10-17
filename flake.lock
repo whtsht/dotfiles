@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "ecsk": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1729176726,
+        "narHash": "sha256-B4JS7HZQx+QDyl13pf4EAO6I4iTdBqnuk4QDP48qVU8=",
+        "owner": "whtsht",
+        "repo": "ecsk",
+        "rev": "b28dbe75f0972fa7cbceb75fb1b035c113762980",
+        "type": "github"
+      },
+      "original": {
+        "owner": "whtsht",
+        "repo": "ecsk",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -40,7 +60,8 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "ecsk": "ecsk"
       }
     }
   },

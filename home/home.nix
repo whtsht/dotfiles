@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "toma";
@@ -18,12 +18,16 @@
     cliphist
     screenfetch
 
+    inputs.ecsk.packages.x86_64-linux.ecsk
+
     # Development Tools
     git
     vim
     emacs
     postman
     bat
+    curl
+    wget
     dbmate
     devcontainer
     ctags
@@ -86,6 +90,7 @@
     minikube
     kubernetes
     awscli
+    ssm-session-manager-plugin
 
     # CLI Tools
     fzf

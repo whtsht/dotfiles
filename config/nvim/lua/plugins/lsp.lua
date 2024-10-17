@@ -12,5 +12,20 @@ return {
         },
       },
     }
+
+    require('lspconfig').ruby_lsp.setup {
+      capabilities = capabilities,
+      settings = {
+        ruby = {
+          format = {
+            command = "rubocop"
+          },
+        },
+      },
+    }
+
+    require('lspconfig').solargraph.setup {
+      capabilities = capabilities,
+    }
   end
 }
