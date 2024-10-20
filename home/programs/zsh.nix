@@ -18,6 +18,7 @@
       "$"  = "";
       ls   = "exa";
       open = "handlr open";
+      nya  = "nyancat";
 
       # git
       gs  = "git status --short";
@@ -56,15 +57,6 @@
       # }
       # zle -N fzf-select-history
       # bindkey '^r' fzf-select-history
-      function y() {
-        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-        yazi "$@" --cwd-file="$tmp"
-        if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-          builtin cd -- "$cwd"
-        fi
-        rm -f -- "$tmp"
-        clear
-      }
       eval "$(zoxide init zsh)"
       eval "$(navi widget zsh)"
       eval "$(atuin init zsh)"

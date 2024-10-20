@@ -23,6 +23,7 @@
     # Development Tools
     git
     vim
+    vscode
     emacs
     postman
     bat
@@ -46,7 +47,7 @@
     deno
     nodejs
     go
-    ruby_3_3
+    ruby
     gauche
     sbcl
     idris2
@@ -141,6 +142,7 @@
     libreoffice
 
     # Misc Tools
+    nyancat
     dunst
     eww
     libnotify
@@ -151,7 +153,6 @@
     dirb
     sqlmap
     mitmproxy
-    vscode
     jetbrains.ruby-mine
     zed-editor
     handlr
