@@ -61,6 +61,7 @@
     lua-language-server
     efm-langserver
     typos-lsp
+    emmet-ls
     haskell-language-server
     idris2Packages.idris2Lsp
 
