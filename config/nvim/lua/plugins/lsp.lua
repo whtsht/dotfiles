@@ -26,6 +26,7 @@ return {
           },
         },
       })
+      setup_server('gopls')
     end
   },
   {
