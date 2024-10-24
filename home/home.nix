@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, dotLoc, ... }:
 
 {
   home.username = "toma";
@@ -175,7 +175,7 @@
 
   home.file = {
     "./.local/bin" = {
-      source = config.lib.file.mkOutOfStoreSymlink ../script;
+      source = config.lib.file.mkOutOfStoreSymlink "${dotLoc}/script";
     };
   };
 
