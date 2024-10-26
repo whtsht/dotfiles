@@ -38,6 +38,7 @@
     # Development Utilities
     lazygit
     lazydocker
+    oxker
 
     # Programming Languages
     llvm
@@ -115,6 +116,10 @@
     grim
     slurp
     swappy
+
+    # Password Managers
+    pass
+    qtpass
 
     # Browsers
     brave
