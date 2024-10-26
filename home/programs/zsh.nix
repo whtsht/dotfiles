@@ -48,15 +48,7 @@
     initExtra = ''
       bindkey -d
       bindkey -e
-      # bindkey '^u' autosuggest-accept
-      # source <(fzf --zsh)
-      # function fzf-select-history() {
-      #     BUFFER=$(history -n -r 1 | awk '!x[$0]++' | fzf --query "$LBUFFER")
-      #     CURSOR=$#BUFFER
-      #     zle reset-prompt
-      # }
-      # zle -N fzf-select-history
-      # bindkey '^r' fzf-select-history
+      eval "$(direnv hook zsh)"
       eval "$(zoxide init zsh)"
       eval "$(navi widget zsh)"
       eval "$(atuin init zsh)"

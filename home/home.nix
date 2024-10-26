@@ -34,6 +34,7 @@
     ctags
     gnumake
     pkg-config
+    direnv
 
     # Development Utilities
     lazygit
@@ -48,7 +49,6 @@
     deno
     nodejs
     go
-    ruby
     gauche
     sbcl
     idris2

@@ -18,6 +18,7 @@ return {
         },
       })
       setup_server('ruby_lsp', {
+        cmd = { 'bundle', 'exec', 'ruby-lsp' },
         settings = {
           ruby = {
             format = {
