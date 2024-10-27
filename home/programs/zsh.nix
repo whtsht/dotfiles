@@ -25,6 +25,7 @@
       ga  = "git add";
       gaa = "git add --all";
       glg = "git log --graph";
+      gf  = "git fetch --prune";
       gc  = "git commit";
       gcm = "git commit --message";
       gbl = "git blame";
