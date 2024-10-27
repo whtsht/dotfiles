@@ -149,6 +149,7 @@
 
     # Misc Tools
     nyancat
+    fastfetch
     dunst
     eww
     libnotify
