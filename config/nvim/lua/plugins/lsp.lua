@@ -28,6 +28,7 @@ return {
         },
       })
       setup_server('gopls')
+      setup_server('pyright')
     end
   },
   {
