@@ -151,6 +151,7 @@
     nyancat
     fastfetch
     dunst
+    quickemu
     eww
     libnotify
     pv

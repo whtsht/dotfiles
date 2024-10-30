@@ -204,6 +204,10 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="dfa0", TAG+="uacc
     shell = pkgs.zsh;
   };
 
+  security.sudo.extraConfig = ''
+    toma ALL=NOPASSWD: /run/current-system/sw/bin/nixos-rebuild
+  '';
+
   services.greetd = {
     enable = true;
     vt = 2;
@@ -230,6 +234,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="dfa0", TAG+="uacc
     curl
     git
     greetd.tuigreet
+    qemu
   ];
 
   environment.variables = {
