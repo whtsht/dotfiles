@@ -29,6 +29,20 @@ return {
       })
       setup_server('gopls')
       setup_server('pyright')
+      setup_server('efm', {
+        init_options = { documentFormatting = true },
+        settings = {
+          rootMarkers = {".git/"},
+          languages = {
+            python = {
+              {
+                formatCommand = "black --quiet -",
+                formatStdin = true
+              }
+            }
+          }
+        }
+      })
     end
   },
   {
