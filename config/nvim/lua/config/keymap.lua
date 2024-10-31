@@ -64,6 +64,7 @@ set_keymap('n', '<M-n>', ':Lspsaga diagnostic_jump_next<CR>', 'Go to next diagno
 set_keymap('n', 'K', ':Lspsaga hover_doc<CR>', 'Show hover')
 set_keymap('n', 'gd', ':Lspsaga goto_definition<CR>', 'Go to definition')
 set_keymap('n', 'gt', ':Lspsaga goto_type_definition<CR>', 'Go to type definition')
+set_keymap('n', 'gf', ':Lspsaga finder<CR>', 'Find references')
 set_keymap('n', '<M-f>', ':lua vim.lsp.buf.format()<CR>', 'Format document')
 set_keymap('n', '<M-r>', ':Lspsaga rename<CR>', 'Rename')
 set_keymap('n', '<M-a>', ':Lspsaga code_action<CR>', 'Code action')
