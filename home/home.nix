@@ -51,6 +51,7 @@
     go
     gauche
     sbcl
+    ruby
     idris2
     chez
     haskell-language-server

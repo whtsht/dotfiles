@@ -43,6 +43,16 @@ return {
           }
         }
       })
+      require('lspconfig.configs').ruby_analyzer = {
+        default_config = {
+          cmd = { "ruby-analyzer" },
+          filetypes = { "ruby" },
+          root_dir = require('lspconfig').util.root_pattern("Cargo.toml"),
+          settings = {},
+        },
+      }
+      setup_server('ruby_analyzer')
+      vim.lsp.set_log_level("INFO")
     end
   },
   {
