@@ -29,6 +29,7 @@ return {
       })
       setup_server('gopls')
       setup_server('pyright')
+      setup_server('ts_ls')
       setup_server('efm', {
         init_options = { documentFormatting = true },
         settings = {
