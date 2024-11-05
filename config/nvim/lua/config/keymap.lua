@@ -20,6 +20,11 @@ set_keymap('n', '<c-h>', ":wincmd h<cr>", "Move to left window")
 set_keymap('n', '<leader>c', '<C-^>', 'Switch to previous file')
 set_keymap('n', 'p', 'p`]', 'Paste and re-indent')
 set_keymap('n', 'P', 'P`]', 'Paste before and re-indent')
+set_keymap('n', 'j', 'gj', 'Move down visual line')
+set_keymap('n', 'k', 'gk', 'Move up visual line')
+set_keymap('n', 'L', '$', 'Move to end of line')
+set_keymap('n', 'H', '^', 'Move to start of line')
+
 
 set_keymap(
   "x",
