@@ -38,6 +38,8 @@
       bind j select-pane -D
       bind k select-pane -U
 
+      bind t choose-tree
+
       bind -r H resize-pane -L 3
       bind -r J resize-pane -D 3
       bind -r K resize-pane -U 3

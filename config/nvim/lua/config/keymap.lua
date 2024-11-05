@@ -25,7 +25,6 @@ set_keymap('n', 'k', 'gk', 'Move up visual line')
 set_keymap('n', 'L', '$', 'Move to end of line')
 set_keymap('n', 'H', '^', 'Move to start of line')
 
-
 set_keymap(
   "x",
   "<leader>s",

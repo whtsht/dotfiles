@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for table in prefix root copy-mode copy-mode-vi; do
+    tmux unbind -a -T "$table"
+done
+
+tmux kill-server
