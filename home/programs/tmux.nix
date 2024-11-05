@@ -52,6 +52,7 @@
       # copy mode
       # ---------------------------------------------------------
 
+      set -g mouse on
       set -g mode-keys vi
       unbind -T copy-mode-vi Enter
       bind -T copy-mode-vi v   send -X begin-selection
