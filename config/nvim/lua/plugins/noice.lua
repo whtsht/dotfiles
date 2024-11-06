@@ -10,14 +10,14 @@ return {
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
+    -- "rcarriga/nvim-notify",
   },
   config = function()
-    require("notify").setup({
-      timeout = 150,
-      render = "compact",
-      stages = "fade",
-    })
+    -- require("notify").setup({
+    --   timeout = 150,
+    --   render = "compact",
+    --   stages = "fade",
+    -- })
     require("noice").setup({
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**

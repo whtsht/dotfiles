@@ -41,7 +41,13 @@ return {
                 formatCommand = "black --quiet -",
                 formatStdin = true
               }
-            }
+            },
+            typescript = {
+              {
+                formatCommand = "prettier --stdin-filepath ${INPUT}",
+                formatStdin = true
+              }
+            },
           }
         }
       })
