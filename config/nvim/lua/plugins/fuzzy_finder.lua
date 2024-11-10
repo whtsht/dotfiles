@@ -22,6 +22,8 @@ return {
         file_ignore_patterns = {
           "^.git/",
           "node_modules/",
+          "log/",
+          "logs/",
         },
         vimgrep_arguments = {
           "rg",

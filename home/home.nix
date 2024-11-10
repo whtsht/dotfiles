@@ -90,6 +90,7 @@
       z3
       matplotlib
       tweepy
+      pandas
     ]))
 
     # Infrastructure Tools
