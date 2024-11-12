@@ -50,7 +50,7 @@
 
       noto-fonts
       noto-fonts-extra
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-color-emoji
       orbitron
     ];
