@@ -111,6 +111,7 @@
     tree
     trash-cli
     navi
+    file
 
     # Compression & Archiving Tools
     zip
