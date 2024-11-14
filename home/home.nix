@@ -173,6 +173,7 @@
     mariadb
     postgresql
     protobuf_28
+    mecab
   ];
 
   home.sessionVariables = {
