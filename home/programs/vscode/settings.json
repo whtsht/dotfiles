@@ -1,25 +1,37 @@
 {
-    "workbench.colorTheme": "GitHub Dark Default",
-    "editor.minimap.enabled": false,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.ignoreRebaseWarning": true,
-    "git.allowForcePush": true,
-    "terminal.integrated.commandsToSkipShell": [
-        "-workbench.action.quickOpen",
-    ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    "vscode-neovim.compositeKeys": {
-        "jj": {
-            "command": "vscode-neovim.escape"
-        },
-        "kk": {
-            "command": "vscode-neovim.escape"
-        }
+  // Editor settings
+  "workbench.colorTheme": "GitHub Dark Default",
+  "editor.minimap.enabled": false,
+  "files.insertFinalNewline": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnSave": true,
+  "workbench.startupEditor": "none",
+  // Git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.ignoreRebaseWarning": true,
+  "git.allowForcePush": true,
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.quickOpen",
+    "-workbench.action.terminal.focusFind"
+  ],
+  // Neovim settings
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
     },
-    "remote.autoForwardPortsSource": "hybrid",
-    "editor.formatOnSave": true,
-    "rubyLsp.bundleGemfile": "Gemfile",
-    "vscode-neovim.neovimClean": true,
-    "workbench.startupEditor": "none",
+    "kk": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "vscode-neovim.neovimClean": true,
+  "vscode-neovim.afterInitConfig": [
+    "set clipboard+=unnamedplus"
+  ],
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  // Ruby LSP settings
+  "rubyLsp.bundleGemfile": "Gemfile",
+  "zenMode.showTabs": "none",
 }

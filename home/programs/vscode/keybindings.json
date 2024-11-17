@@ -8,5 +8,5 @@
     "key": "q",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorTextFocus && neovim.mode == 'normal'"
-  }
+  },
 ]
