@@ -6,6 +6,8 @@
       ms-vscode-remote.remote-containers
       mkhl.direnv
       github.github-vscode-theme
+      github.copilot
+      github.copilot-chat
       eamodio.gitlens
       ritwickdey.liveserver
       shopify.ruby-lsp
@@ -13,6 +15,7 @@
       asvetliakov.vscode-neovim
       jnoortheen.nix-ide
     ]);
+    mutableExtensionsDir = false;
   };
 
   home.file = {

@@ -6,6 +6,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.formatOnSave": true,
   "workbench.startupEditor": "none",
+  "zenMode.showTabs": "none",
   // Git
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -33,5 +34,6 @@
   },
   // Ruby LSP settings
   "rubyLsp.bundleGemfile": "Gemfile",
-  "zenMode.showTabs": "none",
+  // Copilot settings
+  "github.copilot.chat.localeOverride": "ja"
 }
