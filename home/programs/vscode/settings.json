@@ -1,0 +1,25 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.ignoreRebaseWarning": true,
+    "git.allowForcePush": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.quickOpen",
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape"
+        },
+        "kk": {
+            "command": "vscode-neovim.escape"
+        }
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "editor.formatOnSave": true,
+    "rubyLsp.bundleGemfile": "Gemfile",
+    "vscode-neovim.neovimClean": true,
+    "workbench.startupEditor": "none",
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "key": "space w",
+    "command": "workbench.action.files.save",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
+  {
+    "key": "q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  }
+]

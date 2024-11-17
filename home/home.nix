@@ -23,7 +23,6 @@
     # Development Tools
     git
     vim
-    vscode
     emacs
     postman
     bat
