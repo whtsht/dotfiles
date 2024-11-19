@@ -11,6 +11,9 @@ return {
     local z_utils = require("telescope._extensions.zoxide.utils")
     require('telescope').setup({
       defaults = {
+        preview = {
+          filesize_limit = 0.5,
+        },
         mappings = {
           i = {
             ["<C-k>"] = require("telescope.actions").close,
@@ -24,6 +27,7 @@ return {
           "node_modules/",
           "log/",
           "logs/",
+          "vendor/"
         },
         vimgrep_arguments = {
           "rg",
@@ -36,6 +40,11 @@ return {
           "-uu",
           "--glob", "!.*"
         },
+      },
+      pickers = {
+        live_grep = {
+          search_dirs = vim.fn.systemlist("git ls-files")
+        }
       },
       extensions = {
         fzf = {
