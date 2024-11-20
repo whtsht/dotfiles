@@ -90,6 +90,7 @@
       matplotlib
       tweepy
       pandas
+      openai
     ]))
 
     # Infrastructure Tools
