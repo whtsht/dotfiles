@@ -152,6 +152,7 @@
     libreoffice
 
     # Misc Tools
+    parallel
     nyancat
     fastfetch
     dunst
