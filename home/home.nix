@@ -175,6 +175,7 @@
     postgresql
     protobuf_28
     mecab
+    rlwrap
   ];
 
   home.sessionVariables = {
