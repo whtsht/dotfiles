@@ -145,6 +145,10 @@
     imv
     cmatrix
 
+    # Markdown books
+    mdbook
+    mdbook-alerts
+
     # Communication & Productivity
     zotero
     slack

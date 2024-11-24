@@ -3,8 +3,10 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local lspconfig = require('lspconfig')
+      local util = lspconfig.util
       local function setup_server(name, opts)
-        require('lspconfig')[name].setup(vim.tbl_deep_extend("force", {
+        lspconfig[name].setup(vim.tbl_deep_extend("force", {
           capabilities = capabilities,
         }, opts or {}))
       end
@@ -29,8 +31,14 @@ return {
       })
       setup_server('gopls')
       setup_server('pyright')
-      setup_server('ts_ls')
       setup_server('tailwindcss')
+      setup_server('denols', {
+        root_dir = util.root_pattern("deno.json", "deno.jsonc"),
+      })
+      setup_server('ts_ls', {
+        root_dir = util.root_pattern("package.json"),
+        single_file_support = false
+      })
       setup_server('efm', {
         init_options = { documentFormatting = true },
         settings = {
