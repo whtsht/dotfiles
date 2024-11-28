@@ -35,5 +35,6 @@
   // Ruby LSP settings
   "rubyLsp.bundleGemfile": "Gemfile",
   // Copilot settings
-  "github.copilot.chat.localeOverride": "ja"
+  "github.copilot.chat.localeOverride": "ja",
+  "git.openRepositoryInParentFolders": "always"
 }

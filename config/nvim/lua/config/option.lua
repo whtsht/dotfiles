@@ -26,7 +26,7 @@ local options = {
       precedes = "<",
     },
     background = "dark",
-    spell = true,
+    spell = false,
     spelllang = "en,cjk",
     splitbelow = true,
     splitright = true,

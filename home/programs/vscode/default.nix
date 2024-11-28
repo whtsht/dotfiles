@@ -14,6 +14,7 @@
       rust-lang.rust-analyzer
       asvetliakov.vscode-neovim
       jnoortheen.nix-ide
+      denoland.vscode-deno
     ]);
     mutableExtensionsDir = false;
   };

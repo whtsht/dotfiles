@@ -16,7 +16,7 @@
       uuu  = "cd ../../..";
       sw   = "sudo nixos-rebuild switch --flake . --impure";
       "$"  = "";
-      ls   = "exa";
+      l    = "exa";
       open = "handlr open";
       nya  = "nyancat";
 

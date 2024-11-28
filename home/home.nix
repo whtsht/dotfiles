@@ -45,7 +45,7 @@
     clang
     clang-tools
     rustup
-    #deno
+    deno
     nodejs
     go
     gauche
