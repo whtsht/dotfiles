@@ -37,7 +37,7 @@ local options = {
     wrap = true,
   },
   g = {
-    mapleader = ' '
+    mapleader = ' ',
   }
 }
 

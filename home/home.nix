@@ -45,7 +45,7 @@
     clang
     clang-tools
     rustup
-    deno
+    #deno
     nodejs
     go
     gauche
@@ -179,7 +179,6 @@
     postgresql
     protobuf_28
     mecab
-    rlwrap
   ];
 
   home.sessionVariables = {
