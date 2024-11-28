@@ -50,29 +50,28 @@ set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode")
 --   'Flash Treesitter'
 -- )
 -- 
--- -- Telescope
--- set_keymap('n', '<leader>f', ":Telescope find_files<cr>", 'Telescope find files')
--- set_keymap('n', '<leader>b', ":Telescope buffers<cr>", 'Telescope buffers')
--- set_keymap('n', '<leader>h', ":Telescope help_tags<cr>", 'Telescope help tags')
--- set_keymap('n', '<leader>r', ":Telescope resume<cr>", 'Telescope resume')
--- set_keymap('n', '<leader>z', ":Telescope zoxide list<cr>", 'Telescope resume')
--- set_keymap('n', '<leader>p', ":Telescope registers<cr>", 'Telescope resume')
--- set_keymap('n', '<leader>g', ":Telescope live_grep<cr>", 'Telescope live grep')
--- set_keymap("n", "<leader>a", ":Telescope live_grep_args<cr>", "Live grep with args")
--- set_keymap("n", "<leader>i", ":Telescope notify<cr>", "Show notifications")
--- 
--- -- Lsp
--- set_keymap('n', '<M-o>', ':Lspsaga show_line_diagnostics<CR>', 'Open diagnostics')
--- set_keymap('n', '<M-p>', ':Lspsaga diagnostic_jump_prev<CR>', 'Go to previous diagnostic')
--- set_keymap('n', '<M-n>', ':Lspsaga diagnostic_jump_next<CR>', 'Go to next diagnostic')
--- set_keymap('n', 'K', ':Lspsaga hover_doc<CR>', 'Show hover')
--- set_keymap('n', 'gd', ':Lspsaga goto_definition<CR>', 'Go to definition')
--- set_keymap('n', 'gt', ':Lspsaga goto_type_definition<CR>', 'Go to type definition')
--- set_keymap('n', 'gf', ':Lspsaga finder<CR>', 'Find references')
--- set_keymap('n', '<M-f>', ':lua vim.lsp.buf.format()<CR>', 'Format document')
--- set_keymap('n', '<M-r>', ':Lspsaga rename<CR>', 'Rename')
--- set_keymap('n', '<M-a>', ':Lspsaga code_action<CR>', 'Code action')
--- 
+-- Telescope
+set_keymap('n', '<leader>f', ":Telescope find_files<cr>", 'Telescope find files')
+set_keymap('n', '<leader>b', ":Telescope buffers<cr>", 'Telescope buffers')
+set_keymap('n', '<leader>h', ":Telescope help_tags<cr>", 'Telescope help tags')
+set_keymap('n', '<leader>r', ":Telescope resume<cr>", 'Telescope resume')
+set_keymap('n', '<leader>z', ":Telescope zoxide list<cr>", 'Telescope resume')
+set_keymap('n', '<leader>p', ":Telescope registers<cr>", 'Telescope resume')
+set_keymap('n', '<leader>g', ":Telescope live_grep<cr>", 'Telescope live grep')
+set_keymap("n", "<leader>a", ":Telescope live_grep_args<cr>", "Live grep with args")
+set_keymap("n", "<leader>i", ":Telescope notify<cr>", "Show notifications")
+-- Lsp
+set_keymap('n', '<M-o>', ':Lspsaga show_line_diagnostics<CR>', 'Open diagnostics')
+set_keymap('n', '<M-p>', ':Lspsaga diagnostic_jump_prev<CR>', 'Go to previous diagnostic')
+set_keymap('n', '<M-n>', ':Lspsaga diagnostic_jump_next<CR>', 'Go to next diagnostic')
+set_keymap('n', 'K', ':Lspsaga hover_doc<CR>', 'Show hover')
+set_keymap('n', 'gd', ':Lspsaga goto_definition<CR>', 'Go to definition')
+set_keymap('n', 'gt', ':Lspsaga goto_type_definition<CR>', 'Go to type definition')
+set_keymap('n', 'gf', ':Lspsaga finder<CR>', 'Find references')
+set_keymap('n', '<M-f>', ':lua vim.lsp.buf.format()<CR>', 'Format document')
+set_keymap('n', '<M-r>', ':Lspsaga rename<CR>', 'Rename')
+set_keymap('n', '<M-a>', ':Lspsaga code_action<CR>', 'Code action')
+ 
 -- -- LazyGit
 -- set_keymap("n", "<leader>t", ":ToggleLazyGit<cr>", "Toggle LazyGit")
 -- 
