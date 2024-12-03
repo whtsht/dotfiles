@@ -68,7 +68,7 @@ return {
         },
       }
       setup_server('ruby_analyzer')
-      vim.lsp.set_log_level("INFO")
+      setup_server('typeprof')
     end
   },
   {

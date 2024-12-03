@@ -50,7 +50,6 @@
     go
     gauche
     sbcl
-    ruby
     idris2
     chez
     haskell-language-server
@@ -171,7 +170,6 @@
     dirb
     sqlmap
     mitmproxy
-    jetbrains.ruby-mine
     zed-editor
     handlr
     jq
@@ -179,6 +177,7 @@
     postgresql
     protobuf_28
     mecab
+    gnuplot
   ];
 
   home.sessionVariables = {
