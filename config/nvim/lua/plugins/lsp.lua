@@ -19,16 +19,16 @@ return {
           },
         },
       })
-      setup_server('ruby_lsp', {
-        cmd = { 'bundle', 'exec', 'ruby-lsp' },
-        settings = {
-          ruby = {
-            format = {
-              command = "rubocop"
-            },
-          },
-        },
-      })
+      -- setup_server('ruby_lsp', {
+      --   cmd = { 'bundle', 'exec', 'ruby-lsp' },
+      --   settings = {
+      --     ruby = {
+      --       format = {
+      --         command = "rubocop"
+      --       },
+      --     },
+      --   },
+      -- })
       setup_server('gopls')
       setup_server('pyright')
       setup_server('tailwindcss')
