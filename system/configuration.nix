@@ -113,6 +113,12 @@
     toma ALL=NOPASSWD: /run/current-system/sw/bin/nixos-rebuild
   '';
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   services.greetd = {
     enable = true;
     vt = 2;

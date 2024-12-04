@@ -157,6 +157,7 @@
 
     # Misc Tools
     parallel
+    marp-cli
     nyancat
     fastfetch
     dunst
