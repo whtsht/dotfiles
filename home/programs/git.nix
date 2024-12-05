@@ -10,13 +10,6 @@
       # direnv
       ".envrc"
       "/.direnv/"
-
-      # Nix
-      "flake.nix"
-      "flake.lock"
-
-      # Ruby
-      "/vendor/"
     ];
 
     extraConfig = {

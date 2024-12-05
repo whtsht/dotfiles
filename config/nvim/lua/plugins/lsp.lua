@@ -67,7 +67,6 @@ return {
           settings = {},
         },
       }
-      setup_server('ruby_analyzer')
       setup_server('typeprof')
     end
   },

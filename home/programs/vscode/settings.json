@@ -32,9 +32,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  // Ruby LSP settings
-  "rubyLsp.bundleGemfile": "Gemfile",
-  // Copilot settings
-  "github.copilot.chat.localeOverride": "ja",
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "typeprof.server.path": "/home/toma/Code/Ruby/typeprof/bin/typeprof"
 }

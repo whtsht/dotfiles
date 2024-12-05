@@ -7,10 +7,6 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ecsk = {
-      url = "github:whtsht/ecsk";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {

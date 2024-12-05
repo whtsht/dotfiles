@@ -18,7 +18,8 @@
     cliphist
     screenfetch
 
-    inputs.ecsk.packages.x86_64-linux.ecsk
+    ecsk
+    pkg-config
 
     # Development Tools
     git
@@ -48,6 +49,7 @@
     deno
     nodejs
     go
+    ruby
     gauche
     sbcl
     idris2
