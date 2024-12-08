@@ -11,8 +11,6 @@ local options = {
     shiftwidth = 2,
     tabstop = 2,
     softtabstop = 2,
-    autoindent = true,
-    smartindent = true,
 
     -- display
     number = true,
