@@ -11,6 +11,7 @@ local options = {
     shiftwidth = 2,
     tabstop = 2,
     softtabstop = 2,
+    autoindent = true,
     smartindent = true,
 
     -- display
@@ -32,6 +33,7 @@ local options = {
     pumblend = 0,
     shortmess = "I",
     wrap = true,
+    keywordprg = ':help'
   },
   g = {
     mapleader = ' ',
@@ -43,3 +45,5 @@ for scope, table in pairs(options) do
     vim[scope][setting] = value
   end
 end
+
+vim.cmd("colorscheme tokyonight-night")

@@ -100,6 +100,9 @@
     awscli
     ssm-session-manager-plugin
 
+    # Nix utility
+    nix-prefetch-github
+
     # CLI Tools
     fzf
     zoxide

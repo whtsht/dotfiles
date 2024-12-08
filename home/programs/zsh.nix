@@ -48,7 +48,10 @@
 
     initExtra = ''
       bindkey -d
-      bindkey -e
+      bindkey -v
+      bindkey -M viins jj vi-cmd-mode
+      bindkey "^P" up-line-or-search
+      bindkey "^N" down-line-or-search
       eval "$(direnv hook zsh)"
       eval "$(zoxide init zsh)"
       eval "$(navi widget zsh)"
