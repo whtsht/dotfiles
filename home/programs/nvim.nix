@@ -7,6 +7,13 @@
 
   programs.neovim = {
     enable = true;
+    plugins = with pkgs.vimPlugins; [
+      denops-vim
+      goyo-vim
+      limelight-vim
+      tokyonight-nvim
+      gitsigns-nvim
+    ];
   };
 
   home.file = {
