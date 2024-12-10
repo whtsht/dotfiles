@@ -96,7 +96,7 @@
 
     # Latex
     texliveFull
-    textlint
+    tex-fmt
 
     # Infrastructure Tools
     minikube

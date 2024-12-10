@@ -5,6 +5,7 @@ local function set_keymap(mode, lhs, rhs, desc)
 end
 
 set_keymap("i", "jj", "<ESC>", "Exit insert mode")
+set_keymap("i", "kk", "<ESC>", "Exit insert mode")
 set_keymap("i", "<c-l>", "<right>", "Move right")
 set_keymap("i", "<c-h>", "<left>", "Move left")
 set_keymap('n', '<leader>w', ':w<CR>', 'Save file')
