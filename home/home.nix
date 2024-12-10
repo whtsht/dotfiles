@@ -94,6 +94,10 @@
       openai
     ]))
 
+    # Latex
+    texliveFull
+    textlint
+
     # Infrastructure Tools
     minikube
     kubernetes
