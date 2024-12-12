@@ -1,17 +1,9 @@
-local function patch_global(option_name, value)
-  vim.fn['ddu#custom#patch_global'](option_name, value)
-end
-
-patch_global({
+vim.fn['ddu#custom#patch_global']({
   ui = 'ff',
   uiParams = {
     ff = {
-      filterFloatingPosition = "top",
-      filterSplitDirection = "floating",
-      floatingBorder = "rounded",
       prompt = "> ",
       split = "floating",
-      startFilter = true,
     },
   },
   sourceOptions = {
