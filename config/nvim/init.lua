@@ -5,5 +5,6 @@ require("configs.autocmd")
 
 require("plugins.goyo")
 require("plugins.ddu")
+require("plugins.ddc")
 require("plugins.lspconfig")
 require("plugins.gitsigns")

@@ -1,4 +1,8 @@
-vim.call('ddu#custom#patch_global', {
+local function patch_global(option_name, value)
+  vim.fn['ddu#custom#patch_global'](option_name, value)
+end
+
+patch_global({
   ui = 'ff',
   uiParams = {
     ff = {
@@ -12,10 +16,12 @@ vim.call('ddu#custom#patch_global', {
   },
   sourceOptions = {
     _ = {
-      matchers = { 'matcher_substring' },
+      matchers = { 'matcher_fzf' },
+      sorters = { 'sorter_fzf' },
     },
   },
 })
+
 
 vim.call('ddu#custom#patch_local', 'node-files', {
   sources = { 'file_rec' },

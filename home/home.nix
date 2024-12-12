@@ -106,6 +106,7 @@
 
     # Nix utility
     nix-prefetch-github
+    update-nix-fetchgit
 
     # CLI Tools
     fzf
