@@ -36,7 +36,7 @@ set_keymap('n', '<leader>ff', "<cmd>DduNodeFiles<cr>", 'Telescope find files')
 -- Flash
 set_keymap("n", "<leader>/", '<cmd>lua require("flash").jump()<cr>', "Search Modes")
 
--- -- Lsp
+-- Lsp
 -- set_keymap('n', '<M-o>', ':Lspsaga show_line_diagnostics<CR>', 'Open diagnostics')
 -- set_keymap('n', '<M-p>', ':Lspsaga diagnostic_jump_prev<CR>', 'Go to previous diagnostic')
 -- set_keymap('n', '<M-n>', ':Lspsaga diagnostic_jump_next<CR>', 'Go to next diagnostic')
@@ -47,3 +47,14 @@ set_keymap("n", "<leader>/", '<cmd>lua require("flash").jump()<cr>', "Search Mod
 -- set_keymap('n', '<M-f>', ':lua vim.lsp.buf.format()<CR>', 'Format document')
 -- set_keymap('n', '<M-r>', ':Lspsaga rename<CR>', 'Rename')
 -- set_keymap('n', '<M-a>', ':Lspsaga code_action<CR>', 'Code action')
+
+set_keymap('n', '<M-o>', ':lua vim.diagnostic.open_float()<CR>', 'Open diagnostics')
+set_keymap('n', '<M-p>', ':lua vim.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic')
+set_keymap('n', '<M-n>', ':lua vim.diagnostic.goto_next()<CR>', 'Go to next diagnostic')
+set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<CR>', 'Show hover')
+set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', 'Go to definition')
+set_keymap('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>', 'Go to type definition')
+set_keymap('n', 'gf', ':lua vim.lsp.buf.references()<CR>', 'Find references')
+set_keymap('n', '<M-f>', ':lua vim.lsp.buf.formatting()<CR>', 'Format document')
+set_keymap('n', '<M-r>', ':lua vim.lsp.buf.rename()<CR>', 'Rename')
+set_keymap('n', '<M-a>', ':lua vim.lsp.buf.code_action()<CR>', 'Code action')
