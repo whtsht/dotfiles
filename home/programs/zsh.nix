@@ -48,7 +48,7 @@
 
     initExtra = ''
       bindkey -d
-      bindkey -v
+      bindkey -e
       bindkey -M viins jj vi-cmd-mode
       bindkey "^P" up-line-or-search
       bindkey "^N" down-line-or-search

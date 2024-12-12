@@ -110,13 +110,11 @@ in
     enable = true;
     plugins = with pkgs.vimPlugins; [
       denops-vim
-      goyo-vim
-      limelight-vim
       tokyonight-nvim
       gitsigns-nvim
-      auto-pairs
       vim-matchup
       nvim-lspconfig
+      fidget-nvim
 
       # ddu
       ddu-vim

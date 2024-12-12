@@ -3,7 +3,6 @@ require("configs.option")
 require("configs.keymap")
 require("configs.autocmd")
 
-require("plugins.goyo")
 require("plugins.ddu")
 require("plugins.ddc")
 require("plugins.lspconfig")
