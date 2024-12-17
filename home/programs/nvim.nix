@@ -15,6 +15,7 @@
       nvim-lspconfig
       fidget-nvim
       vim-fugitive
+      toggleterm-nvim
 
       nvim-cmp
       cmp-buffer
