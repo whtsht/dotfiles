@@ -36,5 +36,6 @@
   "typeprof.server.path": "/home/toma/Code/Ruby/typeprof/bin/typeprof",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.wordWrap": "on"
 }
