@@ -31,23 +31,50 @@ for _, quote in ipairs({ '"', "'", "`" }) do
 end
 set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode") 
 
-set_keymap('n', '<leader>ff', "<cmd>DduNodeFiles<cr>", 'Telescope find files')
+-- ddc
+-- set_keymap('i', '<C-n>', '<Cmd>call pum#map#select_relative(+1)<CR>')
+-- set_keymap('i', '<C-p>', '<Cmd>call pum#map#select_relative(-1)<CR>')
+-- set_keymap('i', '<C-y>', '<Cmd>call pum#map#confirm()<CR>')
+-- set_keymap('i', '<C-e>', '<Cmd>call pum#map#cancel()<CR>')
+--
+-- set_keymap('n', ':', '<Cmd>call ddc#enable_cmdline_completion()<CR>:')
+-- set_keymap('c', '<C-n>', '<Cmd>call pum#map#select_relative(+1)<CR>')
+-- set_keymap('c', '<C-p>', '<Cmd>call pum#map#select_relative(-1)<CR>')
+-- set_keymap('c', '<C-y>', '<Cmd>call pum#map#confirm()<CR>')
+-- set_keymap('c', '<C-e>', '<Cmd>call pum#map#cancel()<CR>')
 
--- Flash
-set_keymap("n", "<leader>/", '<cmd>lua require("flash").jump()<cr>', "Search Modes")
+-- denippet
+-- set_keymap('i', '<C-l>', '<Plug>(denippet-expand)')
+-- vim.keymap.set("i", "<Tab>", function()
+--   if vim.fn["denippet#jumpable"]() then
+--     return "<Plug>(denippet-jump-next)"
+--   else
+--     return "<Tab>"
+--   end
+-- end, { expr = true })
+-- vim.keymap.set("s", "<Tab>", function()
+--   if vim.fn["denippet#jumpable"]() then
+--     return "<Plug>(denippet-jump-next)"
+--   else
+--     return "<Tab>"
+--   end
+-- end, { expr = true })
+-- vim.keymap.set("i", "<S-Tab>", function()
+--   if vim.fn["denippet#jumpable"](-1) then
+--     return "<Plug>(denippet-jump-prev)"
+--   else
+--     return "<S-Tab>"
+--   end
+-- end, { expr = true })
+-- vim.keymap.set("s", "<S-Tab>", function()
+--   if vim.fn["denippet#jumpable"](-1) then
+--     return "<Plug>(denippet-jump-prev)"
+--   else
+--     return "<S-Tab>"
+--   end
+-- end, { expr = true })
 
 -- Lsp
--- set_keymap('n', '<M-o>', ':Lspsaga show_line_diagnostics<CR>', 'Open diagnostics')
--- set_keymap('n', '<M-p>', ':Lspsaga diagnostic_jump_prev<CR>', 'Go to previous diagnostic')
--- set_keymap('n', '<M-n>', ':Lspsaga diagnostic_jump_next<CR>', 'Go to next diagnostic')
--- set_keymap('n', 'K', ':Lspsaga hover_doc<CR>', 'Show hover')
--- set_keymap('n', 'gd', ':Lspsaga goto_definition<CR>', 'Go to definition')
--- set_keymap('n', 'gt', ':Lspsaga goto_type_definition<CR>', 'Go to type definition')
--- set_keymap('n', 'gf', ':Lspsaga finder<CR>', 'Find references')
--- set_keymap('n', '<M-f>', ':lua vim.lsp.buf.format()<CR>', 'Format document')
--- set_keymap('n', '<M-r>', ':Lspsaga rename<CR>', 'Rename')
--- set_keymap('n', '<M-a>', ':Lspsaga code_action<CR>', 'Code action')
-
 set_keymap('n', '<M-o>', ':lua vim.diagnostic.open_float()<CR>', 'Open diagnostics')
 set_keymap('n', '<M-p>', ':lua vim.diagnostic.goto_prev()<CR>', 'Go to previous diagnostic')
 set_keymap('n', '<M-n>', ':lua vim.diagnostic.goto_next()<CR>', 'Go to next diagnostic')
