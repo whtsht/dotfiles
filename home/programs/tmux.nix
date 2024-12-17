@@ -4,6 +4,9 @@
   programs.tmux = {
     enable = true;
     shell = "${pkgs.zsh}/bin/zsh";
+    plugins = [
+       pkgs.tmuxPlugins.tokyo-night-tmux
+    ];
     extraConfig = ''
       # ---------------------------------------------------------
       # options
@@ -14,7 +17,6 @@
       set -g terminal-overrides ",$TERM:Tc"
       set -g status-interval 0
       set -g escape-time 0
-      set -g status off
 
       # ---------------------------------------------------------
       # key-bind
