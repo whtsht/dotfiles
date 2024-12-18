@@ -18,6 +18,13 @@
       toggleterm-nvim
       fzf-lua
       nvim-web-devicons
+      copilot-lua
+      lualine-nvim
+      nui-nvim
+      noice-nvim
+      nvim-treesitter
+      nvim-treesitter.withAllGrammars
+      luasnip
 
       nvim-cmp
       cmp-buffer

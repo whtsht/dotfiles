@@ -1,6 +1,5 @@
 local function set_keymap(mode, lhs, rhs, desc)
-  local desc = desc or ''
-  local opts = { noremap = true, silent = true, desc = desc }
+  local opts = { noremap = true, silent = true, desc = desc or '' }
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
@@ -31,6 +30,10 @@ for _, quote in ipairs({ '"', "'", "`" }) do
 end
 set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode")
 
+-- Copilot
+set_keymap("i", "<c-i>", "<cmd>lua require('copilot.suggestion').accept_line()<cr>")
+set_keymap("i", "<c-l>", "<cmd>lua require('copilot.suggestion').dismiss()<cr>")
+
 -- FzfLua
 set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
 set_keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
@@ -48,6 +51,6 @@ set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<CR>', 'Show hover')
 set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', 'Go to definition')
 set_keymap('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>', 'Go to type definition')
 set_keymap('n', 'gf', ':lua vim.lsp.buf.references()<CR>', 'Find references')
-set_keymap('n', '<M-f>', ':lua vim.lsp.buf.formatting()<CR>', 'Format document')
+set_keymap('n', '<M-f>', ':lua vim.lsp.buf.format()<CR>', 'Format document')
 set_keymap('n', '<M-r>', ':lua vim.lsp.buf.rename()<CR>', 'Rename')
 set_keymap('n', '<M-a>', ':lua vim.lsp.buf.code_action()<CR>', 'Code action')

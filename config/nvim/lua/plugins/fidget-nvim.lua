@@ -1,1 +1,1 @@
-require('fidget')
+require('fidget').setup()
