@@ -31,48 +31,12 @@ for _, quote in ipairs({ '"', "'", "`" }) do
 end
 set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode") 
 
--- ddc
--- set_keymap('i', '<C-n>', '<Cmd>call pum#map#select_relative(+1)<CR>')
--- set_keymap('i', '<C-p>', '<Cmd>call pum#map#select_relative(-1)<CR>')
--- set_keymap('i', '<C-y>', '<Cmd>call pum#map#confirm()<CR>')
--- set_keymap('i', '<C-e>', '<Cmd>call pum#map#cancel()<CR>')
---
--- set_keymap('n', ':', '<Cmd>call ddc#enable_cmdline_completion()<CR>:')
--- set_keymap('c', '<C-n>', '<Cmd>call pum#map#select_relative(+1)<CR>')
--- set_keymap('c', '<C-p>', '<Cmd>call pum#map#select_relative(-1)<CR>')
--- set_keymap('c', '<C-y>', '<Cmd>call pum#map#confirm()<CR>')
--- set_keymap('c', '<C-e>', '<Cmd>call pum#map#cancel()<CR>')
+-- FzfLua
+set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
 
--- denippet
--- set_keymap('i', '<C-l>', '<Plug>(denippet-expand)')
--- vim.keymap.set("i", "<Tab>", function()
---   if vim.fn["denippet#jumpable"]() then
---     return "<Plug>(denippet-jump-next)"
---   else
---     return "<Tab>"
---   end
--- end, { expr = true })
--- vim.keymap.set("s", "<Tab>", function()
---   if vim.fn["denippet#jumpable"]() then
---     return "<Plug>(denippet-jump-next)"
---   else
---     return "<Tab>"
---   end
--- end, { expr = true })
--- vim.keymap.set("i", "<S-Tab>", function()
---   if vim.fn["denippet#jumpable"](-1) then
---     return "<Plug>(denippet-jump-prev)"
---   else
---     return "<S-Tab>"
---   end
--- end, { expr = true })
--- vim.keymap.set("s", "<S-Tab>", function()
---   if vim.fn["denippet#jumpable"](-1) then
---     return "<Plug>(denippet-jump-prev)"
---   else
---     return "<S-Tab>"
---   end
--- end, { expr = true })
+set_keymap("n", "<leader>gf", "<cmd>FzfLua git_files<cr>")
+set_keymap("n", "<leader>gb", "<cmd>FzfLua git_branches<cr>")
+set_keymap("n", "<leader>lg", "<cmd>FzfLua live_grep_native<cr>")
 
 -- Lsp
 set_keymap('n', '<M-o>', ':lua vim.diagnostic.open_float()<CR>', 'Open diagnostics')

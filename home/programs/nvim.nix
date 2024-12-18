@@ -16,6 +16,8 @@
       fidget-nvim
       vim-fugitive
       toggleterm-nvim
+      fzf-lua
+      nvim-web-devicons
 
       nvim-cmp
       cmp-buffer
