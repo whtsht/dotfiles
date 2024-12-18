@@ -40,3 +40,5 @@ lspconfig.denols.setup({
     end
   end
 })
+
+lspconfig.lua_ls.setup{}

@@ -29,10 +29,12 @@ set_keymap(
 for _, quote in ipairs({ '"', "'", "`" }) do
   set_keymap({ "x", "o" }, "a" .. quote, "2i" .. quote, 'Select inside ' .. quote)
 end
-set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode") 
+set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode")
 
 -- FzfLua
 set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
+set_keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
+set_keymap("n", "<leader>fo", "<cmd>FzfLua oldfiles<cr>")
 
 set_keymap("n", "<leader>gf", "<cmd>FzfLua git_files<cr>")
 set_keymap("n", "<leader>gb", "<cmd>FzfLua git_branches<cr>")
