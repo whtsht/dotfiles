@@ -4,6 +4,7 @@ require("configs.keymap")
 require("configs.autocmd")
 
 require("plugins.lspconfig")
+require("plugins.lspsaga")
 require("plugins.gitsigns")
 require("plugins.cmp")
 require("plugins.fidget-nvim")
