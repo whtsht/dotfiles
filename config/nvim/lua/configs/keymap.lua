@@ -38,10 +38,10 @@ set_keymap("i", "<c-l>", "<cmd>lua require('copilot.suggestion').dismiss()<cr>")
 set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
 set_keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
 set_keymap("n", "<leader>fo", "<cmd>FzfLua oldfiles<cr>")
-
-set_keymap("n", "<leader>gf", "<cmd>FzfLua git_files<cr>")
-set_keymap("n", "<leader>gb", "<cmd>FzfLua git_branches<cr>")
-set_keymap("n", "<leader>lg", "<cmd>FzfLua live_grep_native<cr>")
+set_keymap("n", "<leader>fc", "<cmd>FzfLua command_history<cr>")
+set_keymap("n", "<leader>fg", "<cmd>FzfLua git_files<cr>")
+set_keymap("n", "<leader>fb", "<cmd>FzfLua git_branches<cr>")
+set_keymap("n", "<leader>fl", "<cmd>FzfLua live_grep_native<cr>")
 
 -- Lsp
 set_keymap('n', '<M-o>', ':lua vim.diagnostic.open_float()<CR>', 'Open diagnostics')

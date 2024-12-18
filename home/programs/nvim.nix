@@ -13,6 +13,7 @@
       gitsigns-nvim
       vim-matchup
       nvim-lspconfig
+      lspsaga-nvim
       fidget-nvim
       vim-fugitive
       toggleterm-nvim
