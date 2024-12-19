@@ -1,6 +1,0 @@
-if:
-  prefix: "if"
-  body: |
-    if ($1) {
-      $0
-    }

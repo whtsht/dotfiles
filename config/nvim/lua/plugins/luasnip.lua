@@ -1,1 +1,1 @@
-require("luasnip.loaders.from_lua").load({ paths = { "~/dotfiles/config/nvim/snippet" } })
+require("luasnip.loaders.from_lua").load({ paths = { "~/dotfiles/config/nvim/snippets" } })

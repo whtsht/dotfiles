@@ -69,6 +69,8 @@
     typescript-language-server
     tailwindcss-language-server
 
+    stylua
+
     # Package Managers
     nodePackages.yarn
     nodePackages.pnpm

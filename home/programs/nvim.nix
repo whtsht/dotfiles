@@ -32,6 +32,7 @@
       cmp-path
       cmp-cmdline
       cmp-nvim-lsp
+      cmp_luasnip
     ];
   };
 
