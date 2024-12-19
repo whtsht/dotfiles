@@ -1,6 +1,6 @@
 local function set_keymap(mode, lhs, rhs, desc)
-	local opts = { noremap = true, silent = true, desc = desc or "" }
-	vim.keymap.set(mode, lhs, rhs, opts)
+  local opts = { noremap = true, silent = true, desc = desc or "" }
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 set_keymap("i", "jj", "<ESC>", "Exit insert mode")
@@ -21,7 +21,7 @@ set_keymap("n", "L", "$", "Move to end of line")
 
 set_keymap("x", "<leader>s", "y/\\V<C-R>=escape(@\", '/\\')<CR><CR>", "Search selected text")
 for _, quote in ipairs({ '"', "'", "`" }) do
-	set_keymap({ "x", "o" }, "a" .. quote, "2i" .. quote, "Select inside " .. quote)
+  set_keymap({ "x", "o" }, "a" .. quote, "2i" .. quote, "Select inside " .. quote)
 end
 set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode")
 
@@ -38,13 +38,41 @@ set_keymap("n", "<leader>fg", "<cmd>FzfLua git_files<cr>")
 set_keymap("n", "<leader>fb", "<cmd>FzfLua git_branches<cr>")
 set_keymap("n", "<leader>fl", "<cmd>FzfLua live_grep_native<cr>")
 
+-- Luasnip
+set_keymap(
+  "i",
+  "<Tab>",
+  "<cmd>lua require('luasnip').expand_or_jump()<cr>",
+  "Expand or jump snippet"
+)
+set_keymap("i", "<S-Tab>", "<cmd>lua require('luasnip').jump(-1)<cr>", "Jump to previous snippet")
+set_keymap("s", "<Tab>", "<cmd>lua require('luasnip').jump(1)<cr>", "Jump to next snippet")
+set_keymap("s", "<S-Tab>", "<cmd>lua require('luasnip').jump(-1)<cr>", "Jump to previous snippet")
+set_keymap(
+  "i",
+  "<c-e>",
+  "<cmd>lua require('luasnip').choice_active() and '<Plug>luasnip-next-choice' or '<c-e>'<cr>",
+  "Change choice"
+)
+set_keymap(
+  "s",
+  "<c-e>",
+  "<cmd>lua require('luasnip').choice_active() and '<Plug>luasnip-next-choice' or '<c-e>'<cr>",
+  "Change choice"
+)
+
 -- Lspsaga
 set_keymap("n", "go", ":Lspsaga show_line_diagnostics<CR>", "Open diagnostics")
 set_keymap("n", "gp", ":Lspsaga diagnostic_jump_prev<CR>", "Go to previous diagnostic")
 set_keymap("n", "gn", ":Lspsaga diagnostic_jump_next<CR>", "Go to next diagnostic")
 set_keymap("n", "gk", ":Lspsaga hover_doc<CR>", "Show hover")
 set_keymap("n", "gd", ":Lspsaga goto_definition<CR>", "Go to definition")
-set_keymap("n", "gt", ":Lspsaga goto_type_definition<CR>", "Go to type definition (no Lspsaga equivalent)")
+set_keymap(
+  "n",
+  "gt",
+  ":Lspsaga goto_type_definition<CR>",
+  "Go to type definition (no Lspsaga equivalent)"
+)
 set_keymap("n", "gf", ":Lspsaga lsp_finder<CR>", "Find references")
 set_keymap("n", "gr", ":Lspsaga rename<CR>", "Rename")
 set_keymap("n", "ga", ":Lspsaga code_action<CR>", "Code action")
