@@ -9,6 +9,7 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       denops-vim
+      lazy-nvim
       tokyonight-nvim
       gitsigns-nvim
       vim-matchup
