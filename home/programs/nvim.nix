@@ -1,14 +1,9 @@
 { config, dotLoc, pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.deno
-  ];
-
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
-      denops-vim
       lazy-nvim
       tokyonight-nvim
       gitsigns-nvim
