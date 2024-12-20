@@ -35,7 +35,7 @@ set_keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
 set_keymap("n", "<leader>fo", "<cmd>FzfLua oldfiles<cr>")
 set_keymap("n", "<leader>fc", "<cmd>FzfLua command_history<cr>")
 set_keymap("n", "<leader>fg", "<cmd>FzfLua git_files<cr>")
-set_keymap("n", "<leader>fb", "<cmd>FzfLua git_branches<cr>")
+set_keymap("n", "<leader>ft", "<cmd>FzfLua git_branches<cr>")
 set_keymap("n", "<leader>fl", "<cmd>FzfLua live_grep_native<cr>")
 
 -- Luasnip
