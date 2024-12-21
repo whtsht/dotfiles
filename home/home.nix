@@ -195,6 +195,7 @@
     # Ruby dependencies
     openssl
     libyaml
+    libffi
     zlib
     autoconf
     gperf
