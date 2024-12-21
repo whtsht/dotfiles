@@ -26,8 +26,8 @@ end
 set_keymap("t", "<esc>", "<c-\\><c-n>", "Exit insert mode")
 
 -- Copilot
-set_keymap("i", "<c-i>", "<cmd>lua require('copilot.suggestion').accept_line()<cr>")
-set_keymap("i", "<c-l>", "<cmd>lua require('copilot.suggestion').dismiss()<cr>")
+set_keymap("i", "<c-l>", "<cmd>lua require('copilot.suggestion').accept_line()<cr>")
+set_keymap("i", "<c-h>", "<cmd>lua require('copilot.suggestion').dismiss()<cr>")
 
 -- FzfLua
 set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
@@ -39,27 +39,26 @@ set_keymap("n", "<leader>ft", "<cmd>FzfLua git_branches<cr>")
 set_keymap("n", "<leader>fl", "<cmd>FzfLua live_grep_native<cr>")
 
 -- Luasnip
-set_keymap(
-  "i",
-  "<Tab>",
-  "<cmd>lua require('luasnip').expand_or_jump()<cr>",
-  "Expand or jump snippet"
-)
-set_keymap("i", "<S-Tab>", "<cmd>lua require('luasnip').jump(-1)<cr>", "Jump to previous snippet")
-set_keymap("s", "<Tab>", "<cmd>lua require('luasnip').jump(1)<cr>", "Jump to next snippet")
-set_keymap("s", "<S-Tab>", "<cmd>lua require('luasnip').jump(-1)<cr>", "Jump to previous snippet")
-set_keymap(
-  "i",
-  "<c-e>",
-  "<cmd>lua require('luasnip').choice_active() and '<Plug>luasnip-next-choice' or '<c-e>'<cr>",
-  "Change choice"
-)
-set_keymap(
-  "s",
-  "<c-e>",
-  "<cmd>lua require('luasnip').choice_active() and '<Plug>luasnip-next-choice' or '<c-e>'<cr>",
-  "Change choice"
-)
+vim.keymap.set("i", "<Tab>", function()
+  return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump" or "<Tab>"
+end, { expr = true, noremap = true, silent = true, desc = "Expand or jump snippet (or Tab)" })
+vim.keymap.set("i", "<S-Tab>", function()
+  return require("luasnip").jumpable(-1) and "<Plug>luasnip-jump-prev" or "<S-Tab>"
+end, { expr = true, noremap = true, silent = true, desc = "Jump to previous snippet (or Shift-Tab)" })
+
+vim.keymap.set("s", "<Tab>", function()
+  return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<Tab>"
+end, { expr = true, noremap = true, silent = true, desc = "Jump to next snippet" })
+vim.keymap.set("s", "<S-Tab>", function()
+  return require("luasnip").jumpable(-1) and "<Plug>luasnip-jump-prev" or "<S-Tab>"
+end, { expr = true, noremap = true, silent = true, desc = "Jump to previous snippet" })
+
+vim.keymap.set("i", "<C-e>", function()
+  return require("luasnip").choice_active() and "<Plug>luasnip-next-choice" or "<C-e>"
+end, { expr = true, noremap = true, silent = true, desc = "Change choice" })
+vim.keymap.set("s", "<C-e>", function()
+  return require("luasnip").choice_active() and "<Plug>luasnip-next-choice" or "<C-e>"
+end, { expr = true, noremap = true, silent = true, desc = "Change choice" })
 
 -- Lspsaga
 set_keymap("n", "go", ":Lspsaga show_line_diagnostics<CR>", "Open diagnostics")

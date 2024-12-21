@@ -191,6 +191,14 @@
     protobuf_28
     mecab
     gnuplot
+
+    # Ruby dependencies
+    openssl
+    libyaml
+    zlib
+    autoconf
+    gperf
+    rustc
   ];
 
   home.sessionVariables = {
