@@ -37,6 +37,7 @@ set_keymap("n", "<leader>fc", "<cmd>FzfLua command_history<cr>")
 set_keymap("n", "<leader>fg", "<cmd>FzfLua git_files<cr>")
 set_keymap("n", "<leader>ft", "<cmd>FzfLua git_branches<cr>")
 set_keymap("n", "<leader>fl", "<cmd>FzfLua live_grep_native<cr>")
+set_keymap("n", "<leader>fr", "<cmd>FzfLua resume<cr>")
 
 -- Luasnip
 vim.keymap.set("i", "<Tab>", function()
