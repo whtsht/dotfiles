@@ -183,8 +183,8 @@
     dirb
     sqlmap
     mitmproxy
-    zed-editor
     handlr
+    live-server
     jq
     mariadb
     postgresql
