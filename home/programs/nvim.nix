@@ -22,6 +22,9 @@
       nvim-treesitter
       nvim-treesitter.withAllGrammars
       luasnip
+      friendly-snippets
+      nvim-surround
+      nvim-autopairs
 
       nvim-cmp
       cmp-buffer
