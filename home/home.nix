@@ -110,6 +110,8 @@
     nix-prefetch-github
     update-nix-fetchgit
 
+    gh
+
     # CLI Tools
     fzf
     zoxide
