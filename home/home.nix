@@ -75,7 +75,6 @@
     # Package Managers
     nodePackages.yarn
     nodePackages.pnpm
-    nodePackages.aws-cdk
     stack
 
     # Python with Packages
