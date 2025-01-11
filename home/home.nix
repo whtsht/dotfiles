@@ -35,6 +35,7 @@
     gnumake
     pkg-config
     direnv
+    terraform
 
     # Development Utilities
     lazygit
