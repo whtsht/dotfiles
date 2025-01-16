@@ -10,6 +10,15 @@ let
       hash = "sha256-V86J+8rg1/5ZUL9t0k2S5H+z7KZ1DZwLwmb5yM0+vts=";
     };
   };
+  cmp-skkeleton = pkgs.vimUtils.buildVimPlugin {
+    name = "cmp-skkeleton";
+    src = pkgs.fetchFromGitHub {
+      owner = "rinx";
+      repo = "cmp-skkeleton";
+      rev = "main";
+      hash = "sha256-QTknfchb9Z10Xn8JmJTRqknVu+qgXPayc/zQIBK1B5E=";
+    };
+  };
 in
 {
   programs.neovim = {
@@ -46,6 +55,7 @@ in
       cmp-cmdline
       cmp-nvim-lsp
       cmp_luasnip
+      cmp-skkeleton
     ];
   };
 
