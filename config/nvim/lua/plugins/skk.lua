@@ -6,7 +6,6 @@ vim.fn['skkeleton#config']({
 
 vim.fn['skkeleton#register_kanatable']('rom', {
   ['jj'] = 'escape',
-  ['kk'] = 'escape',
 })
 
 vim.fn['skkeleton#register_kanatable']('rom', {

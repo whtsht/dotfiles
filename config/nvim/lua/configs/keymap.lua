@@ -4,7 +4,6 @@ local function set_keymap(mode, lhs, rhs, desc)
 end
 
 set_keymap("i", "jj", "<ESC>", "Exit insert mode")
-set_keymap("i", "kk", "<ESC>", "Exit insert mode")
 set_keymap("n", "<leader>w", ":w<CR>", "Save file")
 set_keymap("n", "<leader>qq", ":qa<CR>", "Quit")
 set_keymap("n", "<leader>n", ":noh<cr>", "Clear search highlight")
