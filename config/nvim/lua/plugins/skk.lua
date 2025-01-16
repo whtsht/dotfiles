@@ -3,3 +3,8 @@ vim.fn['skkeleton#config']({
     { '~/.skk/SKK-JISYO.L', 'euc-jp' }
   }
 })
+
+vim.fn['skkeleton#register_kanatable']('rom', {
+  [','] = {'，', ''},
+  ['.'] = {'．', ''},
+})
