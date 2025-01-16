@@ -113,9 +113,7 @@
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-skk
-    ];
+    fcitx5.addons = with pkgs; [];
   };
 
   hardware.bluetooth.enable = true;

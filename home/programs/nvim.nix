@@ -1,5 +1,16 @@
 { config, dotLoc, pkgs, ... }:
 
+let
+  skkeleton = pkgs.vimUtils.buildVimPlugin {
+    name = "skkeleton";
+    src = pkgs.fetchFromGitHub {
+      owner = "vim-skk";
+      repo = "skkeleton";
+      rev = "main";
+      hash = "sha256-V86J+8rg1/5ZUL9t0k2S5H+z7KZ1DZwLwmb5yM0+vts=";
+    };
+  };
+in
 {
   programs.neovim = {
     enable = true;
@@ -25,6 +36,9 @@
       friendly-snippets
       nvim-surround
       nvim-autopairs
+
+      denops-vim
+      skkeleton
 
       nvim-cmp
       cmp-buffer

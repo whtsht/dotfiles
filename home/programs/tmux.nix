@@ -24,7 +24,8 @@
 
       unbind C-b
       unbind C-[
-      set -g prefix C-j
+      unbind C-i
+      set -g prefix C-Space
 
       bind s split-window -h -c "#{pane_current_path}"
       bind v split-window -v -c "#{pane_current_path}"

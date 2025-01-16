@@ -19,6 +19,9 @@ set_keymap("n", "k", "gk", "Move up visual line")
 set_keymap("n", "H", "^", "Move to start of line")
 set_keymap("n", "L", "$", "Move to end of line")
 
+-- Skkeleton
+set_keymap('i', '<c-j>', '<Plug>(skkeleton-enable)')
+
 set_keymap("x", "<leader>s", "y/\\V<C-R>=escape(@\", '/\\')<CR><CR>", "Search selected text")
 for _, quote in ipairs({ '"', "'", "`" }) do
   set_keymap({ "x", "o" }, "a" .. quote, "2i" .. quote, "Select inside " .. quote)
