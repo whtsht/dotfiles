@@ -8,7 +8,9 @@ vim.fn['skkeleton#register_kanatable']('rom', {
   ['jj'] = 'escape',
 })
 
-vim.fn['skkeleton#register_kanatable']('rom', {
-  [','] = {'，', ''},
-  ['.'] = {'．', ''},
-})
+if vim.bo.filetype == 'tex' then
+  vim.fn['skkeleton#register_kanatable']('rom', {
+    [','] = {'，', ''},
+    ['.'] = {'．', ''},
+  })
+end
