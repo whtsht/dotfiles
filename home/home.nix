@@ -58,6 +58,7 @@
     chez
     haskell-language-server
     idris2Packages.idris2Lsp
+    arduino-ide
 
     # Language Servers
     pyright
@@ -70,6 +71,7 @@
     idris2Packages.idris2Lsp
     typescript-language-server
     tailwindcss-language-server
+    svelte-language-server
 
     stylua
 
