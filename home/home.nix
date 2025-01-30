@@ -98,6 +98,7 @@
       tweepy
       pandas
       openai
+      duckdb
     ]))
 
     # Latex
