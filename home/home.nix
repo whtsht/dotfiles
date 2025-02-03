@@ -18,6 +18,8 @@
     cliphist
     screenfetch
 
+    libgcc
+
     ecsk
     pkg-config
 
@@ -44,7 +46,6 @@
     oxker
 
     # Programming Languages
-    llvm
     clang
     clang-tools
     rustup
@@ -59,6 +60,13 @@
     haskell-language-server
     idris2Packages.idris2Lsp
     arduino-ide
+    crystal
+    shards
+
+    # LLVM
+    llvm
+    llvm-manpages
+    libllvm
 
     # Language Servers
     pyright
