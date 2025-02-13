@@ -41,8 +41,10 @@ lspconfig.denols.setup({
   end,
 })
 
-lspconfig.lua_ls.setup{}
-lspconfig.emmet_language_server.setup{}
-lspconfig.svelte.setup{}
-lspconfig.crystalline.setup{}
-lspconfig.typeprof.setup{}
+lspconfig.lua_ls.setup {}
+lspconfig.emmet_language_server.setup {}
+lspconfig.svelte.setup {}
+lspconfig.crystalline.setup {}
+lspconfig.typeprof.setup {
+  cmd = { "bundle", "exec", "~/Code/Ruby/typeprof/bin/typeprof", '--lsp', '--stdio' }
+}

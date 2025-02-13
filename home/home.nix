@@ -196,13 +196,10 @@
     rlwrap
     hexyl
     dirb
-    sqlmap
     mitmproxy
     handlr
     live-server
     jq
-    mariadb
-    postgresql
     protobuf_28
     mecab
     gnuplot

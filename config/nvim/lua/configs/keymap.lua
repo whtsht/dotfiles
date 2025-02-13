@@ -73,7 +73,7 @@ set_keymap(
   ":Lspsaga goto_type_definition<CR>",
   "Go to type definition (no Lspsaga equivalent)"
 )
-set_keymap("n", "gf", ":Lspsaga lsp_finder<CR>", "Find references")
+set_keymap("n", "gi", ":Lspsaga finder<CR>", "Find references")
 set_keymap("n", "gr", ":Lspsaga rename<CR>", "Rename")
 set_keymap("n", "ga", ":Lspsaga code_action<CR>", "Code action")
 set_keymap("n", "gf", ":lua vim.lsp.buf.format()<CR>", "Format document (no Lspsaga equivalent)")
