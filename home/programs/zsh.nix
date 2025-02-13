@@ -44,6 +44,14 @@
       gl  = "git fetch && git pull origin $(git branch --show current)";
       gp  = "git push origin $(git branch --show current)";
       gpf = "git push --force --force-with-lease --force-if-includes origin $(git branch --show current)";
+
+      # dev
+      c  = "docker compose -f <(curl -fsSL https://raw.githubusercontent.com/whtsht/rails-develop-env/refs/heads/main/compose.yml)";
+      rs = "env RUBY_DEBUG_OPEN=true bin/rails server -p 3000 -b 0.0.0.0";
+      yw = "yarn build --watch";
+      fl = "bundle exec fluentd -c ./config/fluent.docker-compose.conf";
+      sd = "bundle exec sidekiq";
+      du = "(bundle check || bundle update) && yarn install";
     };
 
     initExtra = ''
