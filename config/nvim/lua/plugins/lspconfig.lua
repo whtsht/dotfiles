@@ -44,3 +44,4 @@ lspconfig.denols.setup({
 lspconfig.lua_ls.setup{}
 lspconfig.emmet_language_server.setup{}
 lspconfig.svelte.setup{}
+lspconfig.crystalline.setup{}

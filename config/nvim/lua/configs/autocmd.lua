@@ -15,12 +15,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
   end,
 })
-
--- if extension is .cr then set filetype to ruby
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-  group = vim.api.nvim_create_augroup("crystal", { clear = true }),
-  pattern = "*.cr",
-  callback = function()
-    vim.bo.filetype = "ruby"
-  end,
-})

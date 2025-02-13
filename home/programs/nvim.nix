@@ -46,8 +46,10 @@ in
       nvim-surround
       nvim-autopairs
 
-      # denops-vim
-      # skkeleton
+      denops-vim
+      skkeleton
+
+      vim-crystal
 
       nvim-cmp
       cmp-buffer

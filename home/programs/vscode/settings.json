@@ -44,5 +44,6 @@
   ],
   "[sql]": {
     "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
-  }
+  },
+  "crystal-lang.server": "/home/toma/Code/Crystal/crystalline"
 }
