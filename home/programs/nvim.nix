@@ -7,7 +7,7 @@ let
       owner = "vim-skk";
       repo = "skkeleton";
       rev = "main";
-      hash = "sha256-V86J+8rg1/5ZUL9t0k2S5H+z7KZ1DZwLwmb5yM0+vts=";
+      hash = "sha256-egAD1VDmoks9WwsEMOgyJmiMRV+p4f6S4sWOMKAew48=";
     };
   };
   cmp-skkeleton = pkgs.vimUtils.buildVimPlugin {
