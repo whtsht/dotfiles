@@ -212,6 +212,9 @@
     autoconf
     gperf
     rustc
+
+    # Games
+    osu-lazer
   ];
 
   home.sessionVariables = {
