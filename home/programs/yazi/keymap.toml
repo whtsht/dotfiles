@@ -1,6 +1,0 @@
-[manager]
-append_keymap = [
-	{ on = [ "e", "e" ], run = 'shell --block --confirm nvim', desc = "Opening Neovim" },
-	{ on = [ "e", "h" ], run = 'shell --block --confirm zsh', desc = "Opening Zsh" },
-	{ on = [ "e", "g" ], run = 'shell --block --confirm lazygit', desc = "Opening LazyGit" },
-]
