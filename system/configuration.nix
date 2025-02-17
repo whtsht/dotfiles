@@ -105,7 +105,8 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Tokyo";
+  # time.timeZone = "Asia/Tokyo";
+  time.timeZone = "Asia/Ho_Chi_Minh";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
