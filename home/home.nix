@@ -200,6 +200,7 @@
     handlr
     live-server
     jq
+    w3m
     protobuf_28
     mecab
     gnuplot
