@@ -18,6 +18,7 @@
     cliphist
     screenfetch
 
+    gcc
     libgcc
 
     ecsk
@@ -46,7 +47,7 @@
     oxker
 
     # Programming Languages
-    clang
+    # clang
     clang-tools
     rustup
     deno
