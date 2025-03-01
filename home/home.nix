@@ -18,13 +18,14 @@
     cliphist
     screenfetch
 
-    gcc
+    # gcc
     libgcc
 
     ecsk
     pkg-config
 
     # Development Tools
+    automake
     git
     vim
     emacs
@@ -47,7 +48,7 @@
     oxker
 
     # Programming Languages
-    # clang
+    clang
     clang-tools
     rustup
     deno

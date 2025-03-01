@@ -48,3 +48,4 @@ lspconfig.crystalline.setup {}
 lspconfig.typeprof.setup {
   cmd = { "bundle", "exec", "~/Code/Ruby/typeprof/bin/typeprof", '--lsp', '--stdio' }
 }
+lspconfig.clangd.setup{}
