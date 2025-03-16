@@ -46,6 +46,8 @@ in
       nvim-surround
       nvim-autopairs
 
+      avante-nvim
+
       denops-vim
       skkeleton
 

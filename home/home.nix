@@ -19,7 +19,7 @@
     screenfetch
 
     # gcc
-    libgcc
+    # libgcc
 
     ecsk
     pkg-config
@@ -68,7 +68,7 @@
     # LLVM
     llvm
     llvm-manpages
-    libllvm
+    # libllvm
 
     # Language Servers
     pyright
@@ -130,7 +130,7 @@
     # CLI Tools
     fzf
     zoxide
-    libyaml
+    # libyaml
     ripgrep
     delta
     ncdu
@@ -209,9 +209,6 @@
 
     # Ruby dependencies
     openssl
-    libyaml
-    libffi
-    zlib
     autoconf
     gperf
     rustc
