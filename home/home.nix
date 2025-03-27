@@ -54,7 +54,6 @@
     deno
     nodejs
     go
-    ruby
     gauche
     sbcl
     idris2
@@ -203,6 +202,7 @@
     live-server
     jq
     w3m
+    gimp
     protobuf_28
     mecab
     gnuplot
