@@ -29,6 +29,7 @@
       safe = {
         directory = config.home.homeDirectory;
       };
+      ghq.root = "~/.workspace";
     };
   };
 }

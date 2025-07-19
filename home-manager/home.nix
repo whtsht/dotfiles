@@ -51,6 +51,8 @@
     yaml-language-server
     wasmtime
     chez
+    ghq
+    fzf
 
     # Misc Tools
     texliveFull

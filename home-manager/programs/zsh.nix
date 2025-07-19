@@ -53,6 +53,18 @@
           fi
         fi
       }
+
+      function gws() {
+        local repo
+        repo=$(ghq list -p | fzf)
+        if [[ -n "$repo" ]]; then
+          cd "$repo"
+          clear
+          zle reset-prompt
+        fi
+      }
+      zle -N gws
+      bindkey '^g' gws
     '';
   };
 }
