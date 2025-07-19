@@ -32,6 +32,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable docker
+  virtualisation.docker.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
@@ -64,6 +67,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     packages = with pkgs; [ ];
   };
