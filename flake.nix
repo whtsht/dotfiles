@@ -11,15 +11,6 @@
 
   outputs =
     inputs@{ nixpkgs, home-manager, ... }:
-    let
-      supportedSystems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
-    in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
@@ -40,10 +31,10 @@
         };
       };
 
-      homeConfigurations = forAllSystems (system: {
+      homeConfigurations = {
         home = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
-            inherit system;
+            system = "x86_64-linux";
             config.allowUnfree = true;
           };
           modules = [
@@ -53,8 +44,8 @@
             inherit inputs;
           };
         };
-      });
+      };
 
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
     };
 }
