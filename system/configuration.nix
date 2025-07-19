@@ -56,10 +56,11 @@
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.toma = {
     isNormalUser = true;
     description = "toma";
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -72,7 +73,10 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    zsh
   ];
+
+  programs.zsh.enable = true;
 
   services.tailscale.enable = true;
 
