@@ -111,6 +111,9 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINw8N9gIUxvRMn69Jc3Nhf8KQjRUYq5f6ngsbhUVGXvC"
   ];
 
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "03:45" ];
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

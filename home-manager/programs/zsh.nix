@@ -22,12 +22,12 @@
     };
 
     shellAliases = {
-      sw = "home-manager switch --flake .";
-      u = "cd ..";
-      uu = "cd ../..";
-      e = "nvim";
-      rm = "trash-put";
-      l = "exa";
+      u   = "cd ..";
+      uu  = "cd ../..";
+      uuu = "cd ../../..";
+      e   = "nvim";
+      rm  = "trash-put";
+      l   = "exa";
       ccu = "npx ccusage@latest";
       dif = "npx difit .";
     };
@@ -65,6 +65,12 @@
       }
       zle -N gws
       bindkey '^g' gws
+
+      function home_manager_optimize_storage() {
+        nix-env --delete-generations old
+        nix-store --gc
+        nix-store --optimise
+      }
     '';
   };
 }
