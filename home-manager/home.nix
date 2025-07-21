@@ -33,6 +33,10 @@
     act
     claude-code
     gemini-cli
+    binaryen
+    kubectl
+    minikube
+    google-cloud-sdk
 
     # Programming Language
     gcc
@@ -59,15 +63,8 @@
     trash-cli
     yt-dlp
     marp-cli
-    linuxKernel.packages.linux_zen.perf
-    google-cloud-sdk
     termius
-
-    binaryen
-
-    # Microservices
-    kubectl
-    minikube
+    nb
   ];
 
   home.sessionVariables = {
