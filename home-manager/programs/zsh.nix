@@ -28,8 +28,9 @@
       e   = "nvim";
       rm  = "trash-put";
       l   = "exa";
-      ccu = "npx ccusage@latest";
       dif = "npx difit .";
+      ccu = "npx ccusage@latest";
+      ccd = "claude --continue --dangerously-skip-permissions";
     };
 
     initContent = ''

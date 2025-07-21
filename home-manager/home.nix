@@ -48,7 +48,9 @@
     deno
     ruby
     clang-tools
-    python314
+    (python312.withPackages (ps: with ps; [
+      duckdb
+    ]))
     go
     wabt
     wasmer

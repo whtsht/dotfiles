@@ -14,6 +14,12 @@
         name = "claude-commands";
       };
     };
+    ".claude/settings.json" = {
+      source = builtins.path {
+        path = ./settings.json;
+        name = "claude-settings";
+      };
+    };
     ".claude/scripts" = {
       source = builtins.path {
         path = ./scripts;
