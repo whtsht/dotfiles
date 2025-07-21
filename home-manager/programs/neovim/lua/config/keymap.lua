@@ -20,10 +20,6 @@ set_keymap("n", "<leader>r", ":%s/\\r//g<CR>")
 -- Skkeleton
 set_keymap('i', '<c-j>', '<Plug>(skkeleton-enable)')
 
--- Quickfix navigation
-set_keymap("n", "<leader>j", ":cnext<CR>", "Next quickfix item")
-set_keymap("n", "<leader>k", ":cprev<CR>", "Previous quickfix item") 
-
 -- FzfLua
 set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
 set_keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
@@ -34,27 +30,10 @@ set_keymap("n", "<leader>ft", "<cmd>FzfLua git_branches<cr>")
 set_keymap("n", "<leader>fl", "<cmd>lua require'fzf-lua'.live_grep({ cmd = \"git grep --line-number --column --color=always\" })<cr>")
 set_keymap("n", "<leader>fr", "<cmd>FzfLua resume<cr>")
 
--- Luasnip
-vim.keymap.set("i", "<Tab>", function()
-  return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump" or "<Tab>"
-end, { expr = true, noremap = true, silent = true, desc = "Expand or jump snippet (or Tab)" })
-vim.keymap.set("i", "<S-Tab>", function()
-  return require("luasnip").jumpable(-1) and "<Plug>luasnip-jump-prev" or "<S-Tab>"
-end, { expr = true, noremap = true, silent = true, desc = "Jump to previous snippet (or Shift-Tab)" })
-
-vim.keymap.set("s", "<Tab>", function()
-  return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<Tab>"
-end, { expr = true, noremap = true, silent = true, desc = "Jump to next snippet" })
-vim.keymap.set("s", "<S-Tab>", function()
-  return require("luasnip").jumpable(-1) and "<Plug>luasnip-jump-prev" or "<S-Tab>"
-end, { expr = true, noremap = true, silent = true, desc = "Jump to previous snippet" })
-
-vim.keymap.set("i", "<C-e>", function()
-  return require("luasnip").choice_active() and "<Plug>luasnip-next-choice" or "<C-e>"
-end, { expr = true, noremap = true, silent = true, desc = "Change choice" })
-vim.keymap.set("s", "<C-e>", function()
-  return require("luasnip").choice_active() and "<Plug>luasnip-next-choice" or "<C-e>"
-end, { expr = true, noremap = true, silent = true, desc = "Change choice" })
+-- Neotree
+set_keymap("n", "<leader>ef", ":Neotree filesystem float<CR>", "Toggle Neotree filesystem")
+set_keymap("n", "<leader>eb", ":Neotree buffers float<CR>", "Toggle Neotree buffers")
+set_keymap("n", "<leader>ec", ":Neotree close float<CR>", "Close Neotree")
 
 -- Lspsaga
 set_keymap("n", "go", ":Lspsaga show_line_diagnostics<CR>", "Open diagnostics")

@@ -38,11 +38,11 @@ in
       cmp-cmdline
       cmp-nvim-lsp
       cmp-skkeleton
+      # File explorer
+      neo-tree-nvim
       # Language server protocol
       nvim-lspconfig
       lspsaga-nvim
-      # Snippet manager
-      luasnip
       # Github copilot
       copilot-vim
       # Japanese Input
