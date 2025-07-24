@@ -30,7 +30,8 @@
       l   = "exa";
       dif = "npx difit .";
       ccu = "npx ccusage@latest";
-      ccd = "claude --continue --dangerously-skip-permissions";
+      ccc = "claude --continue --dangerously-skip-permissions";
+      ccd = "claude --dangerously-skip-permissions";
     };
 
     initContent = ''
