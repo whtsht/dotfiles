@@ -22,12 +22,12 @@
     };
 
     shellAliases = {
-      u   = "cd ..";
-      uu  = "cd ../..";
+      u = "cd ..";
+      uu = "cd ../..";
       uuu = "cd ../../..";
-      e   = "nvim";
-      rm  = "trash-put";
-      l   = "exa";
+      e = "nvim";
+      rm = "trash-put";
+      l = "exa";
       dif = "npx difit .";
       ccu = "npx ccusage@latest";
       ccc = "claude --continue --dangerously-skip-permissions";

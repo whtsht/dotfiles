@@ -1,0 +1,3 @@
+base-url: "https://desktop.tail74e0bd.ts.net"
+auth-file: "/var/cache/ntfy/user.db"
+auth-default-access: "deny-all"

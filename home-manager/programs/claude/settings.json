@@ -1,3 +1,26 @@
 {
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ntfy-send claudecode 'ClaudeCode finished the job'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.message' | xargs -I {} ntfy-send claudecode {}"
+          }
+        ]
+      }
+    ]
+  }
 }
-

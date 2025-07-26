@@ -8,6 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./services.nix
   ];
 
   # Bootloader.
@@ -78,6 +79,7 @@
     vim
     git
     zsh
+    wget
   ];
 
   programs.zsh.enable = true;

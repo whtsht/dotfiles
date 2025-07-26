@@ -48,9 +48,11 @@
     deno
     ruby
     clang-tools
-    (python312.withPackages (ps: with ps; [
-      duckdb
-    ]))
+    (python312.withPackages (
+      ps: with ps; [
+        duckdb
+      ]
+    ))
     go
     wabt
     wasmer
@@ -78,6 +80,8 @@
     NIXOS_OZONE_WL = "1";
     PATH = "$PATH:$HOME/.local/bin:$HOME/.npm-global/bin:$HOME/.cargo/bin:$HOME/.yarn/bin";
   };
+
+  sops.age.keyFile = "/home/toma/.config/sops/age/keys.txt";
 
   programs.home-manager.enable = true;
 }
