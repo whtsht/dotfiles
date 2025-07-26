@@ -20,11 +20,5 @@
         name = "claude-settings";
       };
     };
-    ".claude/scripts" = {
-      source = builtins.path {
-        path = ./scripts;
-        name = "claude-scripts";
-      };
-    };
   };
 }
