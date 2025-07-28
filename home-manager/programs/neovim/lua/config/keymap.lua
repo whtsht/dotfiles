@@ -31,9 +31,9 @@ set_keymap("n", "<leader>fl", "<cmd>lua require'fzf-lua'.live_grep({ cmd = \"git
 set_keymap("n", "<leader>fr", "<cmd>FzfLua resume<cr>")
 
 -- Neotree
-set_keymap("n", "<leader>ef", ":Neotree filesystem float<CR>", "Toggle Neotree filesystem")
-set_keymap("n", "<leader>eb", ":Neotree buffers float<CR>", "Toggle Neotree buffers")
-set_keymap("n", "<leader>ec", ":Neotree close float<CR>", "Close Neotree")
+set_keymap("n", "<leader>ef", ":Neotree filesystem<CR>", "Toggle Neotree filesystem")
+set_keymap("n", "<leader>eb", ":Neotree buffers<CR>", "Toggle Neotree buffers")
+set_keymap("n", "<leader>ec", ":Neotree close<CR>", "Close Neotree")
 
 -- Lspsaga
 set_keymap("n", "go", ":Lspsaga show_line_diagnostics<CR>", "Open diagnostics")
