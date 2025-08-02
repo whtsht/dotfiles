@@ -73,6 +73,22 @@
         nix-store --gc
         nix-store --optimise
       }
+
+      if [[ ! -n $TMUX && $- == *l* ]]; then
+        ID="`tmux list-sessions`"
+        if [[ -z "$ID" ]]; then
+          tmux new-session
+        fi
+        ID="$ID\nCreate New Session:"
+        ID="`echo $ID | fzf | cut -d: -f1`"
+        if [[ "$ID" = "Create New Session" ]]; then
+          tmux new-session
+        elif [[ -n "$ID" ]]; then
+          tmux attach-session -t "$ID"
+        else
+          : # Start terminal normally
+        fi
+      fi
     '';
   };
 }
