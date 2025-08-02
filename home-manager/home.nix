@@ -37,6 +37,8 @@
     kubectl
     minikube
     google-cloud-sdk
+    ghq
+    fzf
 
     # Programming Language
     gcc
@@ -59,8 +61,7 @@
     yaml-language-server
     wasmtime
     chez
-    ghq
-    fzf
+    wapm
 
     # Misc Tools
     texliveFull
