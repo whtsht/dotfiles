@@ -26,6 +26,8 @@ in
     plugins = with pkgs.vimPlugins; [
       # Colorscheme
       tokyonight-nvim
+      # Highlighting
+      nvim-treesitter.withAllGrammars
       # Icons
       nvim-web-devicons
       # Fuzzy finder
@@ -48,6 +50,8 @@ in
       # Japanese Input
       denops-vim
       skkeleton
+      # Terminal
+      toggleterm-nvim
     ];
   };
 

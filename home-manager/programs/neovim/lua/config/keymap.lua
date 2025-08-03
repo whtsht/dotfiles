@@ -21,11 +21,11 @@ set_keymap("n", "<leader>r", ":%s/\\r//g<CR>")
 set_keymap('i', '<c-j>', '<Plug>(skkeleton-enable)')
 
 -- FzfLua
-set_keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>")
+set_keymap("n", "<leader>fi", "<cmd>FzfLua files<cr>")
 set_keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
 set_keymap("n", "<leader>fo", "<cmd>FzfLua oldfiles<cr>")
 set_keymap("n", "<leader>fc", "<cmd>FzfLua command_history<cr>")
-set_keymap("n", "<leader>fg", "<cmd>FzfLua git_files<cr>")
+set_keymap("n", "<leader>ff", "<cmd>FzfLua git_files<cr>")
 set_keymap("n", "<leader>ft", "<cmd>FzfLua git_branches<cr>")
 set_keymap("n", "<leader>fl", "<cmd>lua require'fzf-lua'.live_grep({ cmd = \"git grep --line-number --column --color=always\" })<cr>")
 set_keymap("n", "<leader>fr", "<cmd>FzfLua resume<cr>")
@@ -51,3 +51,50 @@ set_keymap("n", "gi", ":Lspsaga finder<CR>", "Find references")
 set_keymap("n", "gr", ":Lspsaga rename<CR>", "Rename")
 set_keymap("n", "ga", ":Lspsaga code_action<CR>", "Code action")
 set_keymap("n", "gf", ":lua vim.lsp.buf.format()<CR>", "Format document (no Lspsaga equivalent)")
+
+-- ToggleTerm
+local Terminal = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({
+  cmd = "lazygit",
+  hidden = true,
+  direction = "float",
+  float_opts = {
+    border = "single",
+    width = 110,
+    height = 32,
+  },
+})
+function _lazygit_toggle()
+  lazygit:toggle()
+end
+set_keymap("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", "Toggle lazygit in terminal")
+
+local simple_terminal = Terminal:new({
+  cmd = "zsh",
+  hidden = true,
+  direction = "float",
+  float_opts = {
+    border = "single",
+    width = 110,
+    height = 32,
+  },
+})
+function _simple_terminal_toggle()
+  simple_terminal:toggle()
+end
+set_keymap("n", "<leader>tt", "<cmd>lua _simple_terminal_toggle()<CR>", "Toggle simple terminal")
+
+local claudecode = Terminal:new({
+  cmd = "claude",
+  hidden = true,
+  direction = "float",
+  float_opts = {
+    border = "single",
+    width = 110,
+    height = 32,
+  },
+})
+function _claudecode_toggle()
+  claudecode:toggle()
+end
+set_keymap("n", "<leader>tc", "<cmd>lua _claudecode_toggle()<CR>", "Toggle Claude Code in terminal")
