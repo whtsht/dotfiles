@@ -19,6 +19,10 @@ let
       hash = "sha256-QTknfchb9Z10Xn8JmJTRqknVu+qgXPayc/zQIBK1B5E=";
     };
   };
+  skk-jisyo-l = pkgs.fetchurl {
+    url = "http://openlab.jp/skk/dic/SKK-JISYO.L.gz";
+    hash = "sha256-o3KMdIrX6N+D2hf3F4dwoMyYvoF5pDMJjS4s4ww9qMU=";
+  };
 in
 {
   programs.neovim = {
@@ -61,6 +65,11 @@ in
         path = ./.;
         name = "neovim-config";
       };
+    };
+    ".skk/SKK-JISYO.L" = {
+      source = pkgs.runCommand "SKK-JISYO.L" {} ''
+        ${pkgs.gzip}/bin/gunzip -c ${skk-jisyo-l} > $out
+      '';
     };
   };
 }
