@@ -98,3 +98,11 @@ function _claudecode_toggle()
   claudecode:toggle()
 end
 set_keymap("n", "<leader>tc", "<cmd>lua _claudecode_toggle()<CR>", "Toggle Claude Code in terminal")
+
+set_keymap("n", "<leader>yl", function()
+  local filename = vim.fn.expand("%:.")
+  local line_number = vim.fn.line(".")
+  local result = filename .. ":" .. line_number
+  vim.fn.setreg("+", result)
+  vim.notify("Copied: " .. result)
+end, "Copy filename:line_number to clipboard")
