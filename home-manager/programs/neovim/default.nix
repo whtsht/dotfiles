@@ -56,6 +56,8 @@ in
       skkeleton
       # Terminal
       toggleterm-nvim
+      # Git integration
+      gitsigns-nvim
     ];
   };
 
