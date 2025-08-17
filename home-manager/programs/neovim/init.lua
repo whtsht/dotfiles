@@ -1,5 +1,6 @@
 require("config.options")
 require("config.keymap")
+require("config.autocmd")
 require("config.fzf")
 require("config.cmp")
 require("config.lsp")
