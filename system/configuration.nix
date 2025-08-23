@@ -80,6 +80,8 @@
     git
     zsh
     wget
+    xorg.xauth
+    xorg.xhost
   ];
 
   programs.zsh.enable = true;
@@ -103,6 +105,9 @@
       PasswordAuthentication = false;
       PubkeyAuthentication = true;
       PermitRootLogin = "no";
+      X11Forwarding = true;
+      X11DisplayOffset = 10;
+      X11UseLocalhost = true;
     };
   };
 
