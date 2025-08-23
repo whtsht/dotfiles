@@ -45,6 +45,7 @@
     rustup
     nodejs
     nodePackages.yarn
+    pnpm
     bun
     typescript-language-server
     deno
