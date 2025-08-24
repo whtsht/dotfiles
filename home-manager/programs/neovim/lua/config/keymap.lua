@@ -52,6 +52,9 @@ set_keymap("n", "gr", ":Lspsaga rename<CR>", "Rename")
 set_keymap("n", "ga", ":Lspsaga code_action<CR>", "Code action")
 set_keymap("n", "gf", ":lua vim.lsp.buf.format()<CR>", "Format document (no Lspsaga equivalent)")
 
+-- GitSigns
+set_keymap("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", "Toggle blame")
+
 -- ToggleTerm
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({
