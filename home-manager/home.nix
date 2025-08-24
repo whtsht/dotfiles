@@ -39,6 +39,7 @@
     google-cloud-sdk
     ghq
     fzf
+    lefthook
 
     # Programming Language
     gcc
