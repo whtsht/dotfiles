@@ -44,6 +44,14 @@
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
 
+      function tailscale_server() {
+        if [ $# != 1 ]; then
+          echo "Usage: tailscale_server <port>"
+          return 1
+        fi
+        sudo tailscale serve --https=$1 localhost:$1
+      }
+
       function open() {
         if [ $# != 1 ]; then
           explorer.exe .
@@ -51,7 +59,7 @@
           if [ -e $1 ]; then
             explorer.exe $(wslpath -w $1) 2> /dev/null
           else
-            echo "open: $1 : No such file or directory" 
+            echo "open: $1 : No such file or directory"
           fi
         fi
       }
