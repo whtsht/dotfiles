@@ -58,6 +58,7 @@ in
       toggleterm-nvim
       # Git integration
       gitsigns-nvim
+      vim-fugitive
     ];
   };
 

@@ -14,12 +14,6 @@
         name = "claude-commands";
       };
     };
-    ".claude/agents" = {
-      source = builtins.path {
-        path = ./agents;
-        name = "claude-agents";
-      };
-    };
     ".claude/settings.json" = {
       source = builtins.path {
         path = ./settings.json;
