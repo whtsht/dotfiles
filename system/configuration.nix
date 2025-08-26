@@ -102,7 +102,7 @@
   services.openssh = {
     enable = true;
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       PubkeyAuthentication = true;
       PermitRootLogin = "no";
       X11Forwarding = true;
@@ -113,7 +113,7 @@
 
   users.users.toma.openssh.authorizedKeys.keys = [
     # Thinkpad PC
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAUoIp0iT5+FPNjdfGm5K06FF379WvoRYMUitV94ReeE toma@toma"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA4LhJDYYYpeNTUmyH8+IpqnkopOHZEexq73RTrdOIAK toma@toma"
     # AQUOS Smartphone
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINw8N9gIUxvRMn69Jc3Nhf8KQjRUYq5f6ngsbhUVGXvC"
   ];
