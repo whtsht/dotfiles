@@ -102,7 +102,7 @@
   services.openssh = {
     enable = true;
     settings = {
-      PasswordAuthentication = false;
+      PasswordAuthentication = true;
       PubkeyAuthentication = true;
       PermitRootLogin = "no";
       X11Forwarding = true;
