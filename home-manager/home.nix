@@ -59,7 +59,6 @@
     ))
     go
     wabt
-    wasmer
     yaml-language-server
     wasmtime
     chez
@@ -70,7 +69,6 @@
     trash-cli
     yt-dlp
     marp-cli
-    termius
     nb
   ];
 

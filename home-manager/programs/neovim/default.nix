@@ -7,7 +7,7 @@ let
       owner = "vim-skk";
       repo = "skkeleton";
       rev = "main";
-      hash = "sha256-qPV/MsDrTMzcJNilSFRNqmu1VZnGLaRliheeZitZ/eo=";
+      hash = "sha256-PRYm015GqZ0JPIbsFG29Q89M4BDE9sG9Le/UakiaWEE=";
     };
   };
   cmp-skkeleton = pkgs.vimUtils.buildVimPlugin {
@@ -21,7 +21,7 @@ let
   };
   skk-jisyo-l = pkgs.fetchurl {
     url = "http://openlab.jp/skk/dic/SKK-JISYO.L.gz";
-    hash = "sha256-o3KMdIrX6N+D2hf3F4dwoMyYvoF5pDMJjS4s4ww9qMU=";
+    hash = "sha256-BoRak1S+VOBEW2uuXtI/1kL4f55FqolXKO+/Y6Ahqbk=";
   };
 in
 {
