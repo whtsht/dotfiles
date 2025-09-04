@@ -40,6 +40,7 @@
     ghq
     fzf
     lefthook
+    sccache
 
     # Programming Language
     gcc
