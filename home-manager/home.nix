@@ -61,6 +61,7 @@
     go
     wabt
     yaml-language-server
+    svelte-language-server
     wasmtime
     chez
     wapm

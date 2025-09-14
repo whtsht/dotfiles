@@ -37,6 +37,8 @@ lspconfig.clangd.setup{}
 
 lspconfig.yamlls.setup{}
 
+lspconfig.svelte.setup{}
+
 -- Lspsaga
 require("lspsaga").setup({
   ui = {
