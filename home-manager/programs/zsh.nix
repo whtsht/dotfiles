@@ -97,6 +97,13 @@
           : # Start terminal normally
         fi
       fi
+
+      autoload -U add-zsh-hook
+      _rv_autoload_hook () {
+          eval "$(/home/toma/.cargo/bin/rv shell env zsh)"
+      }
+      add-zsh-hook chpwd _rv_autoload_hook
+      _rv_autoload_hook
     '';
   };
 }
