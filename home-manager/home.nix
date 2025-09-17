@@ -45,6 +45,7 @@
     # Programming Language
     gcc
     rustup
+    cargo-nextest
     nodejs
     nodePackages.yarn
     pnpm
