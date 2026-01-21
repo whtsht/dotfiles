@@ -1,0 +1,23 @@
+[user]
+	name = whtsht
+	email = whiteshirt0079@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+	pager = delta --color-only --line-numbers
+	excludesfile = ~/.config/git/ignore
+[interactive]
+	diffFilter = delta --color-only --line-numbers
+[pull]
+	ff = only
+[safe]
+	directory = /home/toma
+[ghq]
+	root = ~/.workspace
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
