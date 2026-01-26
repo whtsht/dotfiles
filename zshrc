@@ -7,6 +7,8 @@ zstyle :compinstall filename '/home/whtsht/.zshrc'
 autoload -Uz compinit
 compinit
 
+export PATH="$PATH:$HOME/.local/bin"
+
 alias l="exa"
 alias la="exa -a"
 alias u="cd .."
@@ -30,3 +32,7 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 source <(fzf --zsh)
+eval "$(atuin init zsh)"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
