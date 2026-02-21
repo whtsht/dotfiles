@@ -9,7 +9,15 @@ return {
     },
     lazy = false,
     config = function()
-      vim.keymap.set("n", "<leader>ef", "<Cmd>Neotree toggle<CR>", { silent = true, noremap = true, desc = "Toggle neo-tree" })
+      require("neo-tree").setup({
+        filesystem = {
+          use_libuv_file_watcher = true
+        },
+      })
+      vim.keymap.set(
+        "n", "<leader>ef", "<Cmd>Neotree toggle<CR>",
+        { silent = true, noremap = true, desc = "Toggle neo-tree" }
+      )
     end
   }
 }

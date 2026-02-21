@@ -1,0 +1,14 @@
+{
+  "Competitive programming template": {
+    "prefix": "cp",
+    "body": [
+      "#include <iostream>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  $1",
+      "}"
+    ],
+    "description": "Minimal template with main function"
+  }
+}

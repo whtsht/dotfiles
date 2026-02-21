@@ -5,6 +5,11 @@ return {
   },
   config = function()
     require("copilot").setup({
+      should_attach = function(bufnr)
+        -- Only attach to buffers with a filename that doesn't start with a dot
+        local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufnr), ":t")
+        return not filename:match("^%.")
+      end,
       suggestion = {
         enabled = true,
         auto_trigger = true,
