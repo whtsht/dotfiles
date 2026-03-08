@@ -13,6 +13,9 @@ return {
         filesystem = {
           use_libuv_file_watcher = true
         },
+        window = {
+          width = 30
+        },
       })
       vim.keymap.set(
         "n", "<leader>ef", "<Cmd>Neotree toggle<CR>",
