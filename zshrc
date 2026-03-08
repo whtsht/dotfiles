@@ -23,6 +23,7 @@ alias la="exa -a"
 alias u="cd .."
 alias uu="cd ../.."
 alias e="nvim"
+alias t="tmux"
 alias p="pwd"
 alias g="lazygit"
 alias rm="trash-put"
@@ -46,7 +47,7 @@ eval "$(atuin init zsh)"
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
-export WASI_SDK_PATH="$HOME/.wasi-sdk/27.0-x86_64-linux"
+export WASI_SDK_PATH="/opt/wasi-sdk"
 alias cc_wasi="${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot"
 
 # pnpm
