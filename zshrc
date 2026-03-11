@@ -18,6 +18,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+alias h="echo 'Hello, World!'"
 alias l="exa"
 alias la="exa -a"
 alias u="cd .."
