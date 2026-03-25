@@ -100,3 +100,10 @@ vim.lsp.config('lua_ls', {
   },
 })
 vim.lsp.enable('lua_ls')
+
+vim.lsp.config('ocamllsp', {
+  cmd = { "ocamllsp" },
+  filetypes = { "ocaml", "menhir", "ocamlinterface", "ocamllex", "reason", "dune" },
+  root_markers = { { "dune-project", "dune-workspace" }, { "*.opam", "opam", "esy.json", "package.json" }, { ".git" } },
+})
+vim.lsp.enable('ocamllsp')
