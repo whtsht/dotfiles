@@ -18,12 +18,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-alias h="echo 'Hello, World!'"
 alias l="exa"
 alias la="exa -a"
 alias u="cd .."
 alias uu="cd ../.."
+alias uuu="cd ../../.."
 alias e="nvim"
+alias ef='nvim $(fzf)'
 alias t="tmux"
 alias p="pwd"
 alias g="lazygit"
@@ -48,6 +49,8 @@ eval "$(atuin init zsh)"
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
+export PATH="$HOME/go/bin:$PATH"
+
 export WASI_SDK_PATH="/opt/wasi-sdk"
 alias cc_wasi="${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot"
 
@@ -60,3 +63,6 @@ esac
 # pnpm end
 
 eval "$(rbenv init - --no-rehash zsh)"
+
+eval $(opam env --switch=default)
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
