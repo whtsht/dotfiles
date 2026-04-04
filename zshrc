@@ -18,6 +18,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+export EDITOR="nvim"
+
 alias l="exa"
 alias la="exa -a"
 alias u="cd .."
