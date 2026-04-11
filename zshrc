@@ -31,6 +31,15 @@ alias t="tmux"
 alias p="pwd"
 alias g="lazygit"
 alias rm="trash-put"
+alias nbn="nb notebooks"
+alias nbu="nb use"
+alias nbl="nb list"
+alias nbd="nb delete"
+nbe() {
+    local id
+    id=$(nb list --no-color | fzf | sed 's/\[\([0-9]*\)\].*/\1/')
+    [[ -n "$id" ]] && nb edit "$id"
+}
 
 function _ghq_fzf_cd() {
   setopt localoptions pipefail
