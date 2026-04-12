@@ -29,7 +29,6 @@ alias e="nvim"
 alias ef='nvim $(fzf)'
 alias t="tmux"
 alias p="pwd"
-alias g="lazygit"
 alias rm="trash-put"
 alias nbn="nb notebooks"
 alias nbu="nb use"
