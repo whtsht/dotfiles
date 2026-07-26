@@ -1,3 +1,8 @@
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_FIND_NO_DUPS
+unsetopt EXTENDED_HISTORY
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -18,17 +23,23 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export EDITOR="nvim"
 
 alias l="exa"
 alias la="exa -a"
+alias c="claude"
+alias cr="claude --resume"
 alias u="cd .."
 alias uu="cd ../.."
 alias uuu="cd ../../.."
 alias e="nvim"
 alias ef='nvim $(fzf)'
 alias t="tmux"
+alias h="herdr"
 alias p="pwd"
+alias m="tldr"
 alias rm="trash-put"
 alias nbn="nb notebooks"
 alias nba="nb add"
@@ -78,3 +89,38 @@ eval "$(rbenv init - --no-rehash zsh)"
 
 eval $(opam env --switch=default)
 [[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
+
+notify() {
+  local message="${1:-We sent a notification}"
+  powershell.exe -Command "New-BurntToastNotification -Text 'zsh', '${message}'"
+}
+
+
+ask() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: ask \"describe what you want to do\"" >&2
+    return 1
+  fi
+
+  local prompt="Generate a single zsh command that accomplishes the following request. Output only the command itself, on one line, with no explanation or preamble. Request: $1"
+
+  local result
+  result=$(claude -p "$prompt" --model haiku)
+
+  # Strip any code block markers in case they still appear
+  result=$(echo "$result" | sed '/^```/d')
+
+  if [[ -z "$result" ]]; then
+    echo "Failed to generate a command" >&2
+    return 1
+  fi
+
+  echo "$result"
+  export ans="$result"
+}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/path.zsh.inc' ]; then . '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/completion.zsh.inc'; fi
