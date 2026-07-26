@@ -129,3 +129,10 @@ vim.lsp.config('ocamllsp', {
   root_markers = { { "dune-project", "dune-workspace" }, { "*.opam", "opam", "esy.json", "package.json" }, { ".git" } },
 })
 vim.lsp.enable('ocamllsp')
+
+vim.lsp.config('crystalline', {
+  cmd = { "crystalline" },
+  filetypes = { "crystal" },
+  root_markers = { "shard.yml", ".git" },
+})
+vim.lsp.enable('crystalline')
