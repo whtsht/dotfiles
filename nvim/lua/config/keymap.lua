@@ -5,6 +5,10 @@ end
 
 
 set_keymap("i", "jj", "<ESC>", "Exit insert mode")
+set_keymap("i", "<C-h>", "<Left>", "Move cursor left")
+set_keymap("i", "<C-j>", "<Down>", "Move cursor down")
+set_keymap("i", "<C-k>", "<Up>", "Move cursor up")
+set_keymap("i", "<C-l>", "<Right>", "Move cursor right")
 set_keymap("n", "<C-s>", ":w<CR>", "Save the file")
 vim.keymap.set('i', '<C-s>', function()
   vim.cmd('silent! write')
