@@ -1,3 +1,25 @@
+-- If lsp.log exceeds 10MB, keep only the last 10MB
+do
+  local logfile = vim.fn.stdpath('state') .. '/lsp.log'
+  local max_size = 10 * 1024 * 1024
+  local stat = vim.uv.fs_stat(logfile)
+  if stat and stat.size > max_size then
+    local f = io.open(logfile, 'rb')
+    if f then
+      f:seek('end', -max_size)
+      local tail = f:read('*a')
+      f:close()
+      -- Drop everything up to the first newline so the file starts at a line boundary
+      tail = tail:match('\n(.*)') or tail
+      f = io.open(logfile, 'wb')
+      if f then
+        f:write(tail)
+        f:close()
+      end
+    end
+  end
+end
+
 vim.lsp.config('rust_analyzer', {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
