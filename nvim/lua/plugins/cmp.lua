@@ -22,6 +22,26 @@ return {
         ["<C-y>"] = cmp.mapping.complete(),
         ["<C-k>"] = cmp.mapping.abort(),
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-n>"] = cmp.mapping(function(fallback)
+          local luasnip = require("luasnip")
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.locally_jumpable(1) then
+            luasnip.jump(1)
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+        ["<C-p>"] = cmp.mapping(function(fallback)
+          local luasnip = require("luasnip")
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif luasnip.locally_jumpable(-1) then
+            luasnip.jump(-1)
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
