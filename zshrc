@@ -118,9 +118,3 @@ ask() {
   echo "$result"
   export ans="$result"
 }
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/path.zsh.inc' ]; then . '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/whtsht/.workspace/github.com/AnimaGroup/GameTrade/google-cloud-sdk/completion.zsh.inc'; fi
