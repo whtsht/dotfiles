@@ -1,0 +1,15 @@
+onboarding = false
+
+[ui]
+show_agent_labels_on_pane_borders = false
+
+[ui.toast.clipboard]
+enabled = false
+
+[theme]
+name = "tokyo-night"
+auto_switch = false
+
+[keys]
+previous_workspace = "prefix+shift+k"
+next_workspace = "prefix+shift+j"

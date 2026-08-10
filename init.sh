@@ -7,3 +7,5 @@ ln -s "$(pwd)/nvim" ~/.config/nvim
 ln -s "$(pwd)/tmux.conf" ~/.tmux.conf
 mkdir -p ~/.config/atuin
 ln -s "$(pwd)/atuin_config.toml" ~/.config/atuin/config.toml
+mkdir -p ~/.config/herdr
+ln -s "$(pwd)/herdr_config.toml" ~/.config/herdr/config.toml
