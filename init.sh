@@ -5,3 +5,5 @@ ln -s "$(pwd)/gitconfig" ~/.gitconfig
 ln -s "$(pwd)/starship.toml" ~/.config/starship.toml
 ln -s "$(pwd)/nvim" ~/.config/nvim
 ln -s "$(pwd)/tmux.conf" ~/.tmux.conf
+mkdir -p ~/.config/atuin
+ln -s "$(pwd)/atuin_config.toml" ~/.config/atuin/config.toml
