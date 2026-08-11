@@ -9,3 +9,5 @@ mkdir -p ~/.config/atuin
 ln -s "$(pwd)/atuin_config.toml" ~/.config/atuin/config.toml
 mkdir -p ~/.config/herdr
 ln -s "$(pwd)/herdr_config.toml" ~/.config/herdr/config.toml
+mkdir -p ~/.config/fontconfig
+ln -s "$(pwd)/fontconfig_fonts.conf" ~/.config/fontconfig/fonts.conf
