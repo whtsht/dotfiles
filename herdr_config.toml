@@ -13,3 +13,6 @@ auto_switch = false
 [keys]
 previous_workspace = "prefix+shift+k"
 next_workspace = "prefix+shift+j"
+
+[terminal]
+default_shell = "zsh"

@@ -13,9 +13,6 @@ autoload -Uz compinit
 compinit
 
 export PATH="$PATH:$HOME/.local/bin"
-for d in $HOME/.local/share/gem/ruby/*/bin; do
-  [[ -d "$d" ]] && export PATH="$PATH:$d"
-done
 
 export PNPM_HOME="/home/whtsht/.local/share/pnpm"
 case ":$PATH:" in
@@ -86,35 +83,3 @@ esac
 # pnpm end
 
 eval "$(rbenv init - --no-rehash zsh)"
-
-eval $(opam env --switch=default)
-[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
-
-notify() {
-  local message="${1:-We sent a notification}"
-  powershell.exe -Command "New-BurntToastNotification -Text 'zsh', '${message}'"
-}
-
-
-ask() {
-  if [[ -z "$1" ]]; then
-    echo "Usage: ask \"describe what you want to do\"" >&2
-    return 1
-  fi
-
-  local prompt="Generate a single zsh command that accomplishes the following request. Output only the command itself, on one line, with no explanation or preamble. Request: $1"
-
-  local result
-  result=$(claude -p "$prompt" --model haiku)
-
-  # Strip any code block markers in case they still appear
-  result=$(echo "$result" | sed '/^```/d')
-
-  if [[ -z "$result" ]]; then
-    echo "Failed to generate a command" >&2
-    return 1
-  fi
-
-  echo "$result"
-  export ans="$result"
-}
