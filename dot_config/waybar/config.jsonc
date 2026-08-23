@@ -22,7 +22,7 @@
   "custom/launcher": {
     "format": "󰀻",
     "tooltip": false,
-    "on-click": "fuzzel"
+    "on-click": "wofi --show drun"
   },
 
   "niri/workspaces": {

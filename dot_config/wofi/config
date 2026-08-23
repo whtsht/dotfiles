@@ -1,0 +1,23 @@
+# The mode is not fixed here so that both `wofi --show drun` (application
+# launcher) and `wofi --dmenu` (menus built by the scripts in
+# ~/.config/niri/scripts) use this file.
+
+width=640
+# Window height is given as a number of entry rows rather than in pixels, so
+# that it follows the font size.
+lines=10
+location=center
+layer=overlay
+
+prompt=Search
+insensitive=true
+matching=fuzzy
+hide_scroll=true
+no_actions=false
+term=alacritty
+
+# Application icons. image_size is the edge length in pixels.
+allow_images=true
+image_size=40
+
+gtk_dark=true

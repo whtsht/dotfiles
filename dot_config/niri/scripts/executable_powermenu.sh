@@ -1,5 +1,5 @@
 #!/bin/sh
-# Pick a power action with fuzzel and run it.
+# Pick a power action with wofi and run it.
 set -eu
 
 choice=$(printf '%s\n' \
@@ -8,7 +8,7 @@ choice=$(printf '%s\n' \
     "suspend" \
     "reboot" \
     "poweroff" \
-    | fuzzel --dmenu --prompt "power> ")
+    | wofi --dmenu --prompt "Power")
 
 case "$choice" in
     lock)     hyprlock ;;

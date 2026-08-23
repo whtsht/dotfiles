@@ -1,5 +1,5 @@
 #!/bin/sh
-# Pick a wallpaper with fuzzel, set it with awww, then regenerate the color
+# Pick a wallpaper with wofi, set it with awww, then regenerate the color
 # scheme with matugen. The path of the selected image is written to a state file
 # so that other tools such as hyprlock can read it.
 set -eu
@@ -19,7 +19,7 @@ fi
 # shellcheck disable=SC2086
 selected=$(find $existing -maxdepth 2 -type f \
     \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) \
-    | sort | fuzzel --dmenu --prompt "wallpaper> ") || exit 0
+    | sort | wofi --dmenu --prompt "Wallpaper") || exit 0
 
 [ -z "$selected" ] && exit 0
 [ -f "$selected" ] || { notify-send -u critical "wallpaper" "No such path: $selected"; exit 1; }

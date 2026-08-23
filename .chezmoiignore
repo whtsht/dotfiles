@@ -12,5 +12,6 @@ README.md
 .config/waybar/colors.css
 .config/swaync/colors.css
 .config/swayosd/colors.css
+.config/wofi/colors.css
 .config/hypr/colors.conf
 .config/fuzzel/fuzzel.ini

@@ -1,0 +1,76 @@
+/* wofi hands the stylesheet to GTK as data rather than as a file, so a
+   relative @import is resolved against the working directory of the wofi
+   process and fails. The absolute path is filled in by chezmoi. */
+@import url("file://{{ .chezmoi.homeDir }}/.config/wofi/colors.css");
+
+* {
+  font-family: "Adwaita Sans", "Noto Sans CJK JP", sans-serif;
+  font-size: 15px;
+}
+
+window {
+  background-color: @surface_container;
+  color: @on_surface;
+  border: 2px solid @primary;
+  border-radius: 16px;
+}
+
+#outer-box {
+  padding: 16px;
+}
+
+#input {
+  background-color: @surface_container_high;
+  color: @on_surface;
+  caret-color: @primary;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+#input image {
+  color: @outline;
+}
+
+#input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#scroll {
+  margin: 0;
+}
+
+#inner-box {
+  background-color: transparent;
+}
+
+#entry {
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+#entry:selected {
+  background-color: @primary_container;
+}
+
+#img {
+  margin-right: 12px;
+}
+
+#text {
+  color: @on_surface;
+}
+
+#text:selected {
+  color: @on_primary_container;
+}
+
+#unselected {
+  color: @on_surface;
+}
+
+#selected {
+  color: @on_primary_container;
+}

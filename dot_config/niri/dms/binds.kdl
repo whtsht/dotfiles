@@ -7,7 +7,7 @@ binds {
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "fuzzel";
+        spawn "wofi" "--show" "drun";
     }
     Mod+V hotkey-overlay-title="Clipboard Manager" {
         spawn-sh "~/.config/niri/scripts/clipboard.sh";
