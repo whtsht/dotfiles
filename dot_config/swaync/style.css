@@ -18,7 +18,7 @@
 .notification-content {
   background: @surface_container;
   color: @on_surface;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 12px;
   border: 1px solid @outline_variant;
 }
@@ -44,7 +44,7 @@
 .close-button {
   background: transparent;
   color: @outline;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 4px;
   padding: 2px;
 }
@@ -57,7 +57,7 @@
 .notification-action {
   background: @surface_container_high;
   color: @on_surface;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 4px;
 }
 
@@ -70,7 +70,7 @@
 .control-center {
   background: @surface;
   color: @on_surface;
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid @outline_variant;
   padding: 8px;
 }
@@ -89,7 +89,7 @@
 .widget-title > button {
   background: @surface_container_high;
   color: @on_surface;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 4px 12px;
   font-size: 13px;
   font-weight: normal;

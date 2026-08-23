@@ -1,7 +1,7 @@
 @import url("colors.css");
 
 window#osd {
-  border-radius: 24px;
+  border-radius: 16px;
   border: 1px solid @outline_variant;
   background: @surface_container;
   padding: 4px;

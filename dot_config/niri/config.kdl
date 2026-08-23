@@ -139,7 +139,7 @@ layout {
 
 // Window corner radius.
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 8
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
@@ -224,7 +224,7 @@ window-rule {
 window-rule {
     match app-id=r#"^org\.gnome\."#
     draw-border-with-background false
-    geometry-corner-radius 12
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 window-rule {
@@ -268,7 +268,7 @@ debug {
 // Override to disable super+tab
 recent-windows {
     highlight {
-        corner-radius 12
+        corner-radius 8
     }
 
     binds {
