@@ -17,7 +17,8 @@ window#osd label {
 }
 
 window#osd label {
-  font-family: "Hack Nerd Font", "Noto Sans CJK JP", sans-serif;
+  font-family: "Adwaita Sans", "Hack Nerd Font", "Noto Sans CJK JP", sans-serif;
+  font-feature-settings: "tnum";
   font-size: 14px;
 }
 
