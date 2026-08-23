@@ -177,7 +177,7 @@ layout {
     }
 }
 
-// Window corner radius, previously set by dms/layout.kdl.
+// Window corner radius.
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
@@ -185,9 +185,7 @@ window-rule {
     draw-border-with-background false
 }
 // Show the wallpaper layer behind the overview.
-// quickshell is the DMS wallpaper, awww-daemon the one used after the migration.
 layer-rule {
-    match namespace="^quickshell$"
     match namespace="^awww-daemon$"
     place-within-backdrop true
 }
@@ -196,14 +194,25 @@ overview {
         off
     }
 }
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-// This line starts waybar, a commonly used bar for Wayland compositors.
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
+
+// Session daemons. DMS previously provided all of these; they are now separate
+// tools started here. spawn-at-startup runs only when niri starts, not on a
+// config reload.
+spawn-at-startup "waybar"
+spawn-at-startup "swaync"
+spawn-at-startup "swayosd-server"
+spawn-at-startup "kanshi"
+spawn-at-startup "awww-daemon"
+// polkit authentication agent. Without it, applications that call polkit
+// (nm-connection-editor, blueman-manager, ...) receive no password prompt.
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+// cliphist needs one watcher per MIME type; clipboard.sh reads the history.
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+
 hotkey-overlay {
     skip-at-startup
 }
