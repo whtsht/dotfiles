@@ -1,5 +1,13 @@
 @import url("colors.css");
 
+/* swaync loads /etc/xdg/swaync/style.css before this file and addresses a
+   notification through selectors such as
+   `.notification-row .notification-background .notification`. A shorter
+   selector loses on specificity no matter the order, so the rules below repeat
+   the same depth. Writing `.notification` alone leaves the built-in grey
+   background and border in place and produces a second frame around the one
+   defined here. */
+
 * {
   font-family: "Adwaita Sans", "Hack Nerd Font", "Noto Sans CJK JP", sans-serif;
   font-feature-settings: "tnum";
@@ -10,36 +18,52 @@
   outline: none;
 }
 
-.notification {
-  background: transparent;
-  padding: 4px;
-  margin: 0;
-}
-
-.notification-content {
+.notification-row .notification-background .notification {
   background: @surface_container;
   color: @on_surface;
-  border-radius: 12px;
-  padding: 12px;
   border: 1px solid @outline_variant;
+  border-radius: 12px;
 }
 
-.notification.critical .notification-content {
-  border: 1px solid @error;
+.notification-row .notification-background .notification.critical {
+  border-color: @error;
 }
 
-.summary {
+.notification-row .notification-background .notification .notification-default-action {
+  padding: 12px;
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover {
+  background: @surface_container_high;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
   color: @on_surface;
+  font-size: 15px;
   font-weight: bold;
 }
 
-.time {
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
   color: @outline;
   font-size: 12px;
+  font-weight: normal;
 }
 
-.body {
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
   color: @on_surface_variant;
+  font-size: 14px;
+}
+
+.notification-row .notification-background .notification .notification-action > button {
+  background: @surface_container_high;
+  color: @on_surface;
+  border-radius: 8px;
+  margin: 4px;
+}
+
+.notification-row .notification-background .notification .notification-action > button:hover {
+  background: @primary_container;
+  color: @on_primary_container;
 }
 
 .close-button {
@@ -55,18 +79,6 @@
   color: @on_error;
 }
 
-.notification-action {
-  background: @surface_container_high;
-  color: @on_surface;
-  border-radius: 8px;
-  margin: 4px;
-}
-
-.notification-action:hover {
-  background: @primary_container;
-  color: @on_primary_container;
-}
-
 /* Control center */
 .control-center {
   background: @surface;
@@ -76,15 +88,19 @@
   padding: 8px;
 }
 
-.control-center .notification-content {
+/* Same depth as the popup rule above, so this has to come after it to win. */
+.control-center .control-center-list .notification {
   background: @surface_container_high;
 }
 
 .widget-title {
   color: @on_surface;
+  margin: 8px;
+}
+
+.widget-title > label {
   font-size: 16px;
   font-weight: bold;
-  margin: 8px;
 }
 
 .widget-title > button {
@@ -102,25 +118,29 @@
 }
 
 .widget-dnd {
-  color: @on_surface;
   margin: 8px;
 }
 
-.widget-dnd > switch {
+.widget-dnd label {
+  color: @on_surface;
+  font-size: 14px;
+}
+
+.widget-dnd switch {
   background: @surface_container_high;
   border-radius: 12px;
 }
 
-.widget-dnd > switch:checked {
+.widget-dnd switch:checked {
   background: @primary;
 }
 
-.widget-dnd > switch slider {
+.widget-dnd switch slider {
   background: @on_surface_variant;
   border-radius: 12px;
 }
 
-.widget-dnd > switch:checked slider {
+.widget-dnd switch:checked slider {
   background: @on_primary;
 }
 
