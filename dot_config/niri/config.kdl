@@ -311,8 +311,5 @@ recent-windows {
     }
 }
 
-// dms/colors.kdl は matugen が壁紙から生成する配色。
-// dms/binds.kdl はキーバインドの定義。
-// いずれもこのファイルより後に読み込まれ、同名の設定を上書きする。
 include optional=true "dms/colors.kdl"
 include optional=true "dms/binds.kdl"
