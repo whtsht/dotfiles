@@ -36,7 +36,3 @@ output_path = '~/.config/wofi/colors.css'
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hypr-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
-
-[templates.fuzzel]
-input_path = '~/.config/matugen/templates/fuzzel.ini'
-output_path = '~/.config/fuzzel/fuzzel.ini'
