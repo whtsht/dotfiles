@@ -121,6 +121,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
+    gaps 4
     background-color "transparent"
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -163,6 +164,9 @@ layout {
         inactive-color "#d0d0d0"      // Light gray
         urgent-color   "#cc4444"      // Softer red
     }
+    focus-ring {
+        width 2
+    }
     shadow {
         softness 30
         spread 5
@@ -172,8 +176,19 @@ layout {
     struts {
     }
 }
+
+// dms/layout.kdl が設定していたウィンドウの角丸。
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+}
+// オーバービューの背景に壁紙レイヤーを表示する。
+// quickshell は DMS の壁紙、awww-daemon は移行後の壁紙。
 layer-rule {
     match namespace="^quickshell$"
+    match namespace="^awww-daemon$"
     place-within-backdrop true
 }
 overview {
@@ -284,6 +299,10 @@ debug {
 
 // Override to disable super+tab
 recent-windows {
+    highlight {
+        corner-radius 12
+    }
+
     binds {
         Alt+Tab         { next-window scope="output"; }
         Alt+Shift+Tab   { previous-window scope="output"; }
@@ -292,10 +311,8 @@ recent-windows {
     }
 }
 
-// Include dms files
+// dms/colors.kdl は matugen が壁紙から生成する配色。
+// dms/binds.kdl はキーバインドの定義。
+// いずれもこのファイルより後に読み込まれ、同名の設定を上書きする。
 include optional=true "dms/colors.kdl"
-include optional=true "dms/layout.kdl"
-include optional=true "dms/alttab.kdl"
 include optional=true "dms/binds.kdl"
-include optional=true "dms/outputs.kdl"
-include optional=true "dms/cursor.kdl"

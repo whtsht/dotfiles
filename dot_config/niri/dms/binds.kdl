@@ -7,91 +7,84 @@ binds {
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
-    }
-    Alt+Space hotkey-overlay-title="Spotlight Bar" {
-        spawn "dms" "ipc" "call" "spotlight-bar" "toggle";
+        spawn "fuzzel";
     }
     Mod+V hotkey-overlay-title="Clipboard Manager" {
-        spawn "dms" "ipc" "call" "clipboard" "toggle";
+        spawn-sh "~/.config/niri/scripts/clipboard.sh";
     }
-    Mod+M hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
+    Mod+M hotkey-overlay-title="Task Manager (btop)" {
+        spawn "alacritty" "--class" "btop" "-e" "btop";
     }
 
-    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
-    Mod+Comma hotkey-overlay-title="Settings" {
-        spawn "dms" "ipc" "call" "settings" "focusOrToggle";
-    }
+    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "~/.config/niri/scripts/powermenu.sh"; }
     Mod+Y hotkey-overlay-title="Browse Wallpapers" {
-        spawn "dms" "ipc" "call" "dash" "toggle" "wallpaper";
+        spawn-sh "~/.config/niri/scripts/wallpaper.sh";
     }
-    Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+    Mod+N hotkey-overlay-title="Notification Center" { spawn "swaync-client" "-t" "-sw"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
-        spawn "dms" "ipc" "call" "lock" "lock";
+        spawn "hyprlock";
     }
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
+    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager (btop)" {
+        spawn "alacritty" "--class" "btop" "-e" "btop";
     }
 
     // === Audio Controls ===
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "increment" "3";
+        spawn "swayosd-client" "--output-volume" "+3";
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+        spawn "swayosd-client" "--output-volume" "-3";
     }
     XF86AudioMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "mute";
+        spawn "swayosd-client" "--output-volume" "mute-toggle";
     }
     XF86AudioMicMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "micmute";
+        spawn "swayosd-client" "--input-volume" "mute-toggle";
     }
     XF86AudioPause allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "playPause";
+        spawn "swayosd-client" "--playerctl" "play-pause";
     }
     XF86AudioPlay allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "playPause";
+        spawn "swayosd-client" "--playerctl" "play-pause";
     }
     XF86AudioPrev allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "previous";
+        spawn "swayosd-client" "--playerctl" "prev";
     }
     XF86AudioNext allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "next";
+        spawn "swayosd-client" "--playerctl" "next";
     }
     Ctrl+XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "increment" "3";
+        spawn "playerctl" "volume" "0.03+";
     }
     Ctrl+XF86AudioLowerVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "decrement" "3";
+        spawn "playerctl" "volume" "0.03-";
     }
 
     // === Audio Controls (F21-F24) ===
     // F21: Volume Down
     XF86TouchpadToggle allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+        spawn "swayosd-client" "--output-volume" "-3";
     }
     // F22: Play / Pause
     XF86TouchpadOn allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "playPause";
+        spawn "swayosd-client" "--playerctl" "play-pause";
     }
     F23 allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "increment" "3";
+        spawn "swayosd-client" "--output-volume" "+3";
     }
     F24 allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "mute";
+        spawn "swayosd-client" "--output-volume" "mute-toggle";
     }
 
     // === Brightness Controls ===
     XF86MonBrightnessUp allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
+       spawn "swayosd-client" "--brightness" "+5";
     }
     XF86MonBrightnessDown allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
+       spawn "swayosd-client" "--brightness" "-5";
     }
 
     // === Window Management ===
@@ -101,7 +94,7 @@ binds {
     Mod+Shift+T { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
-    Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
+    Mod+Shift+W hotkey-overlay-title="Show window rule template" { spawn-sh "~/.config/niri/scripts/window-rule.sh"; }
 
     // === Focus Navigation ===
     Mod+Left  { focus-column-left; }
@@ -161,7 +154,7 @@ binds {
 
     // === Workspace Management ===
     Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" {
-        spawn "dms" "ipc" "call" "workspace-rename" "open";
+        spawn-sh "~/.config/niri/scripts/workspace-rename.sh";
     }
 
     // === Move Workspaces ===
@@ -236,7 +229,7 @@ binds {
     Alt+Print { screenshot-window; }
     // === Display Profiles ===
     Mod+P hotkey-overlay-title="Cycle Display Profile" {
-        spawn "dms" "ipc" "outputs" "cycleProfile";
+        spawn-sh "~/.config/niri/scripts/display-profile.sh";
     }
 
     // === System Controls ===
