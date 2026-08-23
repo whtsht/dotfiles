@@ -1,0 +1,130 @@
+/* swaync の外観。色は matugen が生成する colors.css から取り込む。 */
+@import url("colors.css");
+
+* {
+  font-family: "Hack Nerd Font", "Noto Sans CJK JP", sans-serif;
+  font-size: 14px;
+}
+
+/* 通知ポップアップ */
+.notification-row {
+  outline: none;
+}
+
+.notification {
+  background: transparent;
+  padding: 4px;
+  margin: 0;
+}
+
+.notification-content {
+  background: @surface_container;
+  color: @on_surface;
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid @outline_variant;
+}
+
+.notification.critical .notification-content {
+  border: 1px solid @error;
+}
+
+.summary {
+  color: @on_surface;
+  font-weight: bold;
+}
+
+.time {
+  color: @outline;
+  font-size: 12px;
+}
+
+.body {
+  color: @on_surface_variant;
+}
+
+.close-button {
+  background: transparent;
+  color: @outline;
+  border-radius: 12px;
+  margin: 4px;
+  padding: 2px;
+}
+
+.close-button:hover {
+  background: @error;
+  color: @on_error;
+}
+
+.notification-action {
+  background: @surface_container_high;
+  color: @on_surface;
+  border-radius: 12px;
+  margin: 4px;
+}
+
+.notification-action:hover {
+  background: @primary_container;
+  color: @on_primary_container;
+}
+
+/* 通知センター */
+.control-center {
+  background: @surface;
+  color: @on_surface;
+  border-radius: 16px;
+  border: 1px solid @outline_variant;
+  padding: 8px;
+}
+
+.control-center .notification-content {
+  background: @surface_container_high;
+}
+
+.widget-title {
+  color: @on_surface;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px;
+}
+
+.widget-title > button {
+  background: @surface_container_high;
+  color: @on_surface;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.widget-title > button:hover {
+  background: @primary_container;
+  color: @on_primary_container;
+}
+
+.widget-dnd {
+  color: @on_surface;
+  margin: 8px;
+}
+
+.widget-dnd > switch {
+  background: @surface_container_high;
+  border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+  background: @primary;
+}
+
+.widget-dnd > switch slider {
+  background: @on_surface_variant;
+  border-radius: 12px;
+}
+
+.widget-dnd > switch:checked slider {
+  background: @on_primary;
+}
+
+.blank-window {
+  background: transparent;
+}

@@ -1,0 +1,37 @@
+# matugen は壁紙から Material Design 3 のパレットを生成し、
+# 以下のテンプレートを展開して各ツールの色定義ファイルを出力する。
+# 実行は ~/.config/niri/scripts/wallpaper.sh から行う。
+#
+# ここで出力するファイルはすべて生成物であり、chezmoi の管理対象から
+# 除外している（.chezmoiignore を参照）。取り込む側の設定ファイル
+# （style.css など）がリポジトリ管理の対象である。
+
+[config]
+
+[templates.niri]
+input_path = '~/.config/matugen/templates/niri-colors.kdl'
+output_path = '~/.config/niri/dms/colors.kdl'
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/alacritty/dank-theme.toml'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/waybar/colors.css'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/swaync/colors.css'
+
+[templates.swayosd]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/swayosd/colors.css'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hypr-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/fuzzel.ini'

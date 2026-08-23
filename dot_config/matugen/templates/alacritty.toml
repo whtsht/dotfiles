@@ -1,0 +1,38 @@
+# このファイルは matugen が生成する。直接編集した内容は次回の生成時に失われる。
+# 生成元: ~/.config/matugen/templates/alacritty.toml
+
+# 背景・前景・カーソル・選択範囲は壁紙から生成した Material Design 3 のロールを使う。
+[colors.primary]
+background = '{{colors.background.default.hex}}'
+foreground = '{{colors.on_surface.default.hex}}'
+
+[colors.selection]
+text = '{{colors.on_surface.default.hex}}'
+background = '{{colors.primary_container.default.hex}}'
+
+[colors.cursor]
+text = '{{colors.background.default.hex}}'
+cursor = '{{colors.primary.default.hex}}'
+
+# ANSI 16 色は固定値とする。matugen が提供する base16 は
+# 壁紙の色相へ寄せた低彩度の 16 色であり、赤・緑・黄などの
+# 意味が失われるため、ターミナルの配色には使用しない。
+[colors.normal]
+black   = '#141218'
+red     = '#ff728f'
+green   = '#7fff9a'
+yellow  = '#ffda72'
+blue    = '#7fb4ff'
+magenta = '#e5a5ff'
+cyan    = '#72e5e5'
+white   = '#e6e0e9'
+
+[colors.bright]
+black   = '#9d99a5'
+red     = '#ff9fb2'
+green   = '#a5ffb8'
+yellow  = '#ffe7a5'
+blue    = '#a5cbff'
+magenta = '#f0c6ff'
+cyan    = '#a5f0f0'
+white   = '#faf8ff'

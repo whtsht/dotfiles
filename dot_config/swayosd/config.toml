@@ -1,0 +1,19 @@
+[server]
+# OSD を表示する高さ。0.0 が画面上端、1.0 が下端。
+top_margin = 0.85
+
+# 音量の上限（%）。既定の 150 は誤操作で過大な音量になるため 100 に制限する。
+max_volume = 100
+
+# 輝度の下限（%）。0 まで下げると画面が判読できなくなるため 5 を下限とする。
+min_brightness = 5
+
+show_percentage = true
+
+# キーボードバックライトの変化を検知して OSD を表示する。
+keyboard_backlight = true
+
+# OSD の表示時間（ミリ秒）。
+duration = 1000
+
+[client]

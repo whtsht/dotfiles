@@ -1,0 +1,18 @@
+# kanshi のディスプレイプロファイル。
+# 接続されている出力の組み合わせに一致するプロファイルが自動で適用される。
+# 手動で切り替える場合は ~/.config/niri/scripts/display-profile.sh を使う。
+
+profile docked {
+    output "Iiyama North America PL2390 11758JMC01223" mode 1920x1080@60Hz position 0,0 scale 1
+    output "Lenovo Group Limited 0x403D Unknown" mode 1920x1200@60.003Hz position 1920,0 scale 1.25
+}
+
+profile laptop {
+    output "Iiyama North America PL2390 11758JMC01223" disable
+    output "Lenovo Group Limited 0x403D Unknown" mode 1920x1200@60.003Hz position 0,0 scale 1.25
+}
+
+profile external {
+    output "Iiyama North America PL2390 11758JMC01223" mode 1920x1080@60Hz position 0,0 scale 1
+    output "Lenovo Group Limited 0x403D Unknown" disable
+}

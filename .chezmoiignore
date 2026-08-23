@@ -8,3 +8,8 @@ README.md
 .config/niri/dms/layout.kdl
 .config/niri/dms/windowrules.kdl
 .config/niri/dms/wpblur.kdl
+.config/waybar/colors.css
+.config/swaync/colors.css
+.config/swayosd/colors.css
+.config/hypr/colors.conf
+.config/fuzzel/fuzzel.ini
