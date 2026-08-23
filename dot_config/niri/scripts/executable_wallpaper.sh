@@ -1,11 +1,9 @@
 #!/bin/sh
 # Pick a wallpaper with wofi, set it with awww, then regenerate the color
-# scheme with matugen. The path of the selected image is written to a state file
-# so that other tools such as hyprlock can read it.
+# scheme with matugen.
 set -eu
 
 DIRS="$HOME/Pictures $HOME/Downloads"
-STATE="${XDG_STATE_HOME:-$HOME/.local/state}/wallpaper"
 
 existing=""
 for d in $DIRS; do
@@ -30,6 +28,3 @@ awww img "$selected" --transition-type fade --transition-duration 1
 # most saturated one. Without it matugen cannot pick a candidate and exits with
 # an error in a non-interactive environment.
 matugen image "$selected" --prefer saturation
-
-mkdir -p "$(dirname "$STATE")"
-printf '%s' "$selected" > "$STATE"
