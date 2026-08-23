@@ -1,0 +1,7 @@
+[Unit]
+Description=バッテリ残量の低下を通知する
+Documentation=file:%h/.config/niri/scripts/battery-notify.sh
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/niri/scripts/battery-notify.sh
