@@ -3,7 +3,7 @@
 window#osd {
   border-radius: 16px;
   border: 1px solid @outline_variant;
-  background: @surface_container;
+  background: alpha(@surface_container, 0.8);
   padding: 4px;
 }
 

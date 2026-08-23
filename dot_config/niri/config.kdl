@@ -149,6 +149,32 @@ layer-rule {
     match namespace="^awww-daemon$"
     place-within-backdrop true
 }
+
+// Blur strength for the panels below. There is no radius key; passes is what
+// controls how strong the blur is. Blur stays off until a layer-rule turns it
+// on.
+blur {
+    passes 3
+    noise 0.02
+}
+
+// Blur what is behind the panels. Each of these surfaces is drawn with a
+// partly transparent background (see the style.css of the tool) so that the
+// blurred wallpaper shows through.
+//
+// swaync is left out on purpose. Its notification surface is 400px wide and as
+// tall as the output regardless of how many notifications are shown, and niri
+// blurs the whole surface rectangle rather than the drawn part, so the empty
+// area below a notification appears as a blurred band over whatever is behind
+// it.
+layer-rule {
+    match namespace="^waybar$"
+    match namespace="^swayosd$"
+    match namespace="^wofi$"
+    background-effect {
+        blur true
+    }
+}
 overview {
     workspace-shadow {
         off
