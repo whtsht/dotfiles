@@ -11,11 +11,11 @@
 
 [templates.niri]
 input_path = '~/.config/matugen/templates/niri-colors.kdl'
-output_path = '~/.config/niri/dms/colors.kdl'
+output_path = '~/.config/niri/colors.kdl'
 
 [templates.alacritty]
 input_path = '~/.config/matugen/templates/alacritty.toml'
-output_path = '~/.config/alacritty/dank-theme.toml'
+output_path = '~/.config/alacritty/colors.toml'
 
 [templates.waybar]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
