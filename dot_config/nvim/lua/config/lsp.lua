@@ -65,7 +65,7 @@ vim.lsp.enable('ts_ls')
 vim.lsp.config('typeprof', {
   -- cmd = { "typeprof", "--lsp", "--stdio" },
   -- custom build
-  cmd = { "/home/whtsht/.workspace/github.com/whtsht/typeprof/bin/typeprof", "--lsp", "--stdio" },
+  cmd = { vim.fn.expand("~/.workspace/github.com/whtsht/typeprof/bin/typeprof"), "--lsp", "--stdio" },
   filetypes = { 'ruby', 'eruby' },
   root_markers = { 'Gemfile', '.git' },
 })

@@ -1,6 +1,6 @@
 [user]
-	name = whtsht
-	email = whiteshirt0079@gmail.com
+	name = {{ .name }}
+	email = {{ .email }}
 [init]
 	defaultBranch = main
 [core]
@@ -11,8 +11,6 @@
 	diffFilter = delta --color-only --line-numbers
 [pull]
 	ff = only
-[safe]
-	directory = /home/toma
 [ghq]
 	root = ~/.workspace
 [credential "https://github.com"]

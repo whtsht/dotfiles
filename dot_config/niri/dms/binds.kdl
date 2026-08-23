@@ -71,8 +71,6 @@ binds {
     }
 
     // === Audio Controls (F21-F24) ===
-    // F21 と F22 は xkb により XF86TouchpadToggle / XF86TouchpadOn へ変換されるため、
-    // キー名ではなく変換後のシンボル名を指定する。
     // F21: Volume Down
     XF86TouchpadToggle allow-when-locked=true {
         spawn "dms" "ipc" "call" "audio" "decrement" "3";

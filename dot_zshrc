@@ -8,17 +8,11 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
-zstyle :compinstall filename '/home/whtsht/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
 export PATH="$PATH:$HOME/.local/bin"
-
-export PNPM_HOME="/home/whtsht/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -75,7 +69,7 @@ export WASI_SDK_PATH="/opt/wasi-sdk"
 alias cc_wasi="${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot"
 
 # pnpm
-export PNPM_HOME="/home/whtsht/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
