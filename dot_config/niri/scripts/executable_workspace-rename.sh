@@ -1,6 +1,6 @@
 #!/bin/sh
-# 現在のワークスペース名を fuzzel で入力して設定する。
-# 空文字を入力した場合は名前を解除する。
+# Set the name of the current workspace from input typed into fuzzel.
+# An empty input clears the name.
 set -eu
 
 name=$(printf '' | fuzzel --dmenu --prompt "workspace name> ") || exit 0

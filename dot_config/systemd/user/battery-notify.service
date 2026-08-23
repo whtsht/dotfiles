@@ -1,5 +1,5 @@
 [Unit]
-Description=バッテリ残量の低下を通知する
+Description=Notify when the battery charge is low
 Documentation=file:%h/.config/niri/scripts/battery-notify.sh
 
 [Service]

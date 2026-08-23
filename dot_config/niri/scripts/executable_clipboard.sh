@@ -1,5 +1,5 @@
 #!/bin/sh
-# cliphist の履歴を fuzzel で選択し、選んだ項目をクリップボードへ書き戻す。
+# Pick an entry from the cliphist history with fuzzel and copy it back to the clipboard.
 set -eu
 
 cliphist list | fuzzel --dmenu --prompt "clipboard> " | cliphist decode | wl-copy

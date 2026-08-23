@@ -1,5 +1,5 @@
 #!/bin/sh
-# 電源操作を fuzzel で選択して実行する。
+# Pick a power action with fuzzel and run it.
 set -eu
 
 choice=$(printf '%s\n' \

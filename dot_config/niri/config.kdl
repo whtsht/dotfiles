@@ -177,15 +177,15 @@ layout {
     }
 }
 
-// dms/layout.kdl が設定していたウィンドウの角丸。
+// Window corner radius, previously set by dms/layout.kdl.
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
 }
-// オーバービューの背景に壁紙レイヤーを表示する。
-// quickshell は DMS の壁紙、awww-daemon は移行後の壁紙。
+// Show the wallpaper layer behind the overview.
+// quickshell is the DMS wallpaper, awww-daemon the one used after the migration.
 layer-rule {
     match namespace="^quickshell$"
     match namespace="^awww-daemon$"

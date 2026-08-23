@@ -65,8 +65,8 @@ window#waybar {
   color: @on_surface_variant;
 }
 
-/* フォーカスされたウィンドウがない場合、モジュールは空になる。
-   背景だけが残るのを避けるため、空のときは非表示にする。 */
+/* The module is empty when no window is focused. Hide it in that state so
+   that the background does not remain on its own. */
 window#waybar.empty #window {
   background: transparent;
   padding: 0;

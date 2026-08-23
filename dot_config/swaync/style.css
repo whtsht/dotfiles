@@ -66,7 +66,7 @@
   color: @on_primary_container;
 }
 
-/* 通知センター */
+/* Control center */
 .control-center {
   background: @surface;
   color: @on_surface;

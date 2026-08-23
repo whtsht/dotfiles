@@ -1,10 +1,10 @@
 #!/bin/sh
-# 再生中のメディアを「アーティスト - タイトル」の形式で出力する。
-# hyprlock の label から呼び出す。再生中のプレイヤーがない場合は何も出力しない。
+# Print the currently playing media as "artist - title".
+# Called from a hyprlock label. Prints nothing when no player is running.
 #
-# playerctl の --format は {{ }} を使うが、hyprlang は設定ファイル中の
-# {{ }} を式として解釈して構文エラーになる。そのため hyprlock.conf に
-# 直接書かず、このスクリプトへ切り出している。
+# The --format option of playerctl uses {{ }}, but hyprlang parses {{ }} in a
+# configuration file as an expression and reports a syntax error. The command is
+# therefore kept in this script instead of being written in hyprlock.conf.
 set -eu
 
 artist=$(playerctl metadata xesam:artist 2>/dev/null || true)

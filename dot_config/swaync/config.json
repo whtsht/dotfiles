@@ -33,12 +33,12 @@
   ],
   "widget-config": {
     "title": {
-      "text": "通知",
+      "text": "Notifications",
       "clear-all-button": true,
-      "button-text": "すべて消去"
+      "button-text": "Clear All"
     },
     "dnd": {
-      "text": "通知を停止"
+      "text": "Do Not Disturb"
     },
     "notifications": {
       "vexpand": true

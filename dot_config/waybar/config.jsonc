@@ -73,7 +73,7 @@
 
   "custom/clipboard": {
     "format": "󰅍",
-    "tooltip-format": "クリップボード履歴",
+    "tooltip-format": "Clipboard history",
     "on-click": "~/.config/niri/scripts/clipboard.sh"
   },
 
@@ -114,7 +114,7 @@
     "format-disconnected": "󰖪",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
     "tooltip-format-ethernet": "{ifname}\n{ipaddr}",
-    "tooltip-format-disconnected": "未接続",
+    "tooltip-format-disconnected": "Disconnected",
     "on-click": "nm-connection-editor"
   },
 

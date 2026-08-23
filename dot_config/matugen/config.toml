@@ -1,10 +1,11 @@
-# matugen は壁紙から Material Design 3 のパレットを生成し、
-# 以下のテンプレートを展開して各ツールの色定義ファイルを出力する。
-# 実行は ~/.config/niri/scripts/wallpaper.sh から行う。
+# matugen derives a Material Design 3 palette from the wallpaper and expands
+# the templates below into a color definition file for each tool. It is run by
+# ~/.config/niri/scripts/wallpaper.sh whenever the wallpaper changes.
 #
-# ここで出力するファイルはすべて生成物であり、chezmoi の管理対象から
-# 除外している（.chezmoiignore を参照）。取り込む側の設定ファイル
-# （style.css など）がリポジトリ管理の対象である。
+# This file is hand-written. Every path listed in output_path below, however,
+# is generated at run time and is excluded from chezmoi (see .chezmoiignore).
+# The files that pull those colors in (style.css, hyprlock.conf, ...) are the
+# ones tracked in this repository.
 
 [config]
 

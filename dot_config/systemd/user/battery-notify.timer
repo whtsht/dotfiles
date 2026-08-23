@@ -1,5 +1,5 @@
 [Unit]
-Description=バッテリ残量を 1 分ごとに確認する
+Description=Check the battery charge every minute
 
 [Timer]
 OnBootSec=1min
