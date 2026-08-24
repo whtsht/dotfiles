@@ -17,30 +17,26 @@ output_path = '~/.config/niri/colors.kdl'
 input_path = '~/.config/matugen/templates/alacritty.toml'
 output_path = '~/.config/alacritty/colors.toml'
 
-[templates.waybar]
+# A single color definition file shared by the GTK panels. waybar, swaync,
+# swayosd and wofi each import it from their own style.css by absolute path,
+# so one output covers all four.
+[templates.gtk]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/waybar/colors.css'
-
-[templates.swaync]
-input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/swaync/colors.css'
-
-[templates.swayosd]
-input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/swayosd/colors.css'
-
-[templates.wofi]
-input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/wofi/colors.css'
+output_path = '~/.config/matugen/colors.css'
 
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hypr-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 
+# GTK builds the path to the user stylesheet as
+# $XDG_CONFIG_HOME/gtk-{3,4}.0/gtk.css with the directory and file name
+# hard-coded (see g_build_filename in gtk/gtksettings.c), so the palette is
+# written to that file directly instead of to a colors.css that gtk.css would
+# have to import.
 [templates.gtk3]
 input_path = '~/.config/matugen/templates/gtk-adwaita-colors.css'
-output_path = '~/.config/gtk-3.0/colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
 
 [templates.gtk4]
 input_path = '~/.config/matugen/templates/gtk-adwaita-colors.css'
-output_path = '~/.config/gtk-4.0/colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'

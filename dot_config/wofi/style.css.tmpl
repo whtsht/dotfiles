@@ -1,7 +1,8 @@
-/* wofi hands the stylesheet to GTK as data rather than as a file, so a
-   relative @import is resolved against the working directory of the wofi
-   process and fails. The absolute path is filled in by chezmoi. */
-@import url("file://{{ .chezmoi.homeDir }}/.config/wofi/colors.css");
+/* Color definitions shared by the GTK panels. wofi needs the absolute path
+   because it hands the stylesheet to GTK as data rather than as a file, and
+   the other panels use the same form so that a single generated file serves
+   all of them. The path is filled in by chezmoi. */
+@import url("file://{{ .chezmoi.homeDir }}/.config/matugen/colors.css");
 
 * {
   font-family: "Adwaita Sans", "Noto Sans CJK JP", sans-serif;
