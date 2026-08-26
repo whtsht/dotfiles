@@ -24,7 +24,7 @@ binds {
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
-        spawn "hyprlock";
+        spawn "loginctl" "lock-session";
     }
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager (btop)" {

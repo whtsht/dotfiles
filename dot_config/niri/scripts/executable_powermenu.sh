@@ -11,7 +11,7 @@ choice=$(printf '%s\n' \
     | wofi --dmenu --prompt "Power")
 
 case "$choice" in
-    lock)     hyprlock ;;
+    lock)     loginctl lock-session ;;
     logout)   niri msg action quit --skip-confirmation ;;
     suspend)  systemctl suspend ;;
     reboot)   systemctl reboot ;;
