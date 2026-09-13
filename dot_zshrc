@@ -17,7 +17,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export EDITOR="nvim"
-export BROWSER="firefox"
+export BROWSER="google-chrome-stable"
 
 alias l="exa"
 alias la="exa -a"
