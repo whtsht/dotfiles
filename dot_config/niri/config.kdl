@@ -177,6 +177,17 @@ layer-rule {
         blur true
     }
 }
+// niri does not read border-radius from the stylesheet, so without these the
+// blur fills the square corners outside the rounded window border. Each value
+// matches the border-radius of the window in the style.css.tmpl of that tool.
+layer-rule {
+    match namespace="^wofi$"
+    geometry-corner-radius 12
+}
+layer-rule {
+    match namespace="^swayosd$"
+    geometry-corner-radius 16
+}
 overview {
     workspace-shadow {
         off
