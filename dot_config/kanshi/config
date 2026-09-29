@@ -1,6 +1,6 @@
 profile docked {
-    output "Iiyama North America PL2390 11758JMC01223" mode 1920x1080@60Hz position 0,0 scale 1
-    output "Lenovo Group Limited 0x403D Unknown" mode 1920x1200@60.003Hz position 1920,0 scale 1.25
+    output "Lenovo Group Limited 0x403D Unknown" mode 1920x1200@60.003Hz position 0,0 scale 1.25
+    output "Iiyama North America PL2390 11758JMC01223" mode 1920x1080@60Hz position 1536,0 scale 1
 }
 
 profile laptop {
