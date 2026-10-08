@@ -1,0 +1,19 @@
+[theme]
+mode = "dark"
+source = "builtin"
+builtin = "Tokyo-Night"
+
+[bar.default]
+position = "bottom"
+
+[wallpaper.default]
+path = "~/.local/share/wallpapers/pacman-pixel-3840x2160.png"
+
+[wallpaper.last]
+path = "~/.local/share/wallpapers/pacman-pixel-3840x2160.png"
+
+[lockscreen]
+transition = ["zoom"]
+transition_duration = 500
+blur_intensity = 0.05
+tint_intensity = 0.9

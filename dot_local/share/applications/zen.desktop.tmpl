@@ -1,0 +1,28 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Zen Browser
+GenericName=Web Browser
+Comment=Experience tranquillity while browsing the web
+Keywords=Internet;WWW;Browser;Web;Explorer;zen;
+Exec={{ .chezmoi.homeDir }}/.local/bin/zen %u
+Icon={{ .chezmoi.homeDir }}/.local/opt/zen/browser/chrome/icons/default/default128.png
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+# RemotingName in application.ini is "zen", so the Wayland app-id is "zen".
+StartupWMClass=zen
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https;
+Actions=new-window;new-private-window;profile-manager;
+
+[Desktop Action new-window]
+Name=Open a New Window
+Exec={{ .chezmoi.homeDir }}/.local/bin/zen %u
+
+[Desktop Action new-private-window]
+Name=Open a New Private Window
+Exec={{ .chezmoi.homeDir }}/.local/bin/zen --private-window %u
+
+[Desktop Action profile-manager]
+Name=Open the Profile Manager
+Exec={{ .chezmoi.homeDir }}/.local/bin/zen --ProfileManager

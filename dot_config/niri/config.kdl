@@ -12,28 +12,11 @@ gestures {
     }
 }
 
-// Input device configuration.
-// Find the full list of options on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 input {
     keyboard {
         xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
-
             options "ctrl:nocaps"
         }
-
-        // Enable numlock on startup, omitting this setting disables it.
-        numlock
     }
 
     // Next sections include libinput settings.
@@ -85,7 +68,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 4
+    gaps 2
     background-color "transparent"
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -145,11 +128,7 @@ window-rule {
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
-}
-// Show the wallpaper layer behind the overview.
-layer-rule {
-    match namespace="^awww-daemon$"
-    place-within-backdrop true
+    opacity 0.93
 }
 
 // Blur strength for the panels below. There is no radius key; passes is what
@@ -160,57 +139,13 @@ blur {
     noise 0.02
 }
 
-// Blur what is behind the panels. Each of these surfaces is drawn with a
-// partly transparent background (see the style.css of the tool) so that the
-// blurred wallpaper shows through.
-//
-// swaync is left out on purpose. Its notification surface is 400px wide and as
-// tall as the output regardless of how many notifications are shown, and niri
-// blurs the whole surface rectangle rather than the drawn part, so the empty
-// area below a notification appears as a blurred band over whatever is behind
-// it.
-layer-rule {
-    match namespace="^waybar$"
-    match namespace="^swayosd$"
-    match namespace="^wofi$"
-    background-effect {
-        blur true
-    }
-}
-// niri does not read border-radius from the stylesheet, so without these the
-// blur fills the square corners outside the rounded window border. Each value
-// matches the border-radius of the window in the style.css.tmpl of that tool.
-layer-rule {
-    match namespace="^wofi$"
-    geometry-corner-radius 12
-}
-layer-rule {
-    match namespace="^swayosd$"
-    geometry-corner-radius 16
-}
-overview {
-    workspace-shadow {
-        off
-    }
-}
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
 
 // Session daemons. spawn-at-startup runs only when niri starts, not on a
 // config reload.
-spawn-at-startup "waybar"
-spawn-at-startup "swaync"
-spawn-at-startup "swayosd-server"
-spawn-at-startup "kanshi"
-spawn-at-startup "hypridle"
-spawn-at-startup "awww-daemon"
-// polkit authentication agent. Without it, applications that call polkit
-// (nm-connection-editor, blueman-manager, ...) receive no password prompt.
-spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-// cliphist needs one watcher per MIME type; clipboard.sh reads the history.
-spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
-spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-at-startup "noctalia"
 
 hotkey-overlay {
     skip-at-startup
@@ -249,58 +184,7 @@ animations {
         spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
     }
 }
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-window-rule {
-    match app-id=r#"^org\.gnome\."#
-    draw-border-with-background false
-    geometry-corner-radius 8
-    clip-to-geometry true
-}
-window-rule {
-    match app-id=r#"^gnome-control-center$"#
-    match app-id=r#"^pavucontrol$"#
-    match app-id=r#"^nm-connection-editor$"#
-    default-column-width { proportion 0.5; }
-    open-floating false
-}
-window-rule {
-    match app-id=r#"^org\.gnome\.Calculator$"#
-    match app-id=r#"^gnome-calculator$"#
-    match app-id=r#"^galculator$"#
-    match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^xdg-desktop-portal$"#
-    open-floating true
-}
-window-rule {
-    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
-    open-focused false
-}
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    match app-id="Alacritty"
-    match app-id="zen"
-    match app-id="com.mitchellh.ghostty"
-    match app-id="kitty"
-    draw-border-with-background false
-}
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id="zoom"
-    open-floating true
-}
+
 debug {
     honor-xdg-activation-with-invalid-serial
 }
@@ -319,5 +203,4 @@ recent-windows {
     }
 }
 
-include optional=true "colors.kdl"
 include optional=true "binds.kdl"
