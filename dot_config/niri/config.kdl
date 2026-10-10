@@ -128,7 +128,7 @@ window-rule {
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
-    opacity 0.93
+    opacity 1.0
 }
 
 // Blur strength for the panels below. There is no radius key; passes is what
