@@ -15,12 +15,22 @@ return {
       ['jj'] = 'escape',
     })
 
-    if vim.bo.filetype == 'tex' then
-      vim.fn['skkeleton#register_kanatable']('rom', {
-        [','] = {'，', ''},
-        ['.'] = {'．', ''},
-      })
-    end
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'skkeleton-enable-pre',
+      callback = function()
+        if vim.bo.filetype == 'tex' then
+          vim.fn['skkeleton#register_kanatable']('rom', {
+            [','] = {'，', ''},
+            ['.'] = {'．', ''},
+          })
+        else
+          vim.fn['skkeleton#register_kanatable']('rom', {
+            [','] = {'、', ''},
+            ['.'] = {'。', ''},
+          })
+        end
+      end,
+    })
 
     vim.fn['skkeleton#register_kanatable']('rom', {
       ['['] = {'[', ''},

@@ -11,8 +11,31 @@ return {
   },
   config = function()
     local cmp = require("cmp")
+    local compare = cmp.config.compare
+
+    -- Keep skkeleton candidates in the order skkeleton returns them
+    -- (same as its henkan order) instead of cmp's length/recency sorting.
+    local function skkeleton_order(entry1, entry2)
+      if entry1.source.name == "skkeleton" and entry2.source.name == "skkeleton" then
+        return entry1.id < entry2.id
+      end
+    end
 
     cmp.setup({
+      sorting = {
+        comparators = {
+          skkeleton_order,
+          compare.offset,
+          compare.exact,
+          compare.score,
+          compare.recently_used,
+          compare.locality,
+          compare.kind,
+          compare.sort_text,
+          compare.length,
+          compare.order,
+        },
+      },
       snippet = {
         expand = function(args)
           require 'luasnip'.lsp_expand(args.body)
@@ -51,6 +74,21 @@ return {
       }, {
         { name = "buffer" },
       }),
+    })
+
+    -- nvim-cmp auto-triggers only when the cursor advances by exactly one byte,
+    -- so multibyte kana inserted by skkeleton never starts completion.
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "skkeleton-handled",
+      callback = function()
+        if vim.fn.mode() ~= "i" then
+          return
+        end
+        local state = vim.g["skkeleton#state"]
+        if state and state.phase == "input:okurinasi" then
+          cmp.complete()
+        end
+      end,
     })
 
     cmp.setup.cmdline({ "/", "?" }, {
