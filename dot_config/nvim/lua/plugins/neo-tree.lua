@@ -15,7 +15,7 @@ return {
         },
         window = {
           width = 30
-        },
+        }
       })
       vim.keymap.set(
         "n", "<leader>ef", "<Cmd>Neotree toggle<CR>",
