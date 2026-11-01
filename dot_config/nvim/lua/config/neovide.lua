@@ -1,0 +1,8 @@
+vim.keymap.set('v', '<C-S-c>', '"+y')
+vim.keymap.set('n', '<C-S-v>', '"+P')
+vim.keymap.set('v', '<C-S-v>', '"+P')
+vim.keymap.set({ 'i', 'c' }, '<C-S-v>', '<C-R>+')
+vim.keymap.set('t', '<M-Esc>', [[<C-\><C-n>]])
+vim.keymap.set('t', '<C-S-v>', function()
+  vim.api.nvim_paste(vim.fn.getreg('+'), true, -1)
+end)
