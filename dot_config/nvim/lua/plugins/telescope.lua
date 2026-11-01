@@ -35,5 +35,7 @@ return {
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
     vim.keymap.set('n', '<leader>fb', builtin.git_branches, { desc = 'Telescope switch git branches' })
     vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Telescope resume' })
+    vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Telescope resume' })
+    vim.keymap.set("n", "<leader>fw", "<cmd>AutoSession search<CR>", { desc = "Session search" })
   end
 }
